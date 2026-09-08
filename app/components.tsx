@@ -89,6 +89,10 @@ export function Statement({
   link?: boolean;
 }) {
   const c = copy[lang];
+  const emphasized =
+    lang === "uk"
+      ? "не співпрацюю з видавництвом The Mole Publishing House"
+      : "не сотрудничаю с издательством The Mole Publishing House";
   return (
     <article className="statement">
       <div className="statementMark" aria-hidden="true">
@@ -98,9 +102,14 @@ export function Statement({
         <p className="statementDate">{c.date}</p>
         <h2>{c.statement}</h2>
         <div className="statementText">
-          {c.paras.map((p) => (
-            <p key={p}>{p}</p>
-          ))}
+          {c.paras.map((p) => {
+            const [before, after] = p.split(emphasized);
+            return (
+              <p key={p}>
+                {after === undefined ? p : <>{before}<strong>{emphasized}</strong>{after}</>}
+              </p>
+            );
+          })}
           <p>
             {c.offer} <a href={`mailto:${email}`}>{email}</a>
           </p>

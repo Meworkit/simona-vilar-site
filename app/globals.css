@@ -71,23 +71,25 @@ footer{padding-top:12px;padding-bottom:12px}
 }
 
 /* Statement, biography and footer consistency */
-.statementSection .statement{padding:14px 24px 12px}
-.statementSection .statement h2{margin-bottom:7px}
-.statementSection .statementText p{margin-bottom:4px;line-height:1.36}
-.statementSection .statementText .sign{margin-top:7px;margin-bottom:2px}
-.statementSection .statementPublished{margin-top:1px}
+.statementSection .statement{padding:20px 28px}
+.statementSection .statement h2{margin:0 0 8px;font-size:2.05rem;line-height:1.1}
+.statementSection .statementText p{margin:0 0 4px;font-size:1rem;line-height:1.35}
+.statementSection .statementText p:nth-last-of-type(2){margin-bottom:6px}
+.statementSection .statementText .sign{margin-top:8px;margin-bottom:0;font-size:inherit;line-height:1.25}
+.statementSection .statementPublished{margin:2px 0 0;font-size:.9em;line-height:1.2}
 .bioText p{margin:0 0 18px;font-size:19px;line-height:1.48}
 .footerLanguages{display:flex;align-items:center;gap:6px;white-space:nowrap}
 .foot .footerLanguages a{display:inline;color:var(--text-secondary)}
 .foot .footerLanguages a[aria-current="page"]{color:var(--accent)}
 
 @media(max-width:850px){
-  .statementSection .statement{padding:13px 18px 11px}
-  .statementSection .statementText p{line-height:1.38}
+  .statementSection .statement{padding:16px 18px}
+  .statementSection .statement h2{font-size:1.75rem;line-height:1.1}
+  .statementSection .statementText p{font-size:1rem;line-height:1.4}
   .bioText p{font-size:18px;line-height:1.48}
 }
 
 @media(max-width:560px){
-  .statementSection .statement{padding:13px 16px 11px}
-  .statementSection .statementText p{margin-bottom:5px;line-height:1.4}
+  .statementSection .statement{padding:16px 18px}
+  .statementSection .statementText p{margin-bottom:4px}
 }
