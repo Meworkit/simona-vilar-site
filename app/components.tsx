@@ -109,7 +109,7 @@ export function Statement({
             {full ? (
               <>
                 <p className="sign">{c.signature}</p>
-                <time className="statementPublished" dateTime="2026-09-07">
+                <time className="statementPublished" dateTime="2026-09-08">
                   {c.articleDate}
                 </time>
               </>

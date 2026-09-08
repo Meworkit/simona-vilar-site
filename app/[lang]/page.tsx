@@ -75,7 +75,7 @@ export default async function Page({
             </a>
           </div>
           <a className="card" href={`/${lang}/news/official-statement`}>
-            <time>07.09.2026</time>
+            <time>08.09.2026</time>
             <div>
               <h3>{c.statement}</h3>
                   <p>{c.articleParas.join(" ")}</p>
