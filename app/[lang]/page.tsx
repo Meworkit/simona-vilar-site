@@ -78,7 +78,7 @@ export default async function Page({
             <time>07.09.2026</time>
             <div>
               <h3>{c.statement}</h3>
-                  <p>{c.paras.slice(1, 3).join(" ")}</p>
+                  <p>{c.articleParas.join(" ")}</p>
               <strong>{c.signature}</strong>
             </div>
             <span>{c.read} →</span>

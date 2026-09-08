@@ -70,25 +70,29 @@ export function Header({
 export function Statement({
   lang,
   link = false,
+  full = false,
 }: {
   lang: Lang;
   link?: boolean;
+  full?: boolean;
 }) {
   const c = copy[lang];
   const emphasized =
     lang === "uk"
       ? "не співпрацюю з видавництвом The Mole Publishing House"
       : "не сотрудничаю с издательством The Mole Publishing House";
+  const paras = full ? c.articleParas : c.paras;
+  const offer = full ? c.articleOffer : c.offer;
   return (
     <article className="statement">
       <div className="statementMark" aria-hidden="true">
         !
       </div>
       <div>
-        <p className="statementDate">{c.date}</p>
         <h2>{c.statement}</h2>
         <div className="statementText">
-          {c.paras.map((p) => {
+          {full && <p>{c.articleIntro}</p>}
+          {paras.map((p) => {
             const [before, after] = p.split(emphasized);
             return (
               <p className={after === undefined ? undefined : "statementKey"} key={p}>
@@ -97,14 +101,26 @@ export function Statement({
             );
           })}
           <p>
-            {c.offer} <a href={`mailto:${email}`}>{email}</a>
+            {offer} <a href={`mailto:${email}`}>{email}</a>
           </p>
-          <p>{c.notice}</p>
+          {full && <p>{c.articleNotice}</p>}
+          {full && <p>{c.articleClosing}</p>}
           <div className="statementMeta">
-            <p className="sign">{c.signature}</p>
-            <time className="statementPublished" dateTime="2026-09-07">
-              {c.date}
-            </time>
+            {full ? (
+              <>
+                <p className="sign">{c.signature}</p>
+                <time className="statementPublished" dateTime="2026-09-07">
+                  {c.articleDate}
+                </time>
+              </>
+            ) : (
+              <p className="sign">
+                {c.signature},{" "}
+                <time className="statementPublished" dateTime="2026-09-08">
+                  {c.date}
+                </time>
+              </p>
+            )}
           </div>
         </div>
         {link && (
