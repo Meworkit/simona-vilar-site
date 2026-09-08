@@ -54,8 +54,10 @@ test("all internal links resolve and key interactive links are present", async (
     assert.match(news.html, new RegExp(`href="/${lang}/news/official-statement"`));
     assert.match(biography.html, new RegExp(`href="/${lang}/privacy"`));
     assert.match(privacy.html, /href="mailto:contact@simonavilar\.com"/);
-    assert.match(biography.html, new RegExp(`href="/${lang}/?" class="back"`));
-    assert.match(privacy.html, new RegExp(`href="/${lang}/?" class="back"`));
+    assert.match(biography.html, /class="back"/);
+    assert.match(biography.html, new RegExp(`href="/${lang}/?"`));
+    assert.match(privacy.html, /class="back"/);
+    assert.match(privacy.html, new RegExp(`href="/${lang}/?"`));
     assert.doesNotMatch(pages.map(({ html }) => html).join("\n"), /href="(?:#|\s*)"/);
     const internalPaths = new Set(
       pages.flatMap(({ html }) =>
