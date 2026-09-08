@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Footer, Header } from "../../components";
 import { email, type Lang } from "../../content";
@@ -53,5 +52,5 @@ export default async function PrivacyPage({ params }: { params: Promise<{ lang: 
   const { lang: raw } = await params;
   if (!(raw in privacy)) notFound();
   const lang = raw as Lang, p = privacy[lang];
-  return <><Header lang={lang} page="privacy"/><main className="privacyPage shell"><Link className="back" href={`/${lang}/`}>← {p.back}</Link><header className="privacyHeading"><h1>{p.title}</h1><p>{p.updated}</p></header><article className="privacyBody"><p className="privacyIntro">{p.intro}</p>{p.sections.map(section=><section key={section.title}><h2>{section.title}</h2>{section.paragraphs?.map(item=><Paragraph key={item}>{item}</Paragraph>)}{"list" in section && section.list && <ul>{section.list.map(item=><li key={item}>{item}</li>)}</ul>}{"after" in section && section.after?.map(item=><Paragraph key={item}>{item}</Paragraph>)}</section>)}</article></main><Footer lang={lang} page="privacy"/></>;
+  return <><Header lang={lang} page="privacy"/><main className="privacyPage shell"><a className="back" href={`/${lang}/`}>← {p.back}</a><header className="privacyHeading"><h1>{p.title}</h1><p>{p.updated}</p></header><article className="privacyBody"><p className="privacyIntro">{p.intro}</p>{p.sections.map(section=><section key={section.title}><h2>{section.title}</h2>{section.paragraphs?.map(item=><Paragraph key={item}>{item}</Paragraph>)}{"list" in section && section.list && <ul>{section.list.map(item=><li key={item}>{item}</li>)}</ul>}{"after" in section && section.after?.map(item=><Paragraph key={item}>{item}</Paragraph>)}</section>)}</article></main><Footer lang={lang} page="privacy"/></>;
 }

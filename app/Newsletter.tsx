@@ -1,7 +1,6 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import Link from "next/link";
 import type { Lang } from "./content";
 
 const text = {
@@ -14,5 +13,5 @@ export function Newsletter({ lang }: { lang: Lang }) {
   const formId = lang === "uk" ? process.env.NEXT_PUBLIC_KIT_FORM_ID_UK : process.env.NEXT_PUBLIC_KIT_FORM_ID_RU;
   const t = text[lang];
   function submit(event: FormEvent<HTMLFormElement>) { if (!formId) { event.preventDefault(); return; } setSent(true); }
-  return <section className="newsletter shell" aria-labelledby="newsletter-title"><h2 id="newsletter-title">{t.title}</h2><p>{t.subtitle}</p>{sent ? <p className="newsletterSuccess" role="status">{t.success}</p> : <form action={formId ? `https://app.convertkit.com/forms/${formId}/subscriptions` : undefined} method="post" target="kit-submit" onSubmit={submit}><label className="srOnly" htmlFor={`newsletter-${lang}`}>{t.placeholder}</label><input id={`newsletter-${lang}`} name="email_address" type="email" required autoComplete="email" placeholder={t.placeholder}/><button type="submit" disabled={!formId}>{t.button}</button></form>}<p className="consent">{t.consent} <Link href={`/${lang}/privacy`}>{t.privacy}</Link></p><iframe className="kitFrame" name="kit-submit" title="Kit submission"/></section>;
+  return <section className="newsletter shell" aria-labelledby="newsletter-title"><h2 id="newsletter-title">{t.title}</h2><p>{t.subtitle}</p>{sent ? <p className="newsletterSuccess" role="status">{t.success}</p> : <form action={formId ? `https://app.convertkit.com/forms/${formId}/subscriptions` : undefined} method="post" target="kit-submit" onSubmit={submit}><label className="srOnly" htmlFor={`newsletter-${lang}`}>{t.placeholder}</label><input id={`newsletter-${lang}`} name="email_address" type="email" required autoComplete="email" placeholder={t.placeholder}/><button type="submit" disabled={!formId}>{t.button}</button></form>}<p className="consent">{t.consent} <a href={`/${lang}/privacy`}>{t.privacy}</a></p><iframe className="kitFrame" name="kit-submit" title="Kit submission"/></section>;
 }

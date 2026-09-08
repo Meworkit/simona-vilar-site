@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { copy, email, type Lang } from "./content";
 
 type LocalizedPage = "biography" | "news" | "privacy";
@@ -26,10 +25,10 @@ export function Header({
   return (
     <header>
       <div className="shell head">
-        <Link className="brand" href={`/${lang}/`}>
+        <a className="brand" href={`/${lang}/`}>
           <b>{lang === "uk" ? "Сімона Вілар" : "Симона Вилар"}</b>
           <small>{c.eyebrow}</small>
-        </Link>
+        </a>
         <nav>
           {c.nav.map((n, i) => (
             <a
@@ -50,19 +49,19 @@ export function Header({
           ❧
         </span>
         <div className="langs" aria-label="Language">
-          <Link
+          <a
             aria-current={lang === "uk" ? "page" : undefined}
             href={localizedPath("uk", page, detail)}
           >
             UA
-          </Link>
+          </a>
           ·
-          <Link
+          <a
             aria-current={lang === "ru" ? "page" : undefined}
             href={localizedPath("ru", page, detail)}
           >
             RU
-          </Link>
+          </a>
         </div>
       </div>
     </header>
@@ -109,9 +108,9 @@ export function Statement({
           </div>
         </div>
         {link && (
-          <Link className="more" href={`/${lang}/news/official-statement`}>
+          <a className="more" href={`/${lang}/news/official-statement`}>
             {c.read} →
-          </Link>
+          </a>
         )}
       </div>
     </article>
@@ -135,9 +134,9 @@ export function Footer({
         </div>
         <span>© 2026 Simona Vilar</span>
         <div className="footerLanguages" aria-label="Language">
-          <Link aria-current={lang === "uk" ? "page" : undefined} href={localizedPath("uk", page, detail)}>UA</Link>
+          <a aria-current={lang === "uk" ? "page" : undefined} href={localizedPath("uk", page, detail)}>UA</a>
           <span aria-hidden="true">·</span>
-          <Link aria-current={lang === "ru" ? "page" : undefined} href={localizedPath("ru", page, detail)}>RU</Link>
+          <a aria-current={lang === "ru" ? "page" : undefined} href={localizedPath("ru", page, detail)}>RU</a>
         </div>
       </div>
     </footer>

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import { copy, email, type Lang } from "../content";
 import { biography } from "../biography";
 import { Newsletter } from "../Newsletter";
@@ -60,23 +59,22 @@ export default async function Page({
                     {p}
                   </p>
                 ))}
-                <Link className="more bioLink" href={`/${lang}/biography`}>
+                <a className="more bioLink" href={`/${lang}/biography`}>
                   {biography[lang].read} →
-                </Link>
-                <p className="literaryLine">— {c.line}</p>
+                </a>
           </div>
         </section>
         <section id="news" className="news section shell">
           <div className="titleRow newsTitleRow">
-            <Link href={`/${lang}/news`} aria-label={c.news}>
+            <a href={`/${lang}/news`} aria-label={c.news}>
               <h2>{c.news}</h2>
-            </Link>
+            </a>
             <span />
-            <Link className="allNewsLink" href={`/${lang}/news`}>
+            <a className="allNewsLink" href={`/${lang}/news`}>
               {lang === "uk" ? "Усі новини" : "Все новости"} →
-            </Link>
+            </a>
           </div>
-          <Link className="card" href={`/${lang}/news/official-statement`}>
+          <a className="card" href={`/${lang}/news/official-statement`}>
             <time>07.09.2026</time>
             <div>
               <h3>{c.statement}</h3>
@@ -84,7 +82,7 @@ export default async function Page({
               <strong>{c.signature}</strong>
             </div>
             <span>{c.read} →</span>
-          </Link>
+          </a>
         </section>
         <Newsletter lang={lang} />
         <section id="contact" className="contact section shell">
