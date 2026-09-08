@@ -1,5 +1,18 @@
 import Link from "next/link";
 import { copy, email, type Lang } from "./content";
+
+type LocalizedPage = "biography" | "news" | "privacy";
+
+function localizedPath(
+  lang: Lang,
+  page?: LocalizedPage,
+  detail = false,
+) {
+  if (detail) return `/${lang}/news/official-statement`;
+  if (page) return `/${lang}/${page}`;
+  return `/${lang}`;
+}
+
 export function Header({
   lang,
   detail = false,
@@ -7,19 +20,9 @@ export function Header({
 }: {
   lang: Lang;
   detail?: boolean;
-  page?: "biography" | "news" | "privacy";
+  page?: LocalizedPage;
 }) {
-  const c = copy[lang],
-    other = lang === "uk" ? "ru" : "uk",
-    path = detail
-      ? `/${other}/news/official-statement`
-      : page === "biography"
-        ? `/${other}/biography`
-        : page === "news"
-          ? `/${other}/news`
-          : page === "privacy"
-            ? `/${other}/privacy`
-            : `/${other}/`;
+  const c = copy[lang];
   return (
     <header>
       <div className="shell head">
@@ -49,30 +52,14 @@ export function Header({
         <div className="langs" aria-label="Language">
           <Link
             aria-current={lang === "uk" ? "page" : undefined}
-            href={
-              lang === "uk"
-                ? detail
-                  ? "/uk/news/official-statement"
-                  : "/uk/"
-                : page
-                  ? `/${page === "privacy" ? "uk/privacy" : page === "news" ? "uk/news" : "uk/biography"}`
-                  : path
-            }
+            href={localizedPath("uk", page, detail)}
           >
             UA
           </Link>
           ·
           <Link
             aria-current={lang === "ru" ? "page" : undefined}
-            href={
-              lang === "ru"
-                ? detail
-                  ? "/ru/news/official-statement"
-                  : "/ru/"
-                : page
-                  ? `/${page === "privacy" ? "ru/privacy" : page === "news" ? "ru/news" : "ru/biography"}`
-                  : path
-            }
+            href={localizedPath("ru", page, detail)}
           >
             RU
           </Link>
@@ -114,10 +101,12 @@ export function Statement({
             {c.offer} <a href={`mailto:${email}`}>{email}</a>
           </p>
           <p>{c.notice}</p>
-          <p className="sign">{c.signature}</p>
-          <time className="statementPublished" dateTime="2026-09-07">
-            {c.date}
-          </time>
+          <div className="statementMeta">
+            <p className="sign">{c.signature}</p>
+            <time className="statementPublished" dateTime="2026-09-07">
+              {c.date}
+            </time>
+          </div>
         </div>
         {link && (
           <Link className="more" href={`/${lang}/news/official-statement`}>
@@ -128,7 +117,15 @@ export function Statement({
     </article>
   );
 }
-export function Footer({ lang }: { lang: Lang }) {
+export function Footer({
+  lang,
+  page,
+  detail = false,
+}: {
+  lang: Lang;
+  page?: LocalizedPage;
+  detail?: boolean;
+}) {
   return (
     <footer>
       <div className="shell foot">
@@ -138,9 +135,9 @@ export function Footer({ lang }: { lang: Lang }) {
         </div>
         <span>© 2026 Simona Vilar</span>
         <div className="footerLanguages" aria-label="Language">
-          <Link aria-current={lang === "uk" ? "page" : undefined} href="/uk/">UA</Link>
+          <Link aria-current={lang === "uk" ? "page" : undefined} href={localizedPath("uk", page, detail)}>UA</Link>
           <span aria-hidden="true">·</span>
-          <Link aria-current={lang === "ru" ? "page" : undefined} href="/ru/">RU</Link>
+          <Link aria-current={lang === "ru" ? "page" : undefined} href={localizedPath("ru", page, detail)}>RU</Link>
         </div>
       </div>
     </footer>

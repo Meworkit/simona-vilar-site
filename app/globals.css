@@ -110,3 +110,22 @@ body{font-family:'Literata',Georgia,serif;font-size:18px;font-weight:400;line-he
   .statementSection .statementText p{font-size:16px;line-height:1.45}
   .aboutp,.card p,.blogCard p,.bioText p,.privacyBody p,.privacyBody li{line-height:1.5}
 }
+
+/* Interaction safety and final section rhythm */
+.about:after,.aboutCopy:before,.newsletter:before,.newsletter:after,footer:before,.portrait:after{pointer-events:none}
+.statementSection{padding-bottom:24px}
+.statementSection .statementMeta{display:flex;align-items:baseline;gap:20px;flex-wrap:wrap}
+.statementSection .statementMeta .sign,.statementSection .statementMeta .statementPublished{margin:8px 0 0;color:var(--text-muted);font-family:'Literata',Georgia,serif;font-size:17px;font-weight:400;font-style:italic;line-height:1.25}
+footer{margin-top:48px}
+
+@media(max-width:850px){
+  .statementSection{padding-bottom:22px}
+  footer{margin-top:36px}
+}
+
+@media(max-width:560px){
+  .statementSection{padding-bottom:20px}
+  .statementSection .statementMeta{gap:6px 16px}
+  .statementSection .statementMeta .sign,.statementSection .statementMeta .statementPublished{font-size:16px}
+  footer{margin-top:32px}
+}

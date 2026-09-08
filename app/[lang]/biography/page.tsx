@@ -23,5 +23,5 @@ export default async function BiographyPage({ params }: { params: Promise<{ lang
   if (!(raw in copy)) notFound();
   const lang = raw as Lang;
   const b = biography[lang];
-  return <><Header lang={lang} page="biography"/><main className="bioPage shell"><Link className="back" href={`/${lang}/`}>← {b.back}</Link><div className="bioHeading"><h1>{b.title}</h1></div><div className="bioLayout"><div className="bioPortrait" role="img" aria-label={copy[lang].photo}/><article className="bioText">{b.paragraphs.map((p)=><p key={p}>{p}</p>)}</article></div></main><Newsletter lang={lang}/><Footer lang={lang}/></>;
+  return <><Header lang={lang} page="biography"/><main className="bioPage shell"><Link className="back" href={`/${lang}/`}>← {b.back}</Link><div className="bioHeading"><h1>{b.title}</h1></div><div className="bioLayout"><div className="bioPortrait" role="img" aria-label={copy[lang].photo}/><article className="bioText">{b.paragraphs.map((p)=><p key={p}>{p}</p>)}</article></div></main><Newsletter lang={lang}/><Footer lang={lang} page="biography"/></>;
 }
