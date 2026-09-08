@@ -92,7 +92,7 @@ export function Statement({
           {c.paras.map((p) => {
             const [before, after] = p.split(emphasized);
             return (
-              <p key={p}>
+              <p className={after === undefined ? undefined : "statementKey"} key={p}>
                 {after === undefined ? p : <>{before}<strong>{emphasized}</strong>{after}</>}
               </p>
             );

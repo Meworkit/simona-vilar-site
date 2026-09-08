@@ -148,18 +148,37 @@ h2,.pageHeading h1,.bioHeading h1,.simplePage h1{font-family:'Source Serif 4',Ge
 .newsletter input,.newsletter button{font-weight:500}
 
 /* Clear mouse and keyboard interaction feedback */
-a,button,input{transition:color .18s ease,background-color .18s ease,border-color .18s ease}
+a,button,input{transition:color .18s ease,background-color .18s ease,border-color .18s ease,transform .18s ease,box-shadow .18s ease}
+a[href],button:not(:disabled){cursor:pointer}
 .brand:hover b,.brand:focus-visible b,.head nav a:hover,.head nav a:focus-visible,.langs a:hover,.langs a:focus-visible,.footerLanguages a:hover,.footerLanguages a:focus-visible,.more:hover,.more:focus-visible,.allNewsLink:hover,.allNewsLink:focus-visible,.back:hover,.back:focus-visible,.contact a:hover,.contact a:focus-visible,.privacyEmail:hover,.privacyEmail:focus-visible,.newsletter .consent a:hover,.newsletter .consent a:focus-visible,.foot a:hover,.foot a:focus-visible{color:var(--accent)}
 .card:hover h3,.card:focus-visible h3,.card:hover>span,.card:focus-visible>span,.blogCard:hover h2,.blogCard:focus-visible h2,.blogCard:hover span,.blogCard:focus-visible span,.newsTitleRow>a:hover,.newsTitleRow>a:focus-visible{color:var(--accent)}
+.card,.blogCard{transition:color .18s ease,background-color .18s ease,border-color .18s ease,transform .18s ease,box-shadow .18s ease}
+.card:hover,.card:focus-visible,.blogCard:hover,.blogCard:focus-visible{transform:translateY(-2px);border-color:var(--accent-light);box-shadow:0 15px 38px rgba(47,70,90,.1)}
+.newsletter button:not(:disabled):hover,.newsletter button:not(:disabled):focus-visible{background:var(--accent-dark);border-color:var(--accent-dark);transform:translateY(-1px)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
 .newsletter input:focus{border-color:var(--accent);outline:2px solid color-mix(in srgb,var(--accent) 24%,transparent);outline-offset:2px}
 .newsletter .consent a{position:relative;z-index:2;display:inline-block}
+
+/* Compact editorial hierarchy for the official statement */
+.statementSection .statement,.article .statement{padding:18px 26px}
+.statement h2,.statementSection .statement h2,.article .statement h2{margin-bottom:8px;font-size:28px;font-weight:600;line-height:1.1}
+.statementText p,.statementSection .statementText p,.article .statementText p{margin-bottom:5px;color:var(--text-secondary);font-size:16.5px;font-weight:400;font-style:normal;line-height:1.35}
+.statementText .statementKey,.statementSection .statementText .statementKey,.article .statementText .statementKey{color:var(--text-primary);font-weight:600;font-style:normal}
+.statementText .statementKey strong{font-weight:600}
+.statementSection .statementMeta,.article .statementMeta{display:flex;align-items:baseline;gap:20px;flex-wrap:wrap}
+.statementSection .statementMeta .sign,.statementSection .statementMeta .statementPublished,.article .statementMeta .sign,.article .statementMeta .statementPublished{margin:6px 0 0;color:var(--text-muted);font-size:16px;font-weight:400;font-style:italic;line-height:1.2}
+
+@media(prefers-reduced-motion:reduce){a,button,input,.card,.blogCard{transition:none}.card:hover,.card:focus-visible,.blogCard:hover,.blogCard:focus-visible,.newsletter button:not(:disabled):hover,.newsletter button:not(:disabled):focus-visible{transform:none}}
 
 @media(max-width:560px){
   body{font-size:17px;line-height:1.48}
   .brand b{font-size:29px}
   h2,.pageHeading h1,.bioHeading h1,.simplePage h1{font-size:34px;line-height:1.1}
-  .statement h2,.statementSection .statement h2{font-size:28px}
-  .statementText p,.statementSection .statementText p,.aboutp,.bioText p,.privacyBody .privacyIntro,.privacyBody p,.privacyBody li,.card p,.blogCard p,.contact p,.newsletter>p{font-size:17px}
+  .statementSection .statement,.article .statement{padding:16px 18px}
+  .statement h2,.statementSection .statement h2,.article .statement h2{font-size:26px}
+  .statementText p,.statementSection .statementText p,.article .statementText p{font-size:16px;line-height:1.4}
+  .statementSection .statementMeta .sign,.statementSection .statementMeta .statementPublished,.article .statementMeta .sign,.article .statementMeta .statementPublished{font-size:15px}
+  .aboutp,.bioText p,.privacyBody .privacyIntro,.privacyBody p,.privacyBody li,.card p,.blogCard p,.contact p,.newsletter>p{font-size:17px}
   .head nav{font-size:16px}
   .langs,.footerLanguages{font-size:14px}
 }
