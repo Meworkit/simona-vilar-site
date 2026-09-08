@@ -182,3 +182,29 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   .head nav{font-size:16px}
   .langs,.footerLanguages{font-size:14px}
 }
+
+.statusPage{display:flex;align-items:center;justify-content:center;min-height:calc(100vh - 300px);padding:70px 24px}
+.statusCard{position:relative;width:100%;max-width:620px;padding:44px 46px 40px;border:1px solid var(--border-soft,var(--line));background:var(--statement-bg,var(--blush));box-shadow:0 12px 38px rgba(70,42,36,.05);text-align:center}
+.statusAccent{display:block;width:52px;height:3px;margin:0 auto 26px;background:var(--accent)}
+.statusCard h1{margin:0 0 18px;font-family:'Source Serif 4',Georgia,serif;font-size:40px;font-weight:500;line-height:1.08}
+.statusCard p{margin:0 0 12px;color:var(--text-secondary,var(--muted));font-family:'Source Serif 4',Georgia,serif;font-size:18px;line-height:1.5}
+.statusCard p:last-of-type{margin-bottom:0}
+.statusSecondary{margin-top:20px!important;color:var(--text-muted,var(--muted))!important;font-size:15px!important}
+.statusClosing{margin-top:22px!important;font-style:italic;color:var(--accent)!important}
+.statusButton{display:inline-block;margin-top:30px;padding:14px 34px;border:1px solid var(--accent);background:var(--accent);color:#fffaf6;font:500 15px 'Source Serif 4',Georgia,serif;letter-spacing:.01em}
+.statusButton:hover,.statusButton:focus-visible{background:var(--accent-dark,var(--accent));border-color:var(--accent-dark,var(--accent))}
+.statusCardConfirmed{background:linear-gradient(135deg,var(--statement-bg,var(--blush)),#fffaf6)}
+
+@media(max-width:850px){
+  .statusPage{min-height:calc(100vh - 240px);padding:56px 20px}
+  .statusCard{padding:36px 30px 34px}
+  .statusCard h1{font-size:34px}
+}
+
+@media(max-width:560px){
+  .statusPage{padding:44px 16px}
+  .statusCard{padding:30px 22px 28px;max-width:100%}
+  .statusCard h1{font-size:31px}
+  .statusCard p{font-size:16.5px}
+  .statusButton{display:block;width:100%;padding:14px 0}
+}

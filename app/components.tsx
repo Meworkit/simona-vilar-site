@@ -1,6 +1,11 @@
 import { copy, email, type Lang } from "./content";
 
-type LocalizedPage = "biography" | "news" | "privacy";
+type LocalizedPage =
+  | "biography"
+  | "news"
+  | "privacy"
+  | "subscription-pending"
+  | "subscription-confirmed";
 
 function localizedPath(
   lang: Lang,
@@ -156,5 +161,31 @@ export function Footer({
         </div>
       </div>
     </footer>
+  );
+}
+export function SubscriptionStatus({
+  lang,
+  variant,
+}: {
+  lang: Lang;
+  variant: "pending" | "confirmed";
+}) {
+  const c = copy[lang];
+  const data = variant === "pending" ? c.subscriptionPending : c.subscriptionConfirmed;
+  return (
+    <main className="statusPage">
+      <div className={`statusCard${variant === "confirmed" ? " statusCardConfirmed" : ""}`}>
+        <span className="statusAccent" aria-hidden="true" />
+        <h1>{data.title}</h1>
+        {data.body.map((p) => (
+          <p key={p}>{p}</p>
+        ))}
+        {"secondary" in data && <p className="statusSecondary">{data.secondary}</p>}
+        {"closing" in data && <p className="statusClosing">{data.closing}</p>}
+        <a className="statusButton" href={`/${lang}`}>
+          {data.button}
+        </a>
+      </div>
+    </main>
   );
 }
