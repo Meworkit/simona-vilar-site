@@ -14,7 +14,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const l = lang as Lang;
   const title = `${biography[l].title} — Симона Вилар`;
   const url = `https://simonavilar.com/${lang}/biography`;
-  return { title, description: biography[l].paragraphs[0], alternates: { canonical: url, languages: { uk: "/uk/biography", ru: "/ru/biography" } }, openGraph: { title, description: biography[l].paragraphs[0], siteName: "Симона Вилар", locale: l === "uk" ? "uk_UA" : "ru_RU", type: "article", url } };
+  const ogImage = { url: "https://simonavilar.com/og-image.jpg", width: 1200, height: 630, alt: "Симона Вилар — официальный сайт" };
+  return { title, description: biography[l].paragraphs[0], alternates: { canonical: url, languages: { uk: "/uk/biography", ru: "/ru/biography" } }, openGraph: { title, description: biography[l].paragraphs[0], siteName: "Симона Вилар", locale: l === "uk" ? "uk_UA" : "ru_RU", type: "article", url, images: [ogImage] }, twitter: { card: "summary_large_image", title, description: biography[l].paragraphs[0], images: [ogImage.url] } };
 }
 
 export default async function BiographyPage({ params }: { params: Promise<{ lang: string }> }) {

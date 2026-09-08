@@ -17,6 +17,12 @@ export async function generateMetadata({
   if (!(lang in copy)) return {};
   const c = copy[lang as Lang],
     url = `https://simonavilar.com/${lang}/`;
+  const ogImage = {
+    url: "https://simonavilar.com/og-image.jpg",
+    width: 1200,
+    height: 630,
+    alt: "Симона Вилар — официальный сайт",
+  };
   return {
     title: c.title,
     description: c.description,
@@ -28,6 +34,13 @@ export async function generateMetadata({
       locale: lang === "uk" ? "uk_UA" : "ru_RU",
       type: "website",
       url,
+      images: [ogImage],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: c.title,
+      description: c.description,
+      images: [ogImage.url],
     },
   };
 }
