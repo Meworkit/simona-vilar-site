@@ -69,3 +69,25 @@ footer{padding-top:12px;padding-bottom:12px}
   .newsletter h2{line-height:1.08}
   footer{padding-top:9px;padding-bottom:9px}
 }
+
+/* Statement, biography and footer consistency */
+.statementSection .statement{padding:14px 24px 12px}
+.statementSection .statement h2{margin-bottom:7px}
+.statementSection .statementText p{margin-bottom:4px;line-height:1.36}
+.statementSection .statementText .sign{margin-top:7px;margin-bottom:2px}
+.statementSection .statementPublished{margin-top:1px}
+.bioText p{margin:0 0 18px;font-size:19px;line-height:1.48}
+.footerLanguages{display:flex;align-items:center;gap:6px;white-space:nowrap}
+.foot .footerLanguages a{display:inline;color:var(--text-secondary)}
+.foot .footerLanguages a[aria-current="page"]{color:var(--accent)}
+
+@media(max-width:850px){
+  .statementSection .statement{padding:13px 18px 11px}
+  .statementSection .statementText p{line-height:1.38}
+  .bioText p{font-size:18px;line-height:1.48}
+}
+
+@media(max-width:560px){
+  .statementSection .statement{padding:13px 16px 11px}
+  .statementSection .statementText p{margin-bottom:5px;line-height:1.4}
+}

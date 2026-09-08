@@ -46,7 +46,7 @@ export default async function Page({
       <Header lang={lang} />
       <main id="top">
         <section id="statement" className="statementSection shell">
-          <Statement lang={lang} link />
+          <Statement lang={lang} />
         </section>
         <section id="about" className="about">
           <Placeholder text={c.photo} />
@@ -93,7 +93,7 @@ export default async function Page({
           <a href={`mailto:${email}`}>{email}</a>
         </section>
       </main>
-      <Footer />
+      <Footer lang={lang} />
     </>
   );
 }

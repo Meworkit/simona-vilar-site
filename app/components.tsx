@@ -119,7 +119,7 @@ export function Statement({
     </article>
   );
 }
-export function Footer() {
+export function Footer({ lang }: { lang: Lang }) {
   return (
     <footer>
       <div className="shell foot">
@@ -128,8 +128,10 @@ export function Footer() {
           <a href={`mailto:${email}`}>{email}</a>
         </div>
         <span>© 2026 Simona Vilar</span>
-        <div>
-          <Link href="/uk/">UA</Link> · <Link href="/ru/">RU</Link>
+        <div className="footerLanguages" aria-label="Language">
+          <Link aria-current={lang === "uk" ? "page" : undefined} href="/uk/">UA</Link>
+          <span aria-hidden="true">·</span>
+          <Link aria-current={lang === "ru" ? "page" : undefined} href="/ru/">RU</Link>
         </div>
       </div>
     </footer>
