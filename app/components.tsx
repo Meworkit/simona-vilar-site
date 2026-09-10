@@ -5,7 +5,8 @@ type LocalizedPage =
   | "news"
   | "privacy"
   | "subscription-pending"
-  | "subscription-confirmed";
+  | "subscription-confirmed"
+  | "books";
 
 function localizedPath(
   lang: Lang,
@@ -21,12 +22,27 @@ export function Header({
   lang,
   detail = false,
   page,
+  altPaths,
 }: {
   lang: Lang;
   detail?: boolean;
   page?: LocalizedPage;
+  /**
+   * Exact ru/uk equivalents of the current page (e.g. a book or series
+   * detail route), used instead of the generic `page` lookup so the
+   * language switcher preserves the current book/series rather than
+   * dropping back to the localized page root.
+   */
+  altPaths?: Record<Lang, string>;
 }) {
   const c = copy[lang];
+  const navHrefs = [
+    `/${lang}/#top`,
+    `/${lang}/biography`,
+    `/${lang}/books`,
+    `/${lang}/news`,
+    `/${lang}/#contact`,
+  ];
   return (
     <header>
       <div className="shell head">
@@ -36,16 +52,7 @@ export function Header({
         </a>
         <nav>
           {c.nav.map((n, i) => (
-            <a
-              key={n}
-              href={
-                i === 1
-                  ? `/${lang}/biography`
-                  : i === 2
-                    ? `/${lang}/news`
-                    : `/${lang}/#${["top", "about", "news", "contact"][i]}`
-              }
-            >
+            <a key={n} href={navHrefs[i]}>
               {n}
             </a>
           ))}
@@ -56,14 +63,14 @@ export function Header({
         <div className="langs" aria-label="Language">
           <a
             aria-current={lang === "uk" ? "page" : undefined}
-            href={localizedPath("uk", page, detail)}
+            href={altPaths ? altPaths.uk : localizedPath("uk", page, detail)}
           >
             UA
           </a>
           ·
           <a
             aria-current={lang === "ru" ? "page" : undefined}
-            href={localizedPath("ru", page, detail)}
+            href={altPaths ? altPaths.ru : localizedPath("ru", page, detail)}
           >
             RU
           </a>
@@ -141,10 +148,12 @@ export function Footer({
   lang,
   page,
   detail = false,
+  altPaths,
 }: {
   lang: Lang;
   page?: LocalizedPage;
   detail?: boolean;
+  altPaths?: Record<Lang, string>;
 }) {
   return (
     <footer>
@@ -155,9 +164,9 @@ export function Footer({
         </div>
         <span>© 2026 Simona Vilar</span>
         <div className="footerLanguages" aria-label="Language">
-          <a aria-current={lang === "uk" ? "page" : undefined} href={localizedPath("uk", page, detail)}>UA</a>
+          <a aria-current={lang === "uk" ? "page" : undefined} href={altPaths ? altPaths.uk : localizedPath("uk", page, detail)}>UA</a>
           <span aria-hidden="true">·</span>
-          <a aria-current={lang === "ru" ? "page" : undefined} href={localizedPath("ru", page, detail)}>RU</a>
+          <a aria-current={lang === "ru" ? "page" : undefined} href={altPaths ? altPaths.ru : localizedPath("ru", page, detail)}>RU</a>
         </div>
       </div>
     </footer>

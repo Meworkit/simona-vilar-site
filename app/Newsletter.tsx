@@ -18,7 +18,7 @@ const BREVO_FORM_ACTION =
 export function Newsletter({ lang }: { lang: Lang }) {
   const t = text[lang];
   return (
-    <section className="newsletter shell" aria-labelledby="newsletter-title">
+    <section id="newsletter" className="newsletter shell" aria-labelledby="newsletter-title">
       <h2 id="newsletter-title">{t.title}</h2>
       <p>{t.subtitle}</p>
       <form action={BREVO_FORM_ACTION} method="post">

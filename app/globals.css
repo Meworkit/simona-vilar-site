@@ -209,3 +209,36 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   .statusButton{display:block;width:100%;padding:14px 0}
   .contact a{font-size:16px}
 }
+
+/* Books section — editorial, text-first, no covers/cards/gradients */
+.breadcrumb{margin:0 0 20px;color:var(--text-muted,var(--muted));font:13px Manrope,sans-serif;letter-spacing:.01em}
+.breadcrumb a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.breadcrumb a:hover,.breadcrumb a:focus-visible{color:var(--accent-dark,var(--accent))}
+.seriesBlock{margin-top:42px}
+.seriesBlock h2{margin:0 0 6px;font-size:26px}
+.seriesBlock h2 a{color:var(--text-primary,var(--ink));text-decoration:none}
+.seriesBlock h2 a:hover,.seriesBlock h2 a:focus-visible{color:var(--accent)}
+.seriesDesc{color:var(--text-secondary,var(--muted));font-size:18px;line-height:1.55;margin:0 0 12px}
+.bookList{list-style:none;margin:5px 0 0;padding:0}
+.bookList li{margin:7px 0}
+.bookList a{color:var(--accent);font-size:18px;text-decoration:underline;text-underline-offset:3px}
+.bookList a:hover,.bookList a:focus-visible{color:var(--accent-dark,var(--accent))}
+.bookMeta{margin:0 0 8px;color:var(--text-secondary,var(--muted));font-size:17px;line-height:1.6}
+.bookMeta strong{color:var(--text-primary,var(--ink));font-weight:600}
+.bookMeta a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.bookCta{margin:24px 0 30px;padding:26px 28px;border:1px solid var(--border-soft,var(--line));background:var(--surface-alt,var(--blush))}
+.bookCta p{margin:0 0 16px;color:var(--text-secondary,var(--muted));font-size:17px;line-height:1.5}
+.bookDesc{font-size:19px;line-height:1.55;color:var(--text-primary,var(--ink))}
+.relatedBooks{margin-top:44px;padding-top:32px;border-top:1px solid var(--border-soft,var(--line))}
+.relatedBooks h2{margin:0 0 10px;font-size:23px}
+
+@media(max-width:850px){
+  .seriesBlock h2{font-size:24px}
+}
+
+@media(max-width:560px){
+  .seriesBlock h2{font-size:22px}
+  .bookDesc{font-size:17px}
+  .bookCta{padding:20px 18px}
+  .breadcrumb{font-size:12px;line-height:1.6}
+}
