@@ -226,8 +226,10 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 .bookMeta{margin:0 0 8px;color:var(--text-secondary,var(--muted));font-size:17px;line-height:1.6}
 .bookMeta strong{color:var(--text-primary,var(--ink));font-weight:600}
 .bookMeta a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
-.bookCta{margin:24px 0 30px;padding:26px 28px;border:1px solid var(--border-soft,var(--line));background:var(--surface-alt,var(--blush))}
-.bookCta p{margin:0 0 16px;color:var(--text-secondary,var(--muted));font-size:17px;line-height:1.5}
+.bookCta{margin:16px 0 26px;color:var(--text-secondary,var(--muted));font-size:17px;line-height:1.55;font-style:italic;max-width:640px}
+.bookCtaLink{font-style:normal;font-weight:700;color:var(--accent);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.bookCtaLink:hover{color:var(--accent-dark,var(--accent))}
+.bookCtaLink:focus-visible{outline:2px solid var(--accent);outline-offset:3px;text-decoration:underline}
 .bookDesc{font-size:19px;line-height:1.55;color:var(--text-primary,var(--ink))}
 .relatedBooks{margin-top:44px;padding-top:32px;border-top:1px solid var(--border-soft,var(--line))}
 .relatedBooks h2{margin:0 0 10px;font-size:23px}
@@ -239,6 +241,6 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 @media(max-width:560px){
   .seriesBlock h2{font-size:22px}
   .bookDesc{font-size:17px}
-  .bookCta{padding:20px 18px}
+  .bookCta{font-size:16px;max-width:none}
   .breadcrumb{font-size:12px;line-height:1.6}
 }
