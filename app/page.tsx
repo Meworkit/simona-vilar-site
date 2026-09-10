@@ -1,12 +1,8 @@
-import { headers } from "next/headers";
-import { redirect } from "next/navigation";
+import { permanentRedirect } from "next/navigation";
 
-export default async function Home() {
-  const languages =
-    (await headers()).get("accept-language")?.toLowerCase() ?? "";
-  const preferred = languages
-    .split(",")
-    .map((item) => item.trim().split(";")[0])
-    .find((code) => code.startsWith("uk") || code.startsWith("ru"));
-  redirect(preferred?.startsWith("ru") ? "/ru/" : "/uk/");
+// Russian is the default language version of the site. This is a
+// permanent (308) redirect straight to the final, non-trailing-slash
+// URL so search engines see a single hop rather than a redirect chain.
+export default function Home() {
+  permanentRedirect("/ru");
 }

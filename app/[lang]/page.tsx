@@ -16,7 +16,8 @@ export async function generateMetadata({
   const { lang } = await params;
   if (!(lang in copy)) return {};
   const c = copy[lang as Lang],
-    url = `https://simonavilar.com/${lang}/`;
+    url = `https://simonavilar.com/${lang}`,
+    brand = lang === "uk" ? "Сімона Вілар" : "Симона Вилар";
   const ogImage = {
     url: "https://simonavilar.com/og-image.jpg",
     width: 1200,
@@ -26,11 +27,18 @@ export async function generateMetadata({
   return {
     title: c.title,
     description: c.description,
-    alternates: { canonical: url, languages: { uk: "/uk/", ru: "/ru/" } },
+    alternates: {
+      canonical: url,
+      languages: {
+        uk: "https://simonavilar.com/uk",
+        ru: "https://simonavilar.com/ru",
+        "x-default": "https://simonavilar.com/ru",
+      },
+    },
     openGraph: {
       title: c.title,
       description: c.description,
-      siteName: "Симона Вилар",
+      siteName: brand,
       locale: lang === "uk" ? "uk_UA" : "ru_RU",
       type: "website",
       url,

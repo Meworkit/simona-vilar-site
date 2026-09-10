@@ -2,63 +2,73 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://simonavilar.com/ru/</loc>
+    <loc>https://simonavilar.com/ru</loc>
     <lastmod>2026-09-10</lastmod>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru"/>
   </url>
   <url>
-    <loc>https://simonavilar.com/uk/</loc>
+    <loc>https://simonavilar.com/uk</loc>
     <lastmod>2026-09-10</lastmod>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/"/>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/biography</loc>
     <lastmod>2026-09-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/biography"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/biography"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/biography"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/biography</loc>
     <lastmod>2026-09-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/biography"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/biography"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/biography"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/news</loc>
     <lastmod>2026-09-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/news"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/news"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/news"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/news</loc>
     <lastmod>2026-09-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/news"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/news"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/news"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/news/official-statement</loc>
     <lastmod>2026-09-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/news/official-statement"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/news/official-statement"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/news/official-statement"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/news/official-statement</loc>
     <lastmod>2026-09-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/news/official-statement"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/news/official-statement"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/news/official-statement"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/privacy</loc>
     <lastmod>2026-09-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/privacy"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/privacy"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/privacy</loc>
     <lastmod>2026-09-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/privacy"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/privacy"/>
   </url>
 </urlset>

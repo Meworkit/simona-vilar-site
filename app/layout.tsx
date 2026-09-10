@@ -24,14 +24,32 @@ export const metadata: Metadata = {
   },
 };
 
+// Conservative author schema: only verified facts already published
+// elsewhere on the site (name, pen name, site URL, occupation). No awards,
+// publisher relationships, social profiles, or other unverified claims.
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Симона Вилар",
+  alternateName: "Наталия Гавриленко",
+  url: "https://simonavilar.com",
+  jobTitle: "Писательница",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="uk">
-      <body>{children}</body>
+    <html lang="ru">
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

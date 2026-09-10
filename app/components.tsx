@@ -30,7 +30,7 @@ export function Header({
   return (
     <header>
       <div className="shell head">
-        <a className="brand" href={`/${lang}/`}>
+        <a className="brand" href={`/${lang}`}>
           <b>{lang === "uk" ? "Сімона Вілар" : "Симона Вилар"}</b>
           <small>{c.eyebrow}</small>
         </a>

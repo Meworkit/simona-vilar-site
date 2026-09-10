@@ -19,6 +19,17 @@ interface ExecutionContext {
   passThroughOnException(): void;
 }
 
+// Minimal ambient type for the Workers-runtime HTMLRewriter global (no
+// @cloudflare/workers-types dependency in this project, matching the
+// hand-rolled Env/ExecutionContext types above).
+declare class HTMLRewriter {
+  on(
+    selector: string,
+    handlers: { element(element: { setAttribute(name: string, value: string): void }): void },
+  ): this;
+  transform(response: Response): Response;
+}
+
 // Image security config. SVG sources with .svg extension auto-skip the
 // optimization endpoint on the client side (served directly, no proxy).
 // To route SVGs through the optimizer (with security headers), set
@@ -40,7 +51,28 @@ const worker = {
       }, allowedWidths);
     }
 
-    return handler.fetch(request, env, ctx);
+    const response = await handler.fetch(request, env, ctx);
+
+    // The app has a single root layout (Next.js only allows one <html> tag),
+    // so it can't statically render a per-language lang attribute for both
+    // /ru and /uk. Correct it here at the edge instead of restructuring the
+    // route tree: cheap, and doesn't touch the app's rendering pipeline.
+    const langMatch = url.pathname.match(/^\/(ru|uk)(\/|$)/);
+    if (
+      langMatch &&
+      typeof HTMLRewriter !== "undefined" &&
+      response.headers.get("content-type")?.includes("text/html")
+    ) {
+      return new HTMLRewriter()
+        .on("html", {
+          element(el) {
+            el.setAttribute("lang", langMatch[1]);
+          },
+        })
+        .transform(response);
+    }
+
+    return response;
   },
 };
 
