@@ -23,6 +23,7 @@ export function Header({
   detail = false,
   page,
   altPaths,
+  isHome = false,
 }: {
   lang: Lang;
   detail?: boolean;
@@ -34,6 +35,14 @@ export function Header({
    * dropping back to the localized page root.
    */
   altPaths?: Record<Lang, string>;
+  /**
+   * True only on the homepage: renders the site-name brand mark as the
+   * page's single <h1> (for SEO — every other page already has its own
+   * <h1> further down, so the brand mark stays a plain <b> there to avoid
+   * a duplicate/misplaced heading). Purely semantic — `.brand h1` carries
+   * the exact same styling as `.brand b` throughout globals.css.
+   */
+  isHome?: boolean;
 }) {
   const c = copy[lang];
   const navHrefs = [
@@ -45,11 +54,12 @@ export function Header({
   ];
   const menuLabel = "Меню";
   const closeLabel = lang === "uk" ? "Закрити меню" : "Закрыть меню";
+  const brandName = lang === "uk" ? "Сімона Вілар" : "Симона Вилар";
   return (
     <header>
       <div className="shell head">
         <a className="brand" href={`/${lang}`}>
-          <b>{lang === "uk" ? "Сімона Вілар" : "Симона Вилар"}</b>
+          {isHome ? <h1>{brandName}</h1> : <b>{brandName}</b>}
           <small>{c.eyebrow}</small>
         </a>
         <input type="checkbox" id="navToggle" className="navToggle" aria-label={menuLabel} />

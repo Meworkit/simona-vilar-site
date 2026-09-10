@@ -63,7 +63,7 @@ export default async function Page({
     c = copy[lang];
   return (
     <>
-      <Header lang={lang} />
+      <Header lang={lang} isHome />
       <main id="top">
         <section id="statement" className="statementSection shell">
           <Statement lang={lang} />

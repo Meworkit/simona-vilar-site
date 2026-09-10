@@ -36,6 +36,17 @@ const personJsonLd = {
   jobTitle: "Писательница",
 };
 
+// Helps search engines resolve the site's name (distinct from the Person
+// schema above, which describes the author). Only verified facts: no
+// SearchAction or other unverified capability is claimed.
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Симона Вилар",
+  alternateName: "Simona Vilar",
+  url: "https://simonavilar.com/",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -47,6 +58,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
         {children}
       </body>
