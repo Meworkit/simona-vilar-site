@@ -145,12 +145,12 @@ export default async function BookPage({
             </p>
           )}
 
-          <p className="bookCta">
-            {bc.ctaText}{" "}
-            <a href="#newsletter" className="bookCtaLink">
+          <div className="bookCta">
+            <p className="bookCtaText">{bc.ctaText}</p>
+            <a href="#newsletter" className="bookCtaButton">
               {bc.ctaButton}
             </a>
-          </p>
+          </div>
 
           <p className="bookDesc">{book.description[lang]}</p>
 

@@ -43,6 +43,8 @@ export function Header({
     `/${lang}/news`,
     `/${lang}/#contact`,
   ];
+  const menuLabel = "Меню";
+  const closeLabel = lang === "uk" ? "Закрити меню" : "Закрыть меню";
   return (
     <header>
       <div className="shell head">
@@ -50,7 +52,11 @@ export function Header({
           <b>{lang === "uk" ? "Сімона Вілар" : "Симона Вилар"}</b>
           <small>{c.eyebrow}</small>
         </a>
-        <nav>
+        <input type="checkbox" id="navToggle" className="navToggle" aria-label={menuLabel} />
+        <nav id="mainNav" aria-label={menuLabel}>
+          <label htmlFor="navToggle" className="navClose" aria-label={closeLabel}>
+            ×
+          </label>
           {c.nav.map((n, i) => (
             <a key={n} href={navHrefs[i]}>
               {n}
@@ -75,6 +81,11 @@ export function Header({
             RU
           </a>
         </div>
+        <label htmlFor="navToggle" className="hamburger" aria-label={menuLabel} aria-controls="mainNav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
       </div>
     </header>
   );
