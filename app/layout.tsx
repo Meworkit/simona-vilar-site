@@ -11,9 +11,14 @@ const ogImage = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://simonavilar.com"),
   icons: {
-    icon: [{ url: "/favicon.png", type: "image/png", sizes: "512x512" }],
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-48.png", type: "image/png", sizes: "48x48" },
+      { url: "/favicon-192.png", type: "image/png", sizes: "192x192" },
+      { url: "/favicon-512.png", type: "image/png", sizes: "512x512" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [{ url: "/favicon-180.png", type: "image/png", sizes: "180x180" }],
   },
   openGraph: {
     images: [ogImage],
@@ -54,6 +59,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
+      <head>
+        {/* Speeds up the Google Fonts @import in globals.css (a
+            render-blocking request) without changing the font stack or
+            appearance — just opens the connection earlier. */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+      </head>
       <body>
         <script
           type="application/ld+json"
