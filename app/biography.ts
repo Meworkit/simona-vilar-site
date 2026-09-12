@@ -35,4 +35,21 @@ export const biography: Record<Lang, { title: string; read: string; back: string
       "Для Симоны Вилар писательство — это не просто профессия, а истинное призвание. Она всегда чувствовала, что судьба предназначила ей писать и создавать удивительные миры для своих читателей. Её романы не только приносят удовольствие, но и зажигают в сердцах читателей огонь страсти к истории и книгам.",
     ],
   },
+  en: {
+    title: "Biography",
+    read: "Read full biography",
+    back: "Back to home",
+    paragraphs: [
+      "Simona Vilar and Natalia Obraztsova are literary pen names of the well-known Ukrainian writer Natalia Gavrilenko.",
+      "Natalia has written 29 historical romance novels.",
+      "In 2011 she topped the list of Ukraine's ten most successful writers, and in 2012 she received the literary award \"Golden Writers of Ukraine.\"",
+      "Simona Vilar was born in Kharkiv, in eastern Ukraine. From childhood she loved reading and dreamed of becoming a writer. But her creative path was not an easy one.",
+      "At the start of her career, Simona Vilar tested her first stories on her husband. She would tell him her stories, and his reaction and support inspired her. Even so, she hesitated and doubted for a long time before deciding to approach a publisher. Her first editors were willing to take a chance on someone off the street, and they never regretted it. When they read her first book, they were impressed and quickly recommended her work to a major publishing house.",
+      "But in the late 1990s two tragic events occurred: Natalia's husband died, leaving her with a three-year-old daughter, and at the same time her first publishing contract fell through.",
+      "The following years were extremely difficult. To support herself and her daughter, the once-successful author was ready to do anything: she renovated apartments, worked at a kiosk, and even worked around the clock as a caretaker in a student dormitory. There was no time left for writing. It seemed that her early success had simply been luck, and that it would not come again.",
+      "Just when it seemed that no one believed in her talent, a publishing house in Kharkiv gave her a chance. A little-known publisher that mainly produced accounting literature decided to print her books. That year, 2000, Simona bought her first computer and continued on her creative path. It was a turning point in her life, the moment she realized she was capable of making her dream a reality.",
+      "Creative work is always exhausting, and Simona Vilar tries to recover from it by doing what she loves and what brings her joy. She reads books, watches films, spends time with friends, and listens to music. But travel matters most to her. Simona loves cycling, skiing, and hiking in the mountains, and travel has become part of her creative process. She tries to visit the places she later writes about in her novels, so as to better absorb their atmosphere and create living, realistic worlds.",
+      "For Simona Vilar, writing is not simply a profession but a true calling. She has always felt that fate meant for her to write and to create wondrous worlds for her readers. Her novels not only bring pleasure but also kindle in readers' hearts a passion for history and books.",
+    ],
+  },
 };

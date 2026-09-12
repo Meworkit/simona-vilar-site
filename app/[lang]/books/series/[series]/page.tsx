@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { copy, type Lang } from "../../../../content";
 import { Footer, Header } from "../../../../components";
-import { seriesList, getSeries, booksInSeries, booksCopy } from "../../../../books";
+import { seriesList, getSeries, booksInSeries, booksCopy, bookTitle } from "../../../../books";
 import { Breadcrumb, BreadcrumbJsonLd } from "../../../../BookComponents";
 
 export const dynamicParams = false;
@@ -10,6 +10,7 @@ export function generateStaticParams() {
   return seriesList.flatMap((series) => [
     { lang: "uk", series: series.slug },
     { lang: "ru", series: series.slug },
+    { lang: "en", series: series.slug },
   ]);
 }
 
@@ -27,7 +28,9 @@ export async function generateMetadata({
   const title =
     l === "uk"
       ? `Серія «${series.title.uk}» — Сімона Вілар`
-      : `Серия «${series.title.ru}» — Симона Вилар`;
+      : l === "en"
+        ? `${series.title.en} Series — Simona Vilar`
+        : `Серия «${series.title.ru}» — Симона Вилар`;
   const url = `https://simonavilar.com/${lang}/books/series/${seriesSlug}`;
   const ogImage = {
     url: "https://simonavilar.com/og-image.jpg",
@@ -43,6 +46,7 @@ export async function generateMetadata({
       languages: {
         uk: `https://simonavilar.com/uk/books/series/${seriesSlug}`,
         ru: `https://simonavilar.com/ru/books/series/${seriesSlug}`,
+        en: `https://simonavilar.com/en/books/series/${seriesSlug}`,
         "x-default": `https://simonavilar.com/ru/books/series/${seriesSlug}`,
       },
     },
@@ -50,7 +54,7 @@ export async function generateMetadata({
       title,
       description: series.description[l],
       siteName: bc.authorName,
-      locale: l === "uk" ? "uk_UA" : "ru_RU",
+      locale: l === "uk" ? "uk_UA" : l === "en" ? "en_US" : "ru_RU",
       type: "website",
       url,
       images: [ogImage],
@@ -79,6 +83,7 @@ export default async function SeriesPage({
   const altPaths = {
     ru: `/ru/books/series/${seriesSlug}`,
     uk: `/uk/books/series/${seriesSlug}`,
+    en: `/en/books/series/${seriesSlug}`,
   };
   const breadcrumbItems = [
     { label: bc.breadcrumbRoot, href: `/${lang}/books` },
@@ -98,7 +103,13 @@ export default async function SeriesPage({
         <Breadcrumb items={breadcrumbItems} />
         <header className="privacyHeading">
           <h1>
-            {lang === "uk" ? "Серія" : "Серия"} «{series.title[lang]}»
+            {lang === "en" ? (
+              <>{series.title.en} Series</>
+            ) : (
+              <>
+                {lang === "uk" ? "Серія" : "Серия"} «{series.title[lang]}»
+              </>
+            )}
           </h1>
         </header>
         <article className="privacyBody">
@@ -108,7 +119,7 @@ export default async function SeriesPage({
             <ul className="bookList">
               {books.map((book) => (
                 <li key={book.slug}>
-                  <a href={`/${lang}/books/${book.slug}`}>{book.title}</a>
+                  <a href={`/${lang}/books/${book.slug}`}>{bookTitle(book, lang)}</a>
                 </li>
               ))}
             </ul>

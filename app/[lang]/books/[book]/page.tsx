@@ -9,6 +9,7 @@ import {
   seriesForBook,
   booksInSeries,
   booksCopy,
+  bookTitle,
 } from "../../../books";
 import { Breadcrumb, BreadcrumbJsonLd, BookJsonLd } from "../../../BookComponents";
 
@@ -17,6 +18,7 @@ export function generateStaticParams() {
   return bookList.flatMap((book) => [
     { lang: "uk", book: book.slug },
     { lang: "ru", book: book.slug },
+    { lang: "en", book: book.slug },
   ]);
 }
 
@@ -25,6 +27,11 @@ function metaDescription(lang: Lang, title: string, seriesTitle?: string): strin
     return seriesTitle
       ? `«${title}» — історичний роман Сімони Вілар із циклу «${seriesTitle}». Про книжку та інші твори авторки на офіційному сайті.`
       : `«${title}» — історичний роман Сімони Вілар. Про книжку та інші твори авторки на офіційному сайті.`;
+  }
+  if (lang === "en") {
+    return seriesTitle
+      ? `${title} — a historical novel by Simona Vilar from the ${seriesTitle} series. About the book and the author's other works on the official website.`
+      : `${title} — a historical novel by Simona Vilar. About the book and the author's other works on the official website.`;
   }
   return seriesTitle
     ? `«${title}» — исторический роман Симоны Вилар из цикла «${seriesTitle}». О книге и других произведениях автора на официальном сайте.`
@@ -43,11 +50,14 @@ export async function generateMetadata({
   const l = lang as Lang;
   const bc = booksCopy[l];
   const series = seriesForBook(book);
+  const displayTitle = bookTitle(book, l);
   const title =
     l === "uk"
-      ? `${book.title} — Сімона Вілар | Офіційний сайт`
-      : `${book.title} — Симона Вилар | Официальный сайт`;
-  const description = metaDescription(l, book.title, series?.title[l]);
+      ? `${displayTitle} — Сімона Вілар | Офіційний сайт`
+      : l === "en"
+        ? `${displayTitle} — Simona Vilar | Official Website`
+        : `${displayTitle} — Симона Вилар | Официальный сайт`;
+  const description = metaDescription(l, displayTitle, series?.title[l]);
   const url = `https://simonavilar.com/${lang}/books/${bookSlug}`;
   const ogImage = {
     url: "https://simonavilar.com/og-image.jpg",
@@ -63,6 +73,7 @@ export async function generateMetadata({
       languages: {
         uk: `https://simonavilar.com/uk/books/${bookSlug}`,
         ru: `https://simonavilar.com/ru/books/${bookSlug}`,
+        en: `https://simonavilar.com/en/books/${bookSlug}`,
         "x-default": `https://simonavilar.com/ru/books/${bookSlug}`,
       },
     },
@@ -70,7 +81,7 @@ export async function generateMetadata({
       title,
       description,
       siteName: bc.authorName,
-      locale: l === "uk" ? "uk_UA" : "ru_RU",
+      locale: l === "uk" ? "uk_UA" : l === "en" ? "en_US" : "ru_RU",
       type: "book",
       url,
       images: [ogImage],
@@ -102,13 +113,15 @@ export default async function BookPage({
   const altPaths = {
     ru: `/ru/books/${bookSlug}`,
     uk: `/uk/books/${bookSlug}`,
+    en: `/en/books/${bookSlug}`,
   };
+  const displayTitle = bookTitle(book, lang);
   const breadcrumbItems = [
     { label: bc.breadcrumbRoot, href: `/${lang}/books` },
     ...(series
       ? [{ label: series.title[lang], href: `/${lang}/books/series/${series.slug}` }]
       : []),
-    { label: book.title, href: `/${lang}/books/${bookSlug}` },
+    { label: displayTitle, href: `/${lang}/books/${bookSlug}` },
   ];
   const authorUrl = `https://simonavilar.com/${lang}`;
 
@@ -122,7 +135,7 @@ export default async function BookPage({
         }))}
       />
       <BookJsonLd
-        name={book.title}
+        name={displayTitle}
         authorName={bc.authorName}
         authorUrl={authorUrl}
         seriesName={series?.title[lang]}
@@ -130,7 +143,12 @@ export default async function BookPage({
       <main className="privacyPage shell">
         <Breadcrumb items={breadcrumbItems} />
         <header className="privacyHeading">
-          <h1>{book.title}</h1>
+          <h1>{displayTitle}</h1>
+          {lang === "en" && (
+            <p className="bookOriginalTitle">
+              {bc.originalTitleLabel}: «{book.title}»
+            </p>
+          )}
         </header>
         <article className="privacyBody">
           <p className="bookMeta">
@@ -160,7 +178,7 @@ export default async function BookPage({
               <ul className="bookList">
                 {otherBooks.map((b) => (
                   <li key={b.slug}>
-                    <a href={`/${lang}/books/${b.slug}`}>{b.title}</a>
+                    <a href={`/${lang}/books/${b.slug}`}>{bookTitle(b, lang)}</a>
                   </li>
                 ))}
               </ul>

@@ -36,6 +36,22 @@ const privacy = {
       { title: "8. Зміни політики", paragraphs: ["Ця Політика може оновлюватися, якщо зміниться спосіб роботи сайту, розсилки або використовуваних сервісів.", "Актуальна версія завжди публікується на simonavilar.com."] },
     ],
   },
+  en: {
+    title: "Privacy Policy",
+    updated: "Last updated: September 8, 2026",
+    intro: "This Privacy Policy explains how the personal data of users who subscribe to Simona Vilar's newsletter on simonavilar.com is processed.",
+    back: "Back to home",
+    sections: [
+      { title: "1. Who processes the data", paragraphs: ["The party responsible for processing personal data is:", "Natalia Gavrilenko, writing under the literary pen name Simona Vilar", "For questions about privacy and the processing of personal data, please contact:", "EMAIL"] },
+      { title: "2. What data we collect", paragraphs: ["When you subscribe to the newsletter, we may process:"], list: ["your email address;", "the site language you selected — Russian, Ukrainian, or English;", "your subscription and subscription-confirmation status;", "information about unsubscribing from the newsletter;", "technical data the newsletter service needs to operate and keep the subscription secure."], after: ["We do not request a name, address, payment details, or special categories of personal data through the subscription form."] },
+      { title: "3. What the data is used for", paragraphs: ["Your email address is used solely to send:"], list: ["Simona Vilar's news;", "information about new publications;", "news about the author's work;", "important official announcements."], after: ["We do not use the subscription for third-party mailings, and we do not sell subscriber data."] },
+      { title: "4. Legal basis for processing", paragraphs: ["The legal basis for processing your email address is your consent.", "Subscribing is voluntary. If subscription confirmation is used, you may also receive an email asking you to confirm your email address.", "You may withdraw your consent at any time by using the \"Unsubscribe\" link in any email, or by writing to EMAIL.", "Withdrawing consent does not affect the lawfulness of processing carried out before the withdrawal."] },
+      { title: "5. Brevo newsletter service", paragraphs: ["The Brevo service is used to manage newsletter subscriptions and send emails.", "The email address you provide in the subscription form on the website is processed through Brevo as a technical newsletter service provider, acting on behalf of the newsletter's owner.", "You can unsubscribe from the newsletter at any time using the link included in every email.", "Because Brevo and some of its service providers may be located outside your country of residence, personal data may be processed abroad."] },
+      { title: "6. Retention period", paragraphs: ["Data is retained for as long as the user remains subscribed to the newsletter.", "After unsubscribing, a minimal amount of information may be retained as needed to record the fact of unsubscribing and to prevent further emails from being sent.", "Users may also request that their data be deleted."] },
+      { title: "7. Your rights", paragraphs: ["Depending on the applicable law, users may have the right to:"], list: ["find out what data about them is being processed;", "receive a copy of their data;", "correct inaccurate data;", "request deletion of their data;", "restrict processing;", "withdraw consent;", "receive their data in a portable format, where applicable;", "lodge a complaint with the competent personal-data protection authority."], after: ["To exercise these rights, please write to:", "EMAIL"] },
+      { title: "8. Changes to this policy", paragraphs: ["This Policy may be updated if the way the website, the newsletter, or the services used changes.", "The current version is always published at simonavilar.com."] },
+    ],
+  },
 } as const;
 
 function Paragraph({ children }: { children: string }) {
@@ -45,8 +61,8 @@ function Paragraph({ children }: { children: string }) {
 }
 
 export const dynamicParams = false;
-export function generateStaticParams() { return [{ lang: "uk" }, { lang: "ru" }]; }
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> { const { lang } = await params; if (!(lang in privacy)) return {}; const p = privacy[lang as Lang]; const brand = lang === "uk" ? "Сімона Вілар" : "Симона Вилар"; const title = `${p.title} — ${brand}`; const url = `https://simonavilar.com/${lang}/privacy`; const ogImage = { url: "https://simonavilar.com/og-image.jpg", width: 1200, height: 630, alt: "Симона Вилар — официальный сайт" }; return { title, description: p.intro, alternates: { canonical: url, languages: { uk: "https://simonavilar.com/uk/privacy", ru: "https://simonavilar.com/ru/privacy", "x-default": "https://simonavilar.com/ru/privacy" } }, openGraph: { title, description: p.intro, siteName: brand, locale: lang === "uk" ? "uk_UA" : "ru_RU", type: "website", url, images: [ogImage] }, twitter: { card: "summary_large_image", title, description: p.intro, images: [ogImage.url] } }; }
+export function generateStaticParams() { return [{ lang: "uk" }, { lang: "ru" }, { lang: "en" }]; }
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> { const { lang } = await params; if (!(lang in privacy)) return {}; const p = privacy[lang as Lang]; const brand = lang === "uk" ? "Сімона Вілар" : lang === "en" ? "Simona Vilar" : "Симона Вилар"; const title = `${p.title} — ${brand}`; const url = `https://simonavilar.com/${lang}/privacy`; const ogImage = { url: "https://simonavilar.com/og-image.jpg", width: 1200, height: 630, alt: "Симона Вилар — официальный сайт" }; return { title, description: p.intro, alternates: { canonical: url, languages: { uk: "https://simonavilar.com/uk/privacy", ru: "https://simonavilar.com/ru/privacy", en: "https://simonavilar.com/en/privacy", "x-default": "https://simonavilar.com/ru/privacy" } }, openGraph: { title, description: p.intro, siteName: brand, locale: lang === "uk" ? "uk_UA" : lang === "en" ? "en_US" : "ru_RU", type: "website", url, images: [ogImage] }, twitter: { card: "summary_large_image", title, description: p.intro, images: [ogImage.url] } }; }
 
 export default async function PrivacyPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang: raw } = await params;

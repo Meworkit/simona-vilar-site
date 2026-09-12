@@ -6,7 +6,7 @@ import { Newsletter } from "../Newsletter";
 import { Footer, Header, Statement } from "../components";
 export const dynamicParams = false;
 export function generateStaticParams() {
-  return [{ lang: "uk" }, { lang: "ru" }];
+  return [{ lang: "uk" }, { lang: "ru" }, { lang: "en" }];
 }
 export async function generateMetadata({
   params,
@@ -17,7 +17,7 @@ export async function generateMetadata({
   if (!(lang in copy)) return {};
   const c = copy[lang as Lang],
     url = `https://simonavilar.com/${lang}`,
-    brand = lang === "uk" ? "Сімона Вілар" : "Симона Вилар";
+    brand = lang === "uk" ? "Сімона Вілар" : lang === "en" ? "Simona Vilar" : "Симона Вилар";
   const ogImage = {
     url: "https://simonavilar.com/og-image.jpg",
     width: 1200,
@@ -32,6 +32,7 @@ export async function generateMetadata({
       languages: {
         uk: "https://simonavilar.com/uk",
         ru: "https://simonavilar.com/ru",
+        en: "https://simonavilar.com/en",
         "x-default": "https://simonavilar.com/ru",
       },
     },
@@ -39,7 +40,7 @@ export async function generateMetadata({
       title: c.title,
       description: c.description,
       siteName: brand,
-      locale: lang === "uk" ? "uk_UA" : "ru_RU",
+      locale: lang === "uk" ? "uk_UA" : lang === "en" ? "en_US" : "ru_RU",
       type: "website",
       url,
       images: [ogImage],
@@ -92,7 +93,7 @@ export default async function Page({
             </a>
             <span />
             <a className="allNewsLink" href={`/${lang}/news`}>
-              {lang === "uk" ? "Усі новини" : "Все новости"} →
+              {lang === "uk" ? "Усі новини" : lang === "en" ? "All news" : "Все новости"} →
             </a>
           </div>
           <a className="card" href={`/${lang}/news/official-statement`}>

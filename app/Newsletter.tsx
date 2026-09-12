@@ -3,6 +3,7 @@ import type { Lang } from "./content";
 const text = {
   uk: { title: "Отримувати новини про авторку та наступні публікації", subtitle: "Нові публікації, новини та важливі оголошення авторки.", placeholder: "Ваш email", button: "Підписатися", consent: "Підписуючись, ви погоджуєтеся отримувати новини Симони Вілар електронною поштою. Відписатися можна в будь-який момент.", privacy: "Політика конфіденційності" },
   ru: { title: "Получать новости об авторе и следующих публикациях", subtitle: "Новые публикации, новости и важные объявления автора.", placeholder: "Ваш email", button: "Подписаться", consent: "Подписываясь, вы соглашаетесь получать новости Симоны Вилар по электронной почте. Отписаться можно в любое время.", privacy: "Политика конфиденциальности" },
+  en: { title: "Get news about the author and upcoming publications", subtitle: "New publications, news, and important announcements from the author.", placeholder: "Your email", button: "Subscribe", consent: "By subscribing, you agree to receive Simona Vilar's news by email. You can unsubscribe at any time.", privacy: "Privacy Policy" },
 } as const;
 
 // Brevo signup form. Both /ru and /uk submit here — one shared Russian-flow

@@ -52,9 +52,10 @@ export function Header({
     `/${lang}/news`,
     `/${lang}/#contact`,
   ];
-  const menuLabel = "Меню";
-  const closeLabel = lang === "uk" ? "Закрити меню" : "Закрыть меню";
-  const brandName = lang === "uk" ? "Сімона Вілар" : "Симона Вилар";
+  const menuLabel = lang === "en" ? "Menu" : "Меню";
+  const closeLabel =
+    lang === "uk" ? "Закрити меню" : lang === "en" ? "Close menu" : "Закрыть меню";
+  const brandName = lang === "uk" ? "Сімона Вілар" : lang === "en" ? "Simona Vilar" : "Симона Вилар";
   return (
     <header>
       <div className="shell head">
@@ -90,6 +91,13 @@ export function Header({
           >
             RU
           </a>
+          ·
+          <a
+            aria-current={lang === "en" ? "page" : undefined}
+            href={altPaths ? altPaths.en : localizedPath("en", page, detail)}
+          >
+            EN
+          </a>
         </div>
         <label htmlFor="navToggle" className="hamburger" aria-label={menuLabel} aria-controls="mainNav">
           <span></span>
@@ -113,7 +121,9 @@ export function Statement({
   const emphasized =
     lang === "uk"
       ? "не співпрацюю з видавництвом The Mole Publishing House"
-      : "не сотрудничаю с издательством The Mole Publishing House";
+      : lang === "en"
+        ? "no longer cooperating with The Mole Publishing House"
+        : "не сотрудничаю с издательством The Mole Publishing House";
   const paras = full ? c.articleParas : c.paras;
   const offer = full ? c.articleOffer : c.offer;
   return (
@@ -176,11 +186,12 @@ export function Footer({
   detail?: boolean;
   altPaths?: Record<Lang, string>;
 }) {
+  const brandName = lang === "uk" ? "Сімона Вілар" : lang === "en" ? "Simona Vilar" : "Симона Вилар";
   return (
     <footer>
       <div className="shell foot">
         <div>
-          <b>Симона Вилар</b>
+          <b>{brandName}</b>
           <a href={`mailto:${email}`}>{email}</a>
         </div>
         <span>© 2026 Simona Vilar</span>
@@ -188,6 +199,8 @@ export function Footer({
           <a aria-current={lang === "uk" ? "page" : undefined} href={altPaths ? altPaths.uk : localizedPath("uk", page, detail)}>UA</a>
           <span aria-hidden="true">·</span>
           <a aria-current={lang === "ru" ? "page" : undefined} href={altPaths ? altPaths.ru : localizedPath("ru", page, detail)}>RU</a>
+          <span aria-hidden="true">·</span>
+          <a aria-current={lang === "en" ? "page" : undefined} href={altPaths ? altPaths.en : localizedPath("en", page, detail)}>EN</a>
         </div>
       </div>
     </footer>

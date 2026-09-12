@@ -5,7 +5,7 @@ import { Footer, Header, SubscriptionStatus } from "../../components";
 
 export const dynamicParams = false;
 export function generateStaticParams() {
-  return [{ lang: "uk" }, { lang: "ru" }];
+  return [{ lang: "uk" }, { lang: "ru" }, { lang: "en" }];
 }
 
 export async function generateMetadata({
@@ -16,8 +16,9 @@ export async function generateMetadata({
   const { lang } = await params;
   if (!(lang in copy)) return {};
   const c = copy[lang as Lang];
+  const brand = lang === "en" ? "Simona Vilar" : "Симона Вилар";
   return {
-    title: `${c.subscriptionPending.title} — Симона Вилар`,
+    title: `${c.subscriptionPending.title} — ${brand}`,
     robots: { index: false, follow: false },
   };
 }

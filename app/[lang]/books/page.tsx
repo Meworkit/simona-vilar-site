@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { copy, type Lang } from "../../content";
 import { Footer, Header } from "../../components";
-import { seriesList, bookList, booksInSeries, booksCopy } from "../../books";
+import { seriesList, bookList, booksInSeries, booksCopy, bookTitle } from "../../books";
 
 export const dynamicParams = false;
 export function generateStaticParams() {
-  return [{ lang: "uk" }, { lang: "ru" }];
+  return [{ lang: "uk" }, { lang: "ru" }, { lang: "en" }];
 }
 
 export async function generateMetadata({
@@ -33,6 +33,7 @@ export async function generateMetadata({
       languages: {
         uk: "https://simonavilar.com/uk/books",
         ru: "https://simonavilar.com/ru/books",
+        en: "https://simonavilar.com/en/books",
         "x-default": "https://simonavilar.com/ru/books",
       },
     },
@@ -40,7 +41,7 @@ export async function generateMetadata({
       title: bc.catalogTitle,
       description: bc.catalogIntro,
       siteName: bc.authorName,
-      locale: l === "uk" ? "uk_UA" : "ru_RU",
+      locale: l === "uk" ? "uk_UA" : l === "en" ? "en_US" : "ru_RU",
       type: "website",
       url,
       images: [ogImage],
@@ -53,8 +54,6 @@ export async function generateMetadata({
     },
   };
 }
-
-const standaloneHeading = { ru: "Отдельные романы", uk: "Окремі романи" };
 
 export default async function BooksPage({
   params,
@@ -88,7 +87,7 @@ export default async function BooksPage({
               <ul className="bookList">
                 {booksInSeries(series).map((book) => (
                   <li key={book.slug}>
-                    <a href={`/${lang}/books/${book.slug}`}>{book.title}</a>
+                    <a href={`/${lang}/books/${book.slug}`}>{bookTitle(book, lang)}</a>
                   </li>
                 ))}
               </ul>
@@ -96,11 +95,11 @@ export default async function BooksPage({
           ))}
 
           <section className="seriesBlock">
-            <h2>{standaloneHeading[lang]}</h2>
+            <h2>{bc.standaloneHeading}</h2>
             <ul className="bookList">
               {standalone.map((book) => (
                 <li key={book.slug}>
-                  <a href={`/${lang}/books/${book.slug}`}>{book.title}</a>
+                  <a href={`/${lang}/books/${book.slug}`}>{bookTitle(book, lang)}</a>
                 </li>
               ))}
             </ul>

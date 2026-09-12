@@ -3,590 +3,1010 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://simonavilar.com/ru</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/biography</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/biography"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/biography"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/biography"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/biography"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/biography</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/biography"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/biography"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/biography"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/biography"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/biography</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/biography"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/biography"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/biography"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/biography"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/news</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/news"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/news"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/news"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/news"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/news</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/news"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/news"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/news"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/news"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/news</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/news"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/news"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/news"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/news"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/news/official-statement</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/news/official-statement"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/news/official-statement"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/news/official-statement"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/news/official-statement"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/news/official-statement</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/news/official-statement"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/news/official-statement"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/news/official-statement"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/news/official-statement"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/news/official-statement</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/news/official-statement"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/news/official-statement"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/news/official-statement"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/news/official-statement"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/privacy</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/privacy"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/privacy"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/privacy"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/privacy</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/privacy"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/privacy"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/privacy</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/privacy"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/privacy"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/privacy"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/series/anna-nevill</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/series/anna-nevill"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/series/anna-nevill"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/series/anna-nevill"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/series/anna-nevill"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/series/anna-nevill</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/series/anna-nevill"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/series/anna-nevill"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/series/anna-nevill"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/series/anna-nevill"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/series/anna-nevill</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/series/anna-nevill"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/series/anna-nevill"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/series/anna-nevill"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/series/anna-nevill"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/series/normandskaya-legenda</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/series/normandskaya-legenda"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/series/normandskaya-legenda"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/series/normandskaya-legenda"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/series/normandskaya-legenda"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/series/normandskaya-legenda</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/series/normandskaya-legenda"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/series/normandskaya-legenda"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/series/normandskaya-legenda"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/series/normandskaya-legenda"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/series/normandskaya-legenda</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/series/normandskaya-legenda"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/series/normandskaya-legenda"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/series/normandskaya-legenda"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/series/normandskaya-legenda"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/series/vedma</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/series/vedma"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/series/vedma"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/series/vedma"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/series/vedma"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/series/vedma</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/series/vedma"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/series/vedma"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/series/vedma"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/series/vedma"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/series/vedma</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/series/vedma"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/series/vedma"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/series/vedma"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/series/vedma"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/series/svetorada</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/series/svetorada"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/series/svetorada"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/series/svetorada"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/series/svetorada"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/series/svetorada</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/series/svetorada"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/series/svetorada"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/series/svetorada"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/series/svetorada"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/series/svetorada</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/series/svetorada"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/series/svetorada"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/series/svetorada"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/series/svetorada"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/series/dalekiy-svet</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/series/dalekiy-svet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/series/dalekiy-svet"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/series/dalekiy-svet"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/series/dalekiy-svet"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/series/dalekiy-svet</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/series/dalekiy-svet"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/series/dalekiy-svet"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/series/dalekiy-svet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/series/dalekiy-svet"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/series/dalekiy-svet</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/series/dalekiy-svet"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/series/dalekiy-svet"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/series/dalekiy-svet"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/series/dalekiy-svet"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/series/ten-mecha</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/series/ten-mecha"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/series/ten-mecha"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/series/ten-mecha"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/series/ten-mecha"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/series/ten-mecha</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/series/ten-mecha"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/series/ten-mecha"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/series/ten-mecha"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/series/ten-mecha"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/series/ten-mecha</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/series/ten-mecha"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/series/ten-mecha"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/series/ten-mecha"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/series/ten-mecha"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/series/maysgreyv</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/series/maysgreyv"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/series/maysgreyv"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/series/maysgreyv"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/series/maysgreyv"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/series/maysgreyv</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/series/maysgreyv"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/series/maysgreyv"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/series/maysgreyv"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/series/maysgreyv"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/series/maysgreyv</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/series/maysgreyv"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/series/maysgreyv"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/series/maysgreyv"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/series/maysgreyv"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/obruchennaya-s-rozoy</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/obruchennaya-s-rozoy"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/obruchennaya-s-rozoy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/obruchennaya-s-rozoy"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/obruchennaya-s-rozoy"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/obruchennaya-s-rozoy</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/obruchennaya-s-rozoy"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/obruchennaya-s-rozoy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/obruchennaya-s-rozoy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/obruchennaya-s-rozoy"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/obruchennaya-s-rozoy</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/obruchennaya-s-rozoy"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/obruchennaya-s-rozoy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/obruchennaya-s-rozoy"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/obruchennaya-s-rozoy"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/delatel-koroley</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/delatel-koroley"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/delatel-koroley"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/delatel-koroley"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/delatel-koroley"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/delatel-koroley</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/delatel-koroley"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/delatel-koroley"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/delatel-koroley"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/delatel-koroley"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/delatel-koroley</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/delatel-koroley"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/delatel-koroley"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/delatel-koroley"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/delatel-koroley"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/zamok-na-skale</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/zamok-na-skale"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/zamok-na-skale"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/zamok-na-skale"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/zamok-na-skale"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/zamok-na-skale</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/zamok-na-skale"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/zamok-na-skale"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/zamok-na-skale"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/zamok-na-skale"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/zamok-na-skale</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/zamok-na-skale"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/zamok-na-skale"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/zamok-na-skale"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/zamok-na-skale"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/tyazhest-ventsa</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/tyazhest-ventsa"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/tyazhest-ventsa"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/tyazhest-ventsa"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/tyazhest-ventsa"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/tyazhest-ventsa</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/tyazhest-ventsa"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/tyazhest-ventsa"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/tyazhest-ventsa"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/tyazhest-ventsa"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/tyazhest-ventsa</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/tyazhest-ventsa"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/tyazhest-ventsa"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/tyazhest-ventsa"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/tyazhest-ventsa"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/veter-s-severa</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/veter-s-severa"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/veter-s-severa"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/veter-s-severa"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/veter-s-severa"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/veter-s-severa</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/veter-s-severa"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/veter-s-severa"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/veter-s-severa"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/veter-s-severa"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/veter-s-severa</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/veter-s-severa"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/veter-s-severa"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/veter-s-severa"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/veter-s-severa"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/printsessa-vikingov</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/printsessa-vikingov"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/printsessa-vikingov"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/printsessa-vikingov"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/printsessa-vikingov"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/printsessa-vikingov</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/printsessa-vikingov"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/printsessa-vikingov"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/printsessa-vikingov"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/printsessa-vikingov"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/printsessa-vikingov</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/printsessa-vikingov"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/printsessa-vikingov"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/printsessa-vikingov"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/printsessa-vikingov"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/ognennyy-omut</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/ognennyy-omut"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/ognennyy-omut"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/ognennyy-omut"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/ognennyy-omut"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/ognennyy-omut</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/ognennyy-omut"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/ognennyy-omut"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/ognennyy-omut"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/ognennyy-omut"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/ognennyy-omut</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/ognennyy-omut"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/ognennyy-omut"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/ognennyy-omut"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/ognennyy-omut"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/lesnaya-gertsoginya</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/lesnaya-gertsoginya"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/lesnaya-gertsoginya"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/lesnaya-gertsoginya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/lesnaya-gertsoginya"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/lesnaya-gertsoginya</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/lesnaya-gertsoginya"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/lesnaya-gertsoginya"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/lesnaya-gertsoginya"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/lesnaya-gertsoginya"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/lesnaya-gertsoginya</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/lesnaya-gertsoginya"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/lesnaya-gertsoginya"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/lesnaya-gertsoginya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/lesnaya-gertsoginya"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/vedma</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/vedma"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/vedma"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/vedma"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/vedma"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/vedma</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/vedma"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/vedma"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/vedma"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/vedma"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/vedma</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/vedma"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/vedma"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/vedma"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/vedma"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/vedma-i-knyaz</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/vedma-i-knyaz"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/vedma-i-knyaz"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/vedma-i-knyaz"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/vedma-i-knyaz"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/vedma-i-knyaz</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/vedma-i-knyaz"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/vedma-i-knyaz"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/vedma-i-knyaz"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/vedma-i-knyaz"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/vedma-i-knyaz</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/vedma-i-knyaz"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/vedma-i-knyaz"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/vedma-i-knyaz"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/vedma-i-knyaz"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/vedma-knyagini</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/vedma-knyagini"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/vedma-knyagini"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/vedma-knyagini"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/vedma-knyagini"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/vedma-knyagini</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/vedma-knyagini"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/vedma-knyagini"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/vedma-knyagini"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/vedma-knyagini"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/vedma-knyagini</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/vedma-knyagini"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/vedma-knyagini"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/vedma-knyagini"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/vedma-knyagini"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/vedma-v-tsargrade</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/vedma-v-tsargrade"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/vedma-v-tsargrade"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/vedma-v-tsargrade"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/vedma-v-tsargrade"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/vedma-v-tsargrade</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/vedma-v-tsargrade"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/vedma-v-tsargrade"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/vedma-v-tsargrade"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/vedma-v-tsargrade"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/vedma-v-tsargrade</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/vedma-v-tsargrade"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/vedma-v-tsargrade"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/vedma-v-tsargrade"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/vedma-v-tsargrade"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/vedma-i-tma</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/vedma-i-tma"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/vedma-i-tma"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/vedma-i-tma"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/vedma-i-tma"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/vedma-i-tma</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/vedma-i-tma"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/vedma-i-tma"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/vedma-i-tma"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/vedma-i-tma"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/vedma-i-tma</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/vedma-i-tma"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/vedma-i-tma"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/vedma-i-tma"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/vedma-i-tma"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/syn-vedmy</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/syn-vedmy"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/syn-vedmy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/syn-vedmy"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/syn-vedmy"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/syn-vedmy</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/syn-vedmy"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/syn-vedmy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/syn-vedmy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/syn-vedmy"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/syn-vedmy</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/syn-vedmy"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/syn-vedmy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/syn-vedmy"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/syn-vedmy"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/svetorada-zolotaya</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/svetorada-zolotaya"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/svetorada-zolotaya"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/svetorada-zolotaya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/svetorada-zolotaya"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/svetorada-zolotaya</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/svetorada-zolotaya"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/svetorada-zolotaya"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/svetorada-zolotaya"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/svetorada-zolotaya"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/svetorada-zolotaya</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/svetorada-zolotaya"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/svetorada-zolotaya"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/svetorada-zolotaya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/svetorada-zolotaya"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/svetorada-medovaya</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/svetorada-medovaya"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/svetorada-medovaya"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/svetorada-medovaya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/svetorada-medovaya"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/svetorada-medovaya</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/svetorada-medovaya"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/svetorada-medovaya"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/svetorada-medovaya"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/svetorada-medovaya"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/svetorada-medovaya</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/svetorada-medovaya"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/svetorada-medovaya"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/svetorada-medovaya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/svetorada-medovaya"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/svetorada-yantarnaya</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/svetorada-yantarnaya"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/svetorada-yantarnaya"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/svetorada-yantarnaya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/svetorada-yantarnaya"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/svetorada-yantarnaya</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/svetorada-yantarnaya"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/svetorada-yantarnaya"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/svetorada-yantarnaya"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/svetorada-yantarnaya"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/svetorada-yantarnaya</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/svetorada-yantarnaya"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/svetorada-yantarnaya"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/svetorada-yantarnaya"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/svetorada-yantarnaya"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/ledi-poslushnitsa</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/ledi-poslushnitsa"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/ledi-poslushnitsa"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/ledi-poslushnitsa"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/ledi-poslushnitsa"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/ledi-poslushnitsa</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/ledi-poslushnitsa"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/ledi-poslushnitsa"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/ledi-poslushnitsa"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/ledi-poslushnitsa"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/ledi-poslushnitsa</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/ledi-poslushnitsa"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/ledi-poslushnitsa"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/ledi-poslushnitsa"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/ledi-poslushnitsa"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/rytsar-sveta</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/rytsar-sveta"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/rytsar-sveta"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/rytsar-sveta"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/rytsar-sveta"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/rytsar-sveta</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/rytsar-sveta"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/rytsar-sveta"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/rytsar-sveta"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/rytsar-sveta"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/rytsar-sveta</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/rytsar-sveta"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/rytsar-sveta"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/rytsar-sveta"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/rytsar-sveta"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/lazarit</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/lazarit"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/lazarit"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/lazarit"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/lazarit"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/lazarit</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/lazarit"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/lazarit"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/lazarit"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/lazarit"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/lazarit</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/lazarit"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/lazarit"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/lazarit"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/lazarit"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/assasin</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/assasin"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/assasin"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/assasin"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/assasin"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/assasin</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/assasin"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/assasin"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/assasin"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/assasin"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/assasin</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/assasin"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/assasin"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/assasin"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/assasin"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/paladin</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/paladin"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/paladin"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/paladin"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/paladin"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/paladin</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/paladin"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/paladin"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/paladin"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/paladin"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/paladin</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/paladin"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/paladin"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/paladin"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/paladin"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/feya-s-ostrovov</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/feya-s-ostrovov"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/feya-s-ostrovov"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/feya-s-ostrovov"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/feya-s-ostrovov"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/feya-s-ostrovov</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/feya-s-ostrovov"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/feya-s-ostrovov"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/feya-s-ostrovov"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/feya-s-ostrovov"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/feya-s-ostrovov</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/feya-s-ostrovov"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/feya-s-ostrovov"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/feya-s-ostrovov"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/feya-s-ostrovov"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/lovushka-dlya-orla</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/lovushka-dlya-orla"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/lovushka-dlya-orla"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/lovushka-dlya-orla"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/lovushka-dlya-orla"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/lovushka-dlya-orla</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/lovushka-dlya-orla"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/lovushka-dlya-orla"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/lovushka-dlya-orla"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/lovushka-dlya-orla"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/lovushka-dlya-orla</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/lovushka-dlya-orla"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/lovushka-dlya-orla"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/lovushka-dlya-orla"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/lovushka-dlya-orla"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/poedinok-sopernits</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/poedinok-sopernits"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/poedinok-sopernits"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/poedinok-sopernits"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/poedinok-sopernits"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/poedinok-sopernits</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/poedinok-sopernits"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/poedinok-sopernits"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/poedinok-sopernits"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/poedinok-sopernits"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/poedinok-sopernits</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/poedinok-sopernits"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/poedinok-sopernits"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/poedinok-sopernits"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/poedinok-sopernits"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/zamok-tayn</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/zamok-tayn"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/zamok-tayn"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/zamok-tayn"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/zamok-tayn"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/zamok-tayn</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/zamok-tayn"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/zamok-tayn"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/zamok-tayn"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/zamok-tayn"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/zamok-tayn</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/zamok-tayn"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/zamok-tayn"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/zamok-tayn"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/zamok-tayn"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/koroleva-v-pridachu</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/koroleva-v-pridachu"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/koroleva-v-pridachu"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/koroleva-v-pridachu"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/koroleva-v-pridachu"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/koroleva-v-pridachu</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/koroleva-v-pridachu"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/koroleva-v-pridachu"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/koroleva-v-pridachu"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/koroleva-v-pridachu"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/koroleva-v-pridachu</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/koroleva-v-pridachu"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/koroleva-v-pridachu"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/koroleva-v-pridachu"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/koroleva-v-pridachu"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/chuzhak</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/chuzhak"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/chuzhak"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/chuzhak"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/chuzhak"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/chuzhak</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/chuzhak"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/chuzhak"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/chuzhak"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/chuzhak"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/chuzhak</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/chuzhak"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/chuzhak"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/chuzhak"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/chuzhak"/>
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/v-tot-den</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/v-tot-den"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/v-tot-den"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/v-tot-den"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/v-tot-den"/>
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/v-tot-den</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/v-tot-den"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/v-tot-den"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/v-tot-den"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/v-tot-den"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/books/v-tot-den</loc>
+    <lastmod>2026-09-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/v-tot-den"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/v-tot-den"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/v-tot-den"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/v-tot-den"/>
   </url>
 </urlset>

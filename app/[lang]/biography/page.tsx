@@ -6,17 +6,17 @@ import { Footer, Header } from "../../components";
 import { copy, type Lang } from "../../content";
 
 export const dynamicParams = false;
-export function generateStaticParams() { return [{ lang: "uk" }, { lang: "ru" }]; }
+export function generateStaticParams() { return [{ lang: "uk" }, { lang: "ru" }, { lang: "en" }]; }
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
   if (!(lang in biography)) return {};
   const l = lang as Lang;
-  const brand = l === "uk" ? "Сімона Вілар" : "Симона Вилар";
+  const brand = l === "uk" ? "Сімона Вілар" : l === "en" ? "Simona Vilar" : "Симона Вилар";
   const title = `${biography[l].title} — ${brand}`;
   const url = `https://simonavilar.com/${lang}/biography`;
   const ogImage = { url: "https://simonavilar.com/og-image.jpg", width: 1200, height: 630, alt: "Симона Вилар — официальный сайт" };
-  return { title, description: biography[l].paragraphs[0], alternates: { canonical: url, languages: { uk: "https://simonavilar.com/uk/biography", ru: "https://simonavilar.com/ru/biography", "x-default": "https://simonavilar.com/ru/biography" } }, openGraph: { title, description: biography[l].paragraphs[0], siteName: brand, locale: l === "uk" ? "uk_UA" : "ru_RU", type: "article", url, images: [ogImage] }, twitter: { card: "summary_large_image", title, description: biography[l].paragraphs[0], images: [ogImage.url] } };
+  return { title, description: biography[l].paragraphs[0], alternates: { canonical: url, languages: { uk: "https://simonavilar.com/uk/biography", ru: "https://simonavilar.com/ru/biography", en: "https://simonavilar.com/en/biography", "x-default": "https://simonavilar.com/ru/biography" } }, openGraph: { title, description: biography[l].paragraphs[0], siteName: brand, locale: l === "uk" ? "uk_UA" : l === "en" ? "en_US" : "ru_RU", type: "article", url, images: [ogImage] }, twitter: { card: "summary_large_image", title, description: biography[l].paragraphs[0], images: [ogImage.url] } };
 }
 
 export default async function BiographyPage({ params }: { params: Promise<{ lang: string }> }) {

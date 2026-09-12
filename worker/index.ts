@@ -57,7 +57,7 @@ const worker = {
     // so it can't statically render a per-language lang attribute for both
     // /ru and /uk. Correct it here at the edge instead of restructuring the
     // route tree: cheap, and doesn't touch the app's rendering pipeline.
-    const langMatch = url.pathname.match(/^\/(ru|uk)(\/|$)/);
+    const langMatch = url.pathname.match(/^\/(ru|uk|en)(\/|$)/);
     if (
       langMatch &&
       typeof HTMLRewriter !== "undefined" &&
