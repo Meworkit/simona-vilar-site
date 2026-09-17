@@ -41,7 +41,7 @@ export const copy = {
       "З питань, що стосуються творчості, прав на твори та видавничих пропозицій:",
     title: "Сімона Вілар — офіційний сайт письменниці",
     description:
-      "Офіційний сайт Сімони Вілар (Наталії Гавриленко), авторки історичних романів. Книжки, новини, біографія та офіційні контакти письменниці.",
+      "Офіційний сайт Сімони Вілар - авторки історичних романів. Книжки, біографія, новини, нові публікації та контакти.",
     subscriptionPending: {
       title: "Перевірте пошту",
       body: [
@@ -102,7 +102,7 @@ export const copy = {
       "По вопросам, связанным с творчеством, правами на произведения и издательскими предложениями:",
     title: "Симона Вилар — официальный сайт писательницы",
     description:
-      "Официальный сайт Симоны Вилар (Наталии Гавриленко), автора исторических романов. Книги, новости, биография и официальные контакты писательницы.",
+      "Официальный сайт Симоны Вилар - автора исторических романов. Книги, биография, новости, новые публикации и контакты.",
     subscriptionPending: {
       title: "Проверьте почту",
       body: [
@@ -163,7 +163,7 @@ export const copy = {
       "For questions regarding her work, rights to her books, and publishing proposals:",
     title: "Simona Vilar — Official Author Website",
     description:
-      "Official website of Simona Vilar (Natalia Gavrilenko), author of historical novels. Books, news, biography, and official contact details for the writer.",
+      "Official website of Simona Vilar - author of historical novels. Books, biography, news, new publications, and contacts.",
     subscriptionPending: {
       title: "Check your inbox",
       body: [

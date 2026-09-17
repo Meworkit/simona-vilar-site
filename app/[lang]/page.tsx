@@ -96,15 +96,17 @@ export default async function Page({
               {lang === "uk" ? "Усі новини" : lang === "en" ? "All news" : "Все новости"} →
             </a>
           </div>
-          <a className="card" href={`/${lang}/news/official-statement`}>
-            <time>08.09.2026</time>
-            <div>
-              <h3>{c.statement}</h3>
-                  <p>{c.articleParas.join(" ")}</p>
-              <strong>{c.signature}</strong>
-            </div>
-            <span>{c.read} →</span>
-          </a>
+          <div data-nosnippet="">
+            <a className="card" href={`/${lang}/news/official-statement`}>
+              <time>08.09.2026</time>
+              <div>
+                <h3>{c.statement}</h3>
+                <p>{c.articleParas.join(" ")}</p>
+                <strong>{c.signature}</strong>
+              </div>
+              <span>{c.read} →</span>
+            </a>
+          </div>
         </section>
         <Newsletter lang={lang} />
         <section id="contact" className="contact section shell">

@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Keep metadata in the initial <head> for crawlers and all other user agents.
+  htmlLimitedBots: /.*/,
 };
 
 export default nextConfig;
