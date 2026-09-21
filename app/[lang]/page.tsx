@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { copy, email, type Lang } from "../content";
 import { biography } from "../biography";
 import { Newsletter } from "../Newsletter";
-import { Footer, Header, Statement } from "../components";
+import { Footer, Header, Statement, WebPageJsonLd } from "../components";
 export const dynamicParams = false;
 export function generateStaticParams() {
   return [{ lang: "uk" }, { lang: "ru" }, { lang: "en" }];
@@ -19,10 +19,10 @@ export async function generateMetadata({
     url = `https://simonavilar.com/${lang}`,
     brand = lang === "uk" ? "Сімона Вілар" : lang === "en" ? "Simona Vilar" : "Симона Вилар";
   const ogImage = {
-    url: "https://simonavilar.com/og-image.jpg",
-    width: 1200,
-    height: 630,
-    alt: "Симона Вилар — официальный сайт",
+    url: "https://simonavilar.com/biography-photo.jpg",
+    width: 2000,
+    height: 1335,
+    alt: c.photo,
   };
   return {
     title: c.title,
@@ -65,6 +65,12 @@ export default async function Page({
   return (
     <>
       <Header lang={lang} isHome />
+      <WebPageJsonLd
+        url={`https://simonavilar.com/${lang}`}
+        imageUrl="https://simonavilar.com/biography-photo.jpg"
+        imageWidth={2000}
+        imageHeight={1335}
+      />
       <main id="top">
         <section id="statement" className="statementSection shell">
           <Statement lang={lang} />

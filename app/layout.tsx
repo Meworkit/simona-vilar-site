@@ -10,6 +10,15 @@ const ogImage = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://simonavilar.com"),
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+    },
+  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -39,6 +48,7 @@ const personJsonLd = {
   alternateName: "Наталия Гавриленко",
   url: "https://simonavilar.com",
   jobTitle: "Писательница",
+  image: "https://simonavilar.com/biography-photo.jpg",
 };
 
 // Helps search engines resolve the site's name (distinct from the Person

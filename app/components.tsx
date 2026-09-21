@@ -232,3 +232,33 @@ export function SubscriptionStatus({
     </main>
   );
 }
+
+export function WebPageJsonLd({
+  url,
+  imageUrl,
+  imageWidth,
+  imageHeight,
+}: {
+  url: string;
+  imageUrl: string;
+  imageWidth: number;
+  imageHeight: number;
+}) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    url,
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      url: imageUrl,
+      width: imageWidth,
+      height: imageHeight,
+    },
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
