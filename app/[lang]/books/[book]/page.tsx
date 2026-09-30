@@ -13,7 +13,7 @@ import {
 } from "../../../books";
 import { Breadcrumb, BreadcrumbJsonLd, BookJsonLd } from "../../../BookComponents";
 import { StoryPreview } from "../../../StoryPreview";
-import { storiesCopy, storiesForBook } from "../../../stories";
+import { storiesForBook } from "../../../stories";
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -190,9 +190,8 @@ export default async function BookPage({
 
           {relatedStories.length > 0 && (
             <section className="bookStories">
-              <h2>{storiesCopy[lang].relatedHeading}</h2>
               {relatedStories.map((story) => (
-                <StoryPreview key={story.id} story={story} lang={lang} compact />
+                <StoryPreview key={story.id} story={story} lang={lang} compact bookContext />
               ))}
             </section>
           )}

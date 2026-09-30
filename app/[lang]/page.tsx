@@ -77,37 +77,6 @@ export default async function Page({
         <section id="statement" className="statementSection shell">
           <Statement lang={lang} />
         </section>
-        <section id="about" className="about">
-          <Placeholder text={c.photo} />
-          <div className="aboutCopy">
-            <div className="titleRow">
-              <h2>{c.aboutTitle}</h2>
-              <span />
-            </div>
-                {c.about.map((p) => (
-                  <p className="aboutp" key={p}>
-                    {p}
-                  </p>
-                ))}
-                <a className="more bioLink" href={`/${lang}/biography`}>
-                  {biography[lang].read} →
-                </a>
-          </div>
-        </section>
-        <section className="homeStories section shell">
-          <div className="titleRow homeStoriesTitleRow">
-            <h2>{storiesCopy[lang].latestTitle}</h2>
-            <span />
-            <a className="allNewsLink" href={`/${lang}/stories`}>
-              {storiesCopy[lang].allStories} →
-            </a>
-          </div>
-          <div className="homeStoriesList">
-            {stories.slice(0, 3).map((story) => (
-              <StoryPreview key={story.id} story={story} lang={lang} compact />
-            ))}
-          </div>
-        </section>
         <section id="news" className="news section shell">
           <div className="titleRow newsTitleRow">
             <a href={`/${lang}/news`} aria-label={c.news}>
@@ -127,6 +96,37 @@ export default async function Page({
                 <strong>{c.signature}</strong>
               </div>
               <span>{c.read} →</span>
+            </a>
+          </div>
+        </section>
+        <section className="homeStories section shell">
+          <div className="titleRow homeStoriesTitleRow">
+            <h2>{storiesCopy[lang].latestTitle}</h2>
+            <span />
+            <a className="allNewsLink" href={`/${lang}/stories`}>
+              {storiesCopy[lang].allStories} →
+            </a>
+          </div>
+          <div className="homeStoriesList">
+            {stories.slice(0, 3).map((story) => (
+              <StoryPreview key={story.id} story={story} lang={lang} compact />
+            ))}
+          </div>
+        </section>
+        <section id="about" className="about">
+          <Placeholder text={c.photo} />
+          <div className="aboutCopy">
+            <div className="titleRow">
+              <h2>{c.aboutTitle}</h2>
+              <span />
+            </div>
+            {c.about.map((p) => (
+              <p className="aboutp" key={p}>
+                {p}
+              </p>
+            ))}
+            <a className="more bioLink" href={`/${lang}/biography`}>
+              {biography[lang].read} →
             </a>
           </div>
         </section>

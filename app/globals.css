@@ -91,10 +91,9 @@ footer{padding-top:12px;padding-bottom:12px}
 .storyPreviewCompact h3{font-size:34px}
 .storyPreviewCompact .storyPreviewText{font-size:18px}
 .bookStories{margin-top:44px;padding-top:32px;border-top:1px solid var(--border-soft,var(--line))}
-.bookStories>h2{margin:0 0 28px;font-size:25px}
 .bookStories .storyPreviewCompact{grid-template-columns:minmax(200px,32fr) minmax(0,68fr);gap:30px}
 .bookStories .storyPreviewCompact h3{font-size:27px}
-.bookStories .storyPreviewCompact .storyPreviewText{font-size:17px}
+.bookStories .storyPreviewCompact .storyPreviewText{margin-top:14px;font-size:17px}
 .storyPage{padding:35px 0 100px}
 .storyBreadcrumb{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:38px;color:var(--text-muted);font:500 13px Manrope,sans-serif;letter-spacing:.04em}
 .storyBreadcrumb a{color:var(--accent)}

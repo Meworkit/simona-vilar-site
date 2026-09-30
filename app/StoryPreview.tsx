@@ -7,10 +7,12 @@ export function StoryPreview({
   story,
   lang,
   compact = false,
+  bookContext = false,
 }: {
   story: StoryEntry;
   lang: Lang;
   compact?: boolean;
+  bookContext?: boolean;
 }) {
   const labels = storiesCopy[lang];
   const related = relatedBook(story, lang);
@@ -21,18 +23,18 @@ export function StoryPreview({
         <Image
           src={story.image}
           alt={story.imageAlt[lang]}
-          width={1367}
-          height={768}
+          width={story.imageWidth}
+          height={story.imageHeight}
           sizes={compact ? "(max-width: 850px) 100vw, 45vw" : "(max-width: 850px) 100vw, 540px"}
         />
       </a>
       <div className="storyPreviewCopy">
-        <p className="storyType">{storyTypeLabel(story, lang)}</p>
+        {!bookContext && <p className="storyType">{storyTypeLabel(story, lang)}</p>}
         <h3>
           <a href={`/${lang}/stories/${story.slug}`}>{story.title[lang]}</a>
         </h3>
         <p className="storyPreviewText">{story.preview[lang]}</p>
-        {related && (
+        {related && !bookContext && (
           <p className="storyBookReference">
             {labels.fromBook} «{related.title}»
           </p>

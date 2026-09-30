@@ -49,7 +49,14 @@ export async function generateMetadata({
       url,
       publishedTime: story.publishedAt,
       modifiedTime: story.modifiedAt,
-      images: [{ url: imageUrl, width: 1367, height: 768, alt: story.imageAlt[l] }],
+      images: [
+        {
+          url: imageUrl,
+          width: story.imageWidth,
+          height: story.imageHeight,
+          alt: story.imageAlt[l],
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
@@ -129,8 +136,8 @@ export default async function StoryPage({
             <Image
               src={story.image}
               alt={story.imageAlt[lang]}
-              width={1367}
-              height={768}
+              width={story.imageWidth}
+              height={story.imageHeight}
               sizes="(max-width: 850px) 100vw, 850px"
               priority
             />

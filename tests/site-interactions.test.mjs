@@ -40,6 +40,9 @@ const equivalents = [
     "/en/stories/feya-s-ostrovov-otryvok",
     "/ru/stories/feya-s-ostrovov-otryvok",
   ],
+  ["/ru/stories/vedma-otryvok", "/uk/stories/vedma-otryvok"],
+  ["/uk/stories/vedma-otryvok", "/ru/stories/vedma-otryvok"],
+  ["/en/stories/vedma-otryvok", "/ru/stories/vedma-otryvok"],
   ["/ru/privacy", "/uk/privacy"],
   ["/uk/privacy", "/ru/privacy"],
   ["/ru/news/official-statement", "/uk/news/official-statement"],
@@ -65,8 +68,10 @@ test("all internal links resolve and key interactive links are present", async (
     const privacy = await render(`/${lang}/privacy`);
     const stories = await render(`/${lang}/stories`);
     const story = await render(`/${lang}/stories/feya-s-ostrovov-otryvok`);
+    const witchStory = await render(`/${lang}/stories/vedma-otryvok`);
     const book = await render(`/${lang}/books/feya-s-ostrovov`);
-    const pages = [homepage, news, biography, privacy, stories, story, book];
+    const witchBook = await render(`/${lang}/books/vedma`);
+    const pages = [homepage, news, biography, privacy, stories, story, witchStory, book, witchBook];
 
     assert.match(homepage.html, new RegExp(`href="/${lang}/news/official-statement"`));
     assert.match(news.html, new RegExp(`href="/${lang}/news/official-statement"`));
@@ -76,6 +81,10 @@ test("all internal links resolve and key interactive links are present", async (
     assert.match(stories.html, new RegExp(`href="/${lang}/stories/feya-s-ostrovov-otryvok"`));
     assert.match(story.html, new RegExp(`href="/${lang}/books/feya-s-ostrovov"`));
     assert.match(book.html, new RegExp(`href="/${lang}/stories/feya-s-ostrovov-otryvok"`));
+    assert.match(homepage.html, new RegExp(`href="/${lang}/stories/vedma-otryvok"`));
+    assert.match(stories.html, new RegExp(`href="/${lang}/stories/vedma-otryvok"`));
+    assert.match(witchStory.html, new RegExp(`href="/${lang}/books/vedma"`));
+    assert.match(witchBook.html, new RegExp(`href="/${lang}/stories/vedma-otryvok"`));
     assert.match(biography.html, /class="back"/);
     assert.match(biography.html, new RegExp(`href="/${lang}/?"`));
     assert.match(privacy.html, /class="back"/);

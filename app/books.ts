@@ -492,7 +492,7 @@ export const booksCopy: Record<Lang, BooksCopy> = {
     catalogIntro:
       "Исторические романы Симоны Вилар переносят читателя в разные эпохи — от Древней Руси и эпохи викингов до средневековой Англии, крестовых походов и Ренессанса. В центре большинства историй — сильные герои, политические интриги, столкновение долга и чувства и судьбы людей, оказавшихся рядом с большими историческими событиями.",
     seriesBooksHeading: "Книги серии",
-    otherSeriesBooks: "Другие книги серии",
+    otherSeriesBooks: "Книги в этой серии:",
     author: "Автор",
     authorName: "Симона Вилар",
     series: "Серия",
@@ -510,7 +510,7 @@ export const booksCopy: Record<Lang, BooksCopy> = {
     catalogIntro:
       "Історичні романи Сімони Вілар переносять читача в різні епохи — від Давньої Русі та доби вікінгів до середньовічної Англії, хрестових походів і Ренесансу. У центрі більшості історій — сильні герої, політичні інтриги, зіткнення обов'язку та почуттів і долі людей, які опинилися поруч із великими історичними подіями.",
     seriesBooksHeading: "Книжки серії",
-    otherSeriesBooks: "Інші книжки серії",
+    otherSeriesBooks: "Книги в цій серії:",
     author: "Авторка",
     authorName: "Сімона Вілар",
     series: "Серія",
@@ -528,7 +528,7 @@ export const booksCopy: Record<Lang, BooksCopy> = {
     catalogIntro:
       "Simona Vilar's historical novels take readers across different eras — from ancient Rus and the age of the Vikings to medieval England, the Crusades, and the Renaissance. Most of her stories center on strong characters, political intrigue, the clash between duty and feeling, and the fates of people caught up in major historical events.",
     seriesBooksHeading: "Books in the series",
-    otherSeriesBooks: "Other books in the series",
+    otherSeriesBooks: "Books in this series:",
     author: "Author",
     authorName: "Simona Vilar",
     series: "Series",
