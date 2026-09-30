@@ -3,7 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { copy, type Lang } from "../../../content";
 import { Footer, Header } from "../../../components";
-import { getStory, relatedBook, stories, storiesCopy, storyTypeLabel } from "../../../stories";
+import { getStory, relatedBook, stories, storiesCopy, storyDisplayTitle, storyTypeLabel } from "../../../stories";
 
 const siteUrl = "https://simonavilar.com";
 
@@ -124,7 +124,8 @@ export default async function StoryPage({
         </nav>
         <article className="storyArticle">
           <header className="storyArticleHeading">
-            <h1>{story.title[lang]}</h1>
+            <h1>{storyDisplayTitle(story, lang)}</h1>
+            <p className="storyArticleType">{storyTypeLabel(story, lang)}</p>
           </header>
           <figure className="storyHero" style={{ maxWidth: Math.min(story.imageWidth, 850) }}>
             <Image

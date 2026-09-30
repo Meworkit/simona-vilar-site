@@ -370,6 +370,17 @@ export function storyTypeLabel(story: StoryEntry, lang: Lang): string {
   return story.type === "excerpt" ? labels.excerptType : labels.storyType;
 }
 
+// Display-only: strips a trailing " — <type label>" suffix (e.g. "— отрывок")
+// from the story title, since the type is now shown as a separate small label
+// under the heading instead of inline in the title text. The underlying
+// title data (used for SEO/schema/meta) is left untouched.
+export function storyDisplayTitle(story: StoryEntry, lang: Lang): string {
+  const title = story.title[lang];
+  const typeLabel = storyTypeLabel(story, lang);
+  const suffixPattern = new RegExp(`\\s*[—-]\\s*${typeLabel}\\s*$`, "i");
+  return title.replace(suffixPattern, "").trim();
+}
+
 export function relatedBook(story: StoryEntry, lang: Lang) {
   if (!story.bookSlug) return undefined;
   const book = getBook(story.bookSlug);

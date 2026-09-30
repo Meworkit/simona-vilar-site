@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { Lang } from "./content";
 import type { StoryEntry } from "./stories";
-import { storiesCopy } from "./stories";
+import { storiesCopy, storyDisplayTitle } from "./stories";
 
 // Excerpt-type Stories must show the actual beginning of the supplied
 // literary text — no generated/synthetic lead paragraph. Non-excerpt
@@ -48,7 +48,7 @@ export function StoryPreview({
       </a>
       <div className="storyPreviewCopy">
         <h3>
-          <a href={`/${lang}/stories/${story.slug}`}>{story.title[lang]}</a>
+          <a href={`/${lang}/stories/${story.slug}`}>{storyDisplayTitle(story, lang)}</a>
         </h3>
         <p className="storyPreviewText">
           {preview.map((paragraph, index) => (
