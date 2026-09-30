@@ -218,6 +218,13 @@ export const stories: StoryEntry[] = [
   },
 ];
 
+const homepageStorySlugs = ["vedma-otryvok", "feya-s-ostrovov-otryvok"] as const;
+
+export const homepageStories: StoryEntry[] = homepageStorySlugs
+  .map((slug) => stories.find((story) => story.slug === slug))
+  .filter((story): story is StoryEntry => story !== undefined)
+  .slice(0, 2);
+
 export function getStory(slug: string): StoryEntry | undefined {
   return stories.find((story) => story.slug === slug);
 }

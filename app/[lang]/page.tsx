@@ -5,7 +5,7 @@ import { biography } from "../biography";
 import { Newsletter } from "../Newsletter";
 import { Footer, Header, Statement, WebPageJsonLd } from "../components";
 import { StoryPreview } from "../StoryPreview";
-import { stories, storiesCopy } from "../stories";
+import { homepageStories, storiesCopy } from "../stories";
 export const dynamicParams = false;
 export function generateStaticParams() {
   return [{ lang: "uk" }, { lang: "ru" }, { lang: "en" }];
@@ -77,6 +77,23 @@ export default async function Page({
         <section id="statement" className="statementSection shell">
           <Statement lang={lang} />
         </section>
+        <section id="about" className="about">
+          <Placeholder text={c.photo} />
+          <div className="aboutCopy">
+            <div className="titleRow">
+              <h2>{c.aboutTitle}</h2>
+              <span />
+            </div>
+            {c.about.map((p) => (
+              <p className="aboutp" key={p}>
+                {p}
+              </p>
+            ))}
+            <a className="more bioLink" href={`/${lang}/biography`}>
+              {biography[lang].read} →
+            </a>
+          </div>
+        </section>
         <section id="news" className="news section shell">
           <div className="titleRow newsTitleRow">
             <a href={`/${lang}/news`} aria-label={c.news}>
@@ -108,26 +125,9 @@ export default async function Page({
             </a>
           </div>
           <div className="homeStoriesList">
-            {stories.slice(0, 3).map((story) => (
+            {homepageStories.map((story) => (
               <StoryPreview key={story.id} story={story} lang={lang} compact />
             ))}
-          </div>
-        </section>
-        <section id="about" className="about">
-          <Placeholder text={c.photo} />
-          <div className="aboutCopy">
-            <div className="titleRow">
-              <h2>{c.aboutTitle}</h2>
-              <span />
-            </div>
-            {c.about.map((p) => (
-              <p className="aboutp" key={p}>
-                {p}
-              </p>
-            ))}
-            <a className="more bioLink" href={`/${lang}/biography`}>
-              {biography[lang].read} →
-            </a>
           </div>
         </section>
         <Newsletter lang={lang} />

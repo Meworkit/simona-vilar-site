@@ -85,6 +85,13 @@ test("all internal links resolve and key interactive links are present", async (
     assert.match(stories.html, new RegExp(`href="/${lang}/stories/vedma-otryvok"`));
     assert.match(witchStory.html, new RegExp(`href="/${lang}/books/vedma"`));
     assert.match(witchBook.html, new RegExp(`href="/${lang}/stories/vedma-otryvok"`));
+    assert.equal(
+      [...homepage.html.matchAll(new RegExp(`href="/${lang}/stories/[^"]+"`, "g"))]
+        .map((match) => match[0])
+        .filter((value, index, values) => values.indexOf(value) === index).length,
+      2,
+      `${lang} homepage should link to exactly two featured stories`,
+    );
     assert.match(biography.html, /class="back"/);
     assert.match(biography.html, new RegExp(`href="/${lang}/?"`));
     assert.match(privacy.html, /class="back"/);
