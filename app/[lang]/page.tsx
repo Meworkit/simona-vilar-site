@@ -113,13 +113,15 @@ export default async function Page({
           </div>
         </section>
         <section className="homeStories section shell">
-          <div className="titleRow homeStoriesTitleRow">
-            <h2>{storiesCopy[lang].latestTitle}</h2>
-          </div>
-          <div className="homeStoriesList">
-            {homepageStories.map((story) => (
-              <StoryPreview key={story.id} story={story} lang={lang} compact featured />
-            ))}
+          <div className="homeStoriesFrame">
+            <div className="titleRow homeStoriesTitleRow">
+              <h2>{storiesCopy[lang].latestTitle}</h2>
+            </div>
+            <div className="homeStoriesList">
+              {homepageStories.map((story) => (
+                <StoryPreview key={story.id} story={story} lang={lang} compact featured />
+              ))}
+            </div>
           </div>
         </section>
         <Newsletter lang={lang} />

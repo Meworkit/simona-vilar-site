@@ -126,7 +126,7 @@ export default async function StoryPage({
           <header className="storyArticleHeading">
             <h1>{story.title[lang]}</h1>
           </header>
-          <figure className="storyHero">
+          <figure className="storyHero" style={{ maxWidth: Math.min(story.imageWidth, 850) }}>
             <Image
               src={story.image}
               alt={story.imageAlt[lang]}
