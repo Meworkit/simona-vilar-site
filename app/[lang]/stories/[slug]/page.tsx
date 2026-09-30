@@ -143,7 +143,9 @@ export default async function StoryPage({
             />
           </figure>
           <div className="storyReading">
-            <p className="storyIntro">{story.preview[lang]}</p>
+            {story.type !== "excerpt" && (
+              <p className="storyIntro">{story.preview[lang]}</p>
+            )}
             <div className="storyText">
               {story.body[lang].map((paragraph, index) => (
                 <p className={paragraph === "…" ? "storyEllipsis" : undefined} key={index}>

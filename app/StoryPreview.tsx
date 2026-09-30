@@ -3,15 +3,20 @@ import type { Lang } from "./content";
 import type { StoryEntry } from "./stories";
 import { relatedBook, storiesCopy } from "./stories";
 
-function editorialPreview(story: StoryEntry, lang: Lang) {
+// Excerpt-type Stories must show the actual beginning of the supplied
+// literary text — no generated/synthetic lead paragraph. Non-excerpt
+// ("story") entries may still carry their own editorial intro.
+function previewParagraphs(story: StoryEntry, lang: Lang): string[] {
+  if (story.type === "excerpt") {
+    return story.body[lang].slice(0, 2);
+  }
   const opening = story.preview[lang].trim();
   const continuation = story.body[lang]
     .slice(0, 2)
     .join(" ")
     .replace(/^\.{3}/, "")
     .trim();
-
-  return { opening, continuation };
+  return [opening, continuation];
 }
 
 export function StoryPreview({
@@ -28,7 +33,7 @@ export function StoryPreview({
 }) {
   const labels = storiesCopy[lang];
   const related = relatedBook(story, lang);
-  const preview = editorialPreview(story, lang);
+  const preview = previewParagraphs(story, lang);
 
   return (
     <article
@@ -48,8 +53,9 @@ export function StoryPreview({
           <a href={`/${lang}/stories/${story.slug}`}>{story.title[lang]}</a>
         </h3>
         <p className="storyPreviewText">
-          <span>{preview.opening}</span>
-          <span>{preview.continuation}</span>
+          {preview.map((paragraph, index) => (
+            <span key={index}>{paragraph}</span>
+          ))}
         </p>
         {related && !bookContext && (
           <p className="storyBookReference">

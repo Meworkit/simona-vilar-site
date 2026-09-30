@@ -99,10 +99,6 @@ export default async function Page({
             <a href={`/${lang}/news`} aria-label={c.news}>
               <h2>{c.news}</h2>
             </a>
-            <span />
-            <a className="allNewsLink" href={`/${lang}/news`}>
-              {lang === "uk" ? "Усі новини" : lang === "en" ? "All news" : "Все новости"} →
-            </a>
           </div>
           <div data-nosnippet="">
             <a className="card" href={`/${lang}/news/official-statement`}>
@@ -119,10 +115,6 @@ export default async function Page({
         <section className="homeStories section shell">
           <div className="titleRow homeStoriesTitleRow">
             <h2>{storiesCopy[lang].latestTitle}</h2>
-            <span />
-            <a className="allNewsLink" href={`/${lang}/stories`}>
-              {storiesCopy[lang].allStories} →
-            </a>
           </div>
           <div className="homeStoriesList">
             {homepageStories.map((story) => (

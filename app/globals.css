@@ -89,9 +89,9 @@ footer{padding-top:12px;padding-bottom:12px}
 .storyBookReference{margin:16px 0 0;color:var(--text-muted);font-size:16px;font-style:italic}
 .storyReadMore{display:inline-block;margin-top:22px;color:var(--accent);font-weight:500}
 .storyReadMore:hover{color:var(--accent-dark)}
-.homeStories{padding-top:76px;padding-bottom:76px;border-top:1px solid var(--border-soft,var(--line));border-bottom:1px solid var(--border-soft,var(--line))}
+.homeStories{padding-top:76px;padding-bottom:76px}
 .homeStoriesTitleRow span{max-width:none}
-.homeStoriesList{margin-top:34px}
+.homeStoriesList{margin-top:34px;display:flex;flex-direction:column;gap:72px}
 .storyPreviewCompact{grid-template-columns:minmax(0,45fr) minmax(0,55fr);gap:42px;margin:0;padding:0;border:0}
 .storyPreviewCompact h3{font-size:34px}
 .storyPreviewCompact .storyPreviewText{font-size:18px}
@@ -138,6 +138,7 @@ footer{padding-top:12px;padding-bottom:12px}
   .storyPreview h3,.storyPreviewCompact h3{font-size:30px}
   .storyPreviewText,.storyPreviewCompact .storyPreviewText{font-size:17px}
   .homeStories{padding-top:54px;padding-bottom:54px}
+  .homeStoriesList{gap:48px}
   .homeStoriesTitleRow{flex-wrap:wrap}
   .homeStoriesTitleRow span{order:3;flex-basis:100%}
   .homeStoriesTitleRow .allNewsLink{margin-left:auto}
