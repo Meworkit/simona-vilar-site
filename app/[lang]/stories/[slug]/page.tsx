@@ -124,13 +124,7 @@ export default async function StoryPage({
         </nav>
         <article className="storyArticle">
           <header className="storyArticleHeading">
-            <p className="storyType">{storyTypeLabel(story, lang)}</p>
             <h1>{story.title[lang]}</h1>
-            {related && (
-              <p className="storyArticleBook">
-                {labels.fromBook} «{related.title}»
-              </p>
-            )}
           </header>
           <figure className="storyHero">
             <Image

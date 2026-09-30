@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { Lang } from "./content";
 import type { StoryEntry } from "./stories";
-import { relatedBook, storiesCopy } from "./stories";
+import { storiesCopy } from "./stories";
 
 // Excerpt-type Stories must show the actual beginning of the supplied
 // literary text — no generated/synthetic lead paragraph. Non-excerpt
@@ -23,7 +23,6 @@ export function StoryPreview({
   story,
   lang,
   compact = false,
-  bookContext = false,
 }: {
   story: StoryEntry;
   lang: Lang;
@@ -32,7 +31,6 @@ export function StoryPreview({
   featured?: boolean;
 }) {
   const labels = storiesCopy[lang];
-  const related = relatedBook(story, lang);
   const preview = previewParagraphs(story, lang);
 
   return (
@@ -57,11 +55,6 @@ export function StoryPreview({
             <span key={index}>{paragraph}</span>
           ))}
         </p>
-        {related && !bookContext && (
-          <p className="storyBookReference">
-            {labels.fromBook} «{related.title}»
-          </p>
-        )}
         <a className="storyReadMore" href={`/${lang}/stories/${story.slug}`}>
           {labels.readMore} →
         </a>
