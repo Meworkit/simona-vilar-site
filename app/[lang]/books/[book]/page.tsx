@@ -12,6 +12,8 @@ import {
   bookTitle,
 } from "../../../books";
 import { Breadcrumb, BreadcrumbJsonLd, BookJsonLd } from "../../../BookComponents";
+import { StoryPreview } from "../../../StoryPreview";
+import { storiesCopy, storiesForBook } from "../../../stories";
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -116,6 +118,7 @@ export default async function BookPage({
     en: `/en/books/${bookSlug}`,
   };
   const displayTitle = bookTitle(book, lang);
+  const relatedStories = storiesForBook(book.slug);
   const breadcrumbItems = [
     { label: bc.breadcrumbRoot, href: `/${lang}/books` },
     ...(series
@@ -182,6 +185,15 @@ export default async function BookPage({
                   </li>
                 ))}
               </ul>
+            </section>
+          )}
+
+          {relatedStories.length > 0 && (
+            <section className="bookStories">
+              <h2>{storiesCopy[lang].relatedHeading}</h2>
+              {relatedStories.map((story) => (
+                <StoryPreview key={story.id} story={story} lang={lang} compact />
+              ))}
             </section>
           )}
 

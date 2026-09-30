@@ -6,7 +6,8 @@ type LocalizedPage =
   | "privacy"
   | "subscription-pending"
   | "subscription-confirmed"
-  | "books";
+  | "books"
+  | "stories";
 
 function localizedPath(
   lang: Lang,
@@ -49,6 +50,7 @@ export function Header({
     `/${lang}/#top`,
     `/${lang}/biography`,
     `/${lang}/books`,
+    `/${lang}/stories`,
     `/${lang}/news`,
     `/${lang}/#contact`,
   ];

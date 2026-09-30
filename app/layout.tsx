@@ -44,6 +44,7 @@ export const metadata: Metadata = {
 const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
+  "@id": "https://simonavilar.com/#simona-vilar",
   name: "Симона Вилар",
   alternateName: "Наталия Гавриленко",
   url: "https://simonavilar.com",

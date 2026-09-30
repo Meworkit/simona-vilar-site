@@ -64,6 +64,85 @@ footer{padding-top:12px;padding-bottom:12px}
   .foot{gap:14px}
 }
 
+/* Stories — an editorial reading section within the existing site language. */
+.head nav{gap:27px}
+.storiesPage{min-height:650px;padding:55px 0 96px}
+.storiesHeading{padding-bottom:30px;border-bottom:1px solid var(--border-soft,var(--line))}
+.storiesHeading>p{margin:0 0 9px;color:var(--accent);font:500 12px Manrope,sans-serif;letter-spacing:.13em;text-transform:uppercase}
+.storiesHeading h1{margin:0;font-size:68px;font-weight:500;line-height:1}
+.storiesList{margin-top:46px}
+.storyPreview{display:grid;grid-template-columns:minmax(0,45fr) minmax(0,55fr);align-items:center;gap:54px;padding:0 0 48px;margin:0 0 48px;border-bottom:1px solid var(--border-soft,var(--line))}
+.storyPreview:nth-child(even) .storyPreviewImage{order:2}
+.storyPreviewImage{display:block;overflow:hidden;aspect-ratio:3/2;background:var(--surface-alt)}
+.storyPreviewImage img{display:block;width:100%;height:100%;object-fit:cover}
+.storyPreviewCopy{min-width:0;padding:16px 8px}
+.storyType{margin:0 0 13px;color:var(--accent);font:600 12px Manrope,sans-serif;letter-spacing:.13em;text-transform:uppercase}
+.storyPreview h3{margin:0;font-size:38px;font-weight:500;line-height:1.14}
+.storyPreview h3 a{color:var(--text-primary)}
+.storyPreview h3 a:hover{color:var(--accent)}
+.storyPreviewText{margin:18px 0 0;color:var(--text-secondary);font-size:19px;line-height:1.5}
+.storyBookReference{margin:16px 0 0;color:var(--text-muted);font-size:16px;font-style:italic}
+.storyReadMore{display:inline-block;margin-top:22px;color:var(--accent);font-weight:500}
+.storyReadMore:hover{color:var(--accent-dark)}
+.homeStories{padding-top:76px;padding-bottom:76px;border-top:1px solid var(--border-soft,var(--line));border-bottom:1px solid var(--border-soft,var(--line))}
+.homeStoriesTitleRow span{max-width:none}
+.homeStoriesList{margin-top:34px}
+.storyPreviewCompact{grid-template-columns:minmax(0,45fr) minmax(0,55fr);gap:42px;margin:0;padding:0;border:0}
+.storyPreviewCompact h3{font-size:34px}
+.storyPreviewCompact .storyPreviewText{font-size:18px}
+.bookStories{margin-top:44px;padding-top:32px;border-top:1px solid var(--border-soft,var(--line))}
+.bookStories>h2{margin:0 0 28px;font-size:25px}
+.bookStories .storyPreviewCompact{grid-template-columns:minmax(200px,32fr) minmax(0,68fr);gap:30px}
+.bookStories .storyPreviewCompact h3{font-size:27px}
+.bookStories .storyPreviewCompact .storyPreviewText{font-size:17px}
+.storyPage{padding:35px 0 100px}
+.storyBreadcrumb{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:38px;color:var(--text-muted);font:500 13px Manrope,sans-serif;letter-spacing:.04em}
+.storyBreadcrumb a{color:var(--accent)}
+.storyArticle{max-width:980px;margin:0 auto}
+.storyArticleHeading{max-width:820px;margin:0 auto 38px;text-align:center}
+.storyArticleHeading h1{margin:0;font-size:62px;font-weight:500;line-height:1.06}
+.storyArticleBook{margin:18px 0 0;color:var(--text-secondary);font-size:19px;font-style:italic}
+.storyHero{width:min(850px,100%);margin:0 auto 48px}
+.storyHero img{display:block;width:100%;height:auto;border:1px solid var(--border-soft,var(--line))}
+.storyReading{width:min(720px,100%);margin:0 auto}
+.storyIntro{margin:0 0 38px;padding:0 0 32px;border-bottom:1px solid var(--accent-light);color:var(--text-primary);font-size:23px;font-style:italic;line-height:1.5}
+.storyText p{margin:0 0 24px;color:var(--text-primary);font-size:19px;line-height:1.62}
+.storyText .storyEllipsis{margin:28px 0;text-align:center;color:var(--text-muted);letter-spacing:.3em}
+.storyRelatedBook{margin:54px 0 34px;padding:34px 0;border-top:1px solid var(--border-soft,var(--line));border-bottom:1px solid var(--border-soft,var(--line))}
+.storyRelatedBook>p:first-child{margin:0 0 10px;color:var(--accent);font:600 12px Manrope,sans-serif;letter-spacing:.13em;text-transform:uppercase}
+.storyRelatedBook h2{margin:0;font-size:34px;font-weight:500}
+.storyRelatedBook h2+p{margin:8px 0 0;color:var(--text-muted);font-style:italic}
+.storyRelatedBook a{display:inline-block;margin-top:20px;color:var(--accent);font-weight:500}
+.storyBack{display:inline-block;margin-top:12px;color:var(--accent);font-weight:500}
+
+@media(max-width:850px){
+  .storiesPage{padding-top:42px}
+  .storiesHeading h1{font-size:58px}
+  .storyPreview,.storyPreviewCompact,.bookStories .storyPreviewCompact{grid-template-columns:1fr;gap:24px}
+  .storyPreview:nth-child(even) .storyPreviewImage{order:0}
+  .storyPreviewCopy{padding:0 2px}
+  .storyArticleHeading h1{font-size:52px}
+}
+@media(max-width:560px){
+  .storiesPage{padding:34px 0 68px}
+  .storiesHeading h1{font-size:46px}
+  .storiesList{margin-top:32px}
+  .storyPreview{gap:20px;padding-bottom:34px;margin-bottom:34px}
+  .storyPreview h3,.storyPreviewCompact h3{font-size:30px}
+  .storyPreviewText,.storyPreviewCompact .storyPreviewText{font-size:17px}
+  .homeStories{padding-top:54px;padding-bottom:54px}
+  .homeStoriesTitleRow{flex-wrap:wrap}
+  .homeStoriesTitleRow span{order:3;flex-basis:100%}
+  .homeStoriesTitleRow .allNewsLink{margin-left:auto}
+  .storyPage{padding:28px 0 72px}
+  .storyBreadcrumb{margin-bottom:28px}
+  .storyArticleHeading{margin-bottom:28px;text-align:left}
+  .storyArticleHeading h1{font-size:42px}
+  .storyHero{margin-bottom:34px}
+  .storyIntro{margin-bottom:30px;padding-bottom:25px;font-size:20px}
+  .storyText p{font-size:17px;line-height:1.58}
+}
+
 @media(max-width:560px){
   .statementSection{padding-bottom:16px}
   .newsletter h2{line-height:1.08}

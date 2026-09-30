@@ -4,6 +4,8 @@ import { copy, email, type Lang } from "../content";
 import { biography } from "../biography";
 import { Newsletter } from "../Newsletter";
 import { Footer, Header, Statement, WebPageJsonLd } from "../components";
+import { StoryPreview } from "../StoryPreview";
+import { stories, storiesCopy } from "../stories";
 export const dynamicParams = false;
 export function generateStaticParams() {
   return [{ lang: "uk" }, { lang: "ru" }, { lang: "en" }];
@@ -90,6 +92,20 @@ export default async function Page({
                 <a className="more bioLink" href={`/${lang}/biography`}>
                   {biography[lang].read} →
                 </a>
+          </div>
+        </section>
+        <section className="homeStories section shell">
+          <div className="titleRow homeStoriesTitleRow">
+            <h2>{storiesCopy[lang].latestTitle}</h2>
+            <span />
+            <a className="allNewsLink" href={`/${lang}/stories`}>
+              {storiesCopy[lang].allStories} →
+            </a>
+          </div>
+          <div className="homeStoriesList">
+            {stories.slice(0, 3).map((story) => (
+              <StoryPreview key={story.id} story={story} lang={lang} compact />
+            ))}
           </div>
         </section>
         <section id="news" className="news section shell">

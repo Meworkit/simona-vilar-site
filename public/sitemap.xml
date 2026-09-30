@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://simonavilar.com/ru</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en"/>
@@ -11,7 +11,7 @@
   </url>
   <url>
     <loc>https://simonavilar.com/uk</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en"/>
@@ -19,7 +19,7 @@
   </url>
   <url>
     <loc>https://simonavilar.com/en</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en"/>
@@ -843,7 +843,7 @@
   </url>
   <url>
     <loc>https://simonavilar.com/ru/books/feya-s-ostrovov</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/feya-s-ostrovov"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/feya-s-ostrovov"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/feya-s-ostrovov"/>
@@ -851,7 +851,7 @@
   </url>
   <url>
     <loc>https://simonavilar.com/uk/books/feya-s-ostrovov</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/feya-s-ostrovov"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/feya-s-ostrovov"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/feya-s-ostrovov"/>
@@ -859,7 +859,7 @@
   </url>
   <url>
     <loc>https://simonavilar.com/en/books/feya-s-ostrovov</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/books/feya-s-ostrovov"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/feya-s-ostrovov"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/feya-s-ostrovov"/>
@@ -1008,5 +1008,53 @@
     <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/books/v-tot-den"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/books/v-tot-den"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/books/v-tot-den"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/ru/stories</loc>
+    <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/stories"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/stories"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/stories"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/stories"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/uk/stories</loc>
+    <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/stories"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/stories"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/stories"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/stories"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/stories</loc>
+    <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/stories"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/stories"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/stories"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/stories"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/ru/stories/feya-s-ostrovov-otryvok</loc>
+    <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/stories/feya-s-ostrovov-otryvok"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/stories/feya-s-ostrovov-otryvok"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/stories/feya-s-ostrovov-otryvok"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/stories/feya-s-ostrovov-otryvok"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/uk/stories/feya-s-ostrovov-otryvok</loc>
+    <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/stories/feya-s-ostrovov-otryvok"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/stories/feya-s-ostrovov-otryvok"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/stories/feya-s-ostrovov-otryvok"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/stories/feya-s-ostrovov-otryvok"/>
+  </url>
+  <url>
+    <loc>https://simonavilar.com/en/stories/feya-s-ostrovov-otryvok</loc>
+    <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://simonavilar.com/ru/stories/feya-s-ostrovov-otryvok"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://simonavilar.com/uk/stories/feya-s-ostrovov-otryvok"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://simonavilar.com/en/stories/feya-s-ostrovov-otryvok"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://simonavilar.com/ru/stories/feya-s-ostrovov-otryvok"/>
   </url>
 </urlset>

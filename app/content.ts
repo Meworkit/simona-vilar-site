@@ -3,7 +3,7 @@ export const email = "contact@simonavilar.com";
 export const copy = {
   uk: {
     eyebrow: "Офіційний сайт",
-    nav: ["Головна", "Біографія", "Книжки", "Новини", "Контакти"],
+    nav: ["Головна", "Біографія", "Книжки", "Історії", "Новини", "Контакти"],
     role: "Авторка історичної прози",
     photo: "Фотографія авторки",
     statement: "Офіційна заява",
@@ -64,7 +64,7 @@ export const copy = {
   },
   ru: {
     eyebrow: "Официальный сайт",
-    nav: ["Главная", "Биография", "Книги", "Новости", "Контакты"],
+    nav: ["Главная", "Биография", "Книги", "Истории", "Новости", "Контакты"],
     role: "Автор исторической прозы",
     photo: "Фотография автора",
     statement: "Официальное заявление",
@@ -125,7 +125,7 @@ export const copy = {
   },
   en: {
     eyebrow: "Official website",
-    nav: ["Home", "Biography", "Books", "News", "Contact"],
+    nav: ["Home", "Biography", "Books", "Stories", "News", "Contact"],
     role: "Author of historical fiction",
     photo: "Photograph of the author",
     statement: "Official statement",
