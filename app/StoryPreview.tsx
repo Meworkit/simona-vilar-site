@@ -1,14 +1,24 @@
 import Image from "next/image";
 import type { Lang } from "./content";
 import type { StoryEntry } from "./stories";
-import { relatedBook, storiesCopy, storyTypeLabel } from "./stories";
+import { relatedBook, storiesCopy } from "./stories";
+
+function editorialPreview(story: StoryEntry, lang: Lang) {
+  const opening = story.preview[lang].trim();
+  const continuation = story.body[lang]
+    .slice(0, 2)
+    .join(" ")
+    .replace(/^\.{3}/, "")
+    .trim();
+
+  return { opening, continuation };
+}
 
 export function StoryPreview({
   story,
   lang,
   compact = false,
   bookContext = false,
-  featured = false,
 }: {
   story: StoryEntry;
   lang: Lang;
@@ -18,6 +28,7 @@ export function StoryPreview({
 }) {
   const labels = storiesCopy[lang];
   const related = relatedBook(story, lang);
+  const preview = editorialPreview(story, lang);
 
   return (
     <article
@@ -33,14 +44,13 @@ export function StoryPreview({
         />
       </a>
       <div className="storyPreviewCopy">
-        {!bookContext && <p className="storyType">{storyTypeLabel(story, lang)}</p>}
         <h3>
           <a href={`/${lang}/stories/${story.slug}`}>{story.title[lang]}</a>
         </h3>
-        <p className="storyPreviewText">{story.preview[lang]}</p>
-        {featured && story.homepageExtra && (
-          <p className="storyPreviewExtra">{story.homepageExtra[lang]}</p>
-        )}
+        <p className="storyPreviewText">
+          <span>{preview.opening}</span>
+          <span>{preview.continuation}</span>
+        </p>
         {related && !bookContext && (
           <p className="storyBookReference">
             {labels.fromBook} «{related.title}»
