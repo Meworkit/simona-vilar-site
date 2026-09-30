@@ -8,17 +8,21 @@ export function StoryPreview({
   lang,
   compact = false,
   bookContext = false,
+  featured = false,
 }: {
   story: StoryEntry;
   lang: Lang;
   compact?: boolean;
   bookContext?: boolean;
+  featured?: boolean;
 }) {
   const labels = storiesCopy[lang];
   const related = relatedBook(story, lang);
 
   return (
-    <article className={`storyPreview${compact ? " storyPreviewCompact" : ""}`}>
+    <article
+      className={`storyPreview${compact ? " storyPreviewCompact" : ""}${story.imageHeight > story.imageWidth ? " storyPreviewPortrait" : ""}`}
+    >
       <a className="storyPreviewImage" href={`/${lang}/stories/${story.slug}`}>
         <Image
           src={story.image}
@@ -34,6 +38,9 @@ export function StoryPreview({
           <a href={`/${lang}/stories/${story.slug}`}>{story.title[lang]}</a>
         </h3>
         <p className="storyPreviewText">{story.preview[lang]}</p>
+        {featured && story.homepageExtra && (
+          <p className="storyPreviewExtra">{story.homepageExtra[lang]}</p>
+        )}
         {related && !bookContext && (
           <p className="storyBookReference">
             {labels.fromBook} «{related.title}»

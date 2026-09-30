@@ -14,6 +14,7 @@ export interface StoryEntry {
   modifiedAt: string;
   title: LocalizedText;
   preview: LocalizedText;
+  homepageExtra?: LocalizedText;
   body: LocalizedParagraphs;
   image: string;
   imageWidth: number;
@@ -87,6 +88,134 @@ export const storiesCopy: Record<
 };
 
 export const stories: StoryEntry[] = [
+  {
+    id: "veter-severa-otryvok",
+    slug: "veter-severa-otryvok",
+    type: "excerpt",
+    publishedAt: "2026-09-30",
+    modifiedAt: "2026-09-30",
+    title: {
+      ru: "Ветер с севера — отрывок",
+      uk: "Ветер с севера — уривок",
+      en: "Wind from the North — excerpt",
+    },
+    preview: {
+      ru: "Эмма спускается в подземелье и видит пленённого Ролло. Униженный, но не сломленный, он встречает её взглядом, в котором больше достоинства, чем покорности.",
+      uk: "Емма спускається до підземелля і бачить полоненого Ролло. Принижений, але не зламаний, він зустрічає її поглядом, у якому більше гідності, ніж покори.",
+      en: "Emma descends into the dungeon and finds Rollo a prisoner. Humiliated but unbroken, he meets her gaze with more dignity than submission.",
+    },
+    homepageExtra: {
+      ru: "Мелит поднял факел повыше, в его дымном свете Эмма с замиранием сердца увидела Ролло.",
+      uk: "Меліт підняв смолоскип вище, і в його димному світлі Емма із завмиранням серця побачила Ролло.",
+      en: "Melite raised the torch higher, and in its smoky light Emma saw Rollo. Her heart seemed to stop.",
+    },
+    body: {
+      ru: [
+        "...Эврар удержал Эмму на последней ступеньке, дабы она не испачкала свой роскошный подол в жидкой грязи подземелья. Мелит поднял факел повыше, в его дымном свете Эмма с замиранием сердца увидела Ролло.",
+        "Он сидел в знакомой ей позе, облокотившись о стену и небрежно уронив скованные руки между согнутых колен. Викинг был перепачкан глиной, его длинные волосы сосульками свисали на глаза. Лицо было темным, он щурился от света, но у Эммы дрогнуло сердце, когда она поймала знакомый серо-стальной взгляд. Ролло был унижен, но ни в его небрежной позе, ни в глазах, ни в повороте головы не было затравленности. Скорее пренебрежение и достоинство.",
+        "Душа Эммы рванулась к нему. Ей пришлось взять себя в руки, чтобы остаться стоять с выражением брезгливого любопытства. Ролло скривил рот в усмешке.",
+        "- Принцесса франков! Ты прекрасно выглядишь, Эмма. Надеюсь, теперь твоя душа довольна и ты счастлива, созерцая меня здесь.",
+        "У девушки задрожали губы. Но когда она заговорила, голос её звучал твердо:",
+        "- Да, Ролло. Многое изменилось, и теперь ты пленник, а власть над тобой - у меня.",
+        "- Власть? Но власть и прежде была у тебя. Только ты не понимала этого.",
+        "Она молчала, оглушенная...",
+      ],
+      uk: [
+        "...Еврар затримав Емму на останній сходинці, аби вона не забруднила свій розкішний поділ у рідкому багні підземелля. Меліт підняв смолоскип вище, і в його димному світлі Емма із завмиранням серця побачила Ролло.",
+        "Він сидів у знайомій їй позі, спершись на стіну й недбало опустивши закуті руки між зігнутими колінами. Вікінг був вимазаний глиною, його довге волосся бурульками спадало на очі. Обличчя було темне, він мружився від світла, але в Емми здригнулося серце, коли вона впіймала знайомий сіро-сталевий погляд. Ролло був принижений, але ні в його недбалій позі, ні в очах, ні в повороті голови не було нічого загнаного. Радше зневага й гідність.",
+        "Душа Емми рвонулася до нього. Їй довелося взяти себе в руки, щоб і далі стояти з виразом гидливої цікавості. Ролло скривив губи в усмішці.",
+        "- Принцесо франків! Ти чудово виглядаєш, Еммо. Сподіваюся, тепер твоя душа задоволена і ти щаслива, дивлячись на мене тут.",
+        "У дівчини затремтіли губи. Але коли вона заговорила, її голос звучав твердо:",
+        "- Так, Ролло. Багато що змінилося, і тепер ти полонений, а влада над тобою — у мене.",
+        "- Влада? Але влада й раніше була в тебе. Тільки ти цього не розуміла.",
+        "Вона мовчала, приголомшена...",
+      ],
+      en: [
+        "...Evrard stopped Emma on the final step so that she would not soil the rich hem of her gown in the watery filth of the dungeon floor. Melite raised the torch higher, and in its smoky light Emma saw Rollo. Her heart seemed to stop.",
+        "He was sitting in a pose she knew well, leaning back against the wall, his shackled hands resting carelessly between his bent knees. The Viking was smeared with clay, his long hair hanging in damp strands over his eyes. His face was dark with grime and he squinted against the light, but Emma’s heart gave a jolt when she met that familiar steel-grey gaze. Rollo had been humiliated, yet there was nothing hunted or broken in his careless posture, his eyes, or the tilt of his head. If anything, there was contempt — and dignity.",
+        "Emma’s whole soul yearned toward him. She had to master herself and remain where she was, wearing an expression of cool, disdainful curiosity. Rollo’s mouth twisted into a smile.",
+        "“Princess of the Franks! You look beautiful, Emma. I hope your soul is satisfied now, and that you are happy to see me here.”",
+        "Her lips trembled. But when she spoke, her voice was steady.",
+        "“Yes, Rollo. Much has changed. Now you are a prisoner, and I have power over you.”",
+        "“Power? But you always had power over me. You simply never understood it.”",
+        "She stood silent, stunned...",
+      ],
+    },
+    image: "/simona-vilar-veter-severa.jpg",
+    imageWidth: 571,
+    imageHeight: 856,
+    imageAlt: {
+      ru: "Симона Вилар — «Ветер с севера», иллюстрация",
+      uk: "Сімона Вілар — «Ветер с севера», ілюстрація",
+      en: "Simona Vilar — “Wind from the North”, illustration",
+    },
+    bookSlug: "veter-s-severa",
+    seriesSlug: "normandskaya-legenda",
+    seoTitle: {
+      ru: "Ветер с севера — отрывок | Симона Вилар",
+      uk: "Ветер с севера — уривок | Сімона Вілар",
+      en: "Wind from the North — excerpt | Simona Vilar",
+    },
+    metaDescription: {
+      ru: "Отрывок из романа Симоны Вилар «Ветер с севера».",
+      uk: "Уривок із роману Сімони Вілар «Ветер с севера».",
+      en: "An excerpt from Simona Vilar’s novel “Wind from the North”.",
+    },
+  },
+  {
+    id: "svetorada-zolotaya-otryvok",
+    slug: "svetorada-zolotaya-otryvok",
+    type: "excerpt",
+    publishedAt: "2026-09-30",
+    modifiedAt: "2026-09-30",
+    title: {
+      ru: "Светорада Золотая — отрывок",
+      uk: "Светорада Золотая — уривок",
+      en: "Golden Svetorada — excerpt",
+    },
+    preview: {
+      ru: "Светорада и Стема пускают коней в галоп, превращая невинное состязание в момент юного азарта, свободы и пьянящей радости скорости.",
+      uk: "Светорада і Стема пускають коней у шалений галоп, і невинне змагання перетворюється на мить юного запалу, свободи й п’янкого щастя швидкості.",
+      en: "Svetorada and Stema spur their horses into a wild gallop, and a playful race becomes a moment of youthful exhilaration, freedom, and the intoxicating joy of speed.",
+    },
+    body: {
+      ru: [
+        "Стема на этот раз выехал на своем Пегаше. Княжна посмеивалась над его черно-белым коренастым жеребчиком, удивляясь, отчего парню нравятся лошади такой «коровьей» масти. Стема же защищал любимца: дескать, Пегаш и вынослив, и быстр, и не раз в степных дозорах спасал всадника даже от быстроногих хазарских коней.",
+        "Светорада лишь насмешливо фыркнула, пришпорила свою белую кобылицу и пустила ее вскачь. Стеме только того и надо было: стегнул Пегаша — и тоже в галоп.",
+        "Хитрая Светорада, заметив, что парень начинает ее нагонять, слегка попридержала свою хазарскую лошадку, но близко к себе так и не подпустила. Однако тут уже Пегаш показал, на что способен. Вскоре они уже неслись бок о бок, и только ветер свистел в ушах. Они азартно покрикивали, подгоняя коней, и трудно было понять: соревнование ли это или просто рвется наружу молодой задор и пьянящее счастье, когда хочется мчаться наперегонки с самим ветром...",
+      ],
+      uk: [
+        "Стема цього разу виїхав на своєму Пегаші. Княжна посміювалася з його чорно-білого кремезного жеребчика, дивуючись, чому хлопцеві до вподоби коні такої «коров’ячої» масті. Стема ж боронив свого улюбленця: мовляв, Пегаш і витривалий, і швидкий, і не раз у степових дозорах рятував вершника навіть від прудконогих хозарських коней.",
+        "Светорада лише насмішкувато фиркнула, пришпорила свою білу кобилицю й пустила її навскач. Стемі тільки того й треба було: він стьобнув Пегаша — і теж пустився в галоп.",
+        "Хитра Светорада, помітивши, що хлопець починає її наздоганяти, трохи притримала свою хозарську конячку, але близько до себе так і не підпустила. Та тут уже Пегаш показав, на що здатен. Незабаром вони вже неслися пліч-о-пліч, і лише вітер свистів у вухах. Вони азартно покрикували, підганяючи коней, і важко було зрозуміти: чи це змагання, чи просто рветься назовні молодий запал і п’янке щастя, коли хочеться мчати наввипередки з самим вітром...",
+      ],
+      en: [
+        "This time, Stema rode out on his Pegash. The princess teased him about his sturdy little black-and-white stallion, wondering why he was so fond of horses with such a “cow-like” coloring. Stema, however, defended his favorite: Pegash was both hardy and swift, he insisted, and more than once during patrols across the steppe had carried his rider to safety even from the fleet-footed horses of the Khazars.",
+        "Svetorada merely gave a mocking snort, urged her white mare forward, and sent her racing into a gallop. That was all the encouragement Stema needed. He flicked Pegash on and galloped after her.",
+        "Clever Svetorada noticed that the young man was beginning to catch up and reined in her Khazar mare ever so slightly, though she still refused to let him come too close. But now Pegash showed what he was capable of. Before long, the two horses were racing side by side with the wind whistling in their ears. Svetorada and Stema called out excitedly as they urged their mounts onward, and it was hard to tell whether this was still a contest at all, or simply youthful exhilaration breaking free — that intoxicating happiness that makes you want to race the wind itself...",
+      ],
+    },
+    image: "/simona-vilar-svetorada-zolotaya.jpg",
+    imageWidth: 1536,
+    imageHeight: 1024,
+    imageAlt: {
+      ru: "Симона Вилар — «Светорада Золотая», иллюстрация",
+      uk: "Сімона Вілар — «Светорада Золотая», ілюстрація",
+      en: "Simona Vilar — “Golden Svetorada”, illustration",
+    },
+    bookSlug: "svetorada-zolotaya",
+    seriesSlug: "svetorada",
+    seoTitle: {
+      ru: "Светорада Золотая — отрывок | Симона Вилар",
+      uk: "Светорада Золотая — уривок | Сімона Вілар",
+      en: "Golden Svetorada — excerpt | Simona Vilar",
+    },
+    metaDescription: {
+      ru: "Отрывок из романа Симоны Вилар «Светорада Золотая».",
+      uk: "Уривок із роману Сімони Вілар «Светорада Золотая».",
+      en: "An excerpt from Simona Vilar’s novel “Golden Svetorada”.",
+    },
+  },
   {
     id: "vedma-otryvok",
     slug: "vedma-otryvok",
@@ -218,7 +347,10 @@ export const stories: StoryEntry[] = [
   },
 ];
 
-const homepageStorySlugs = ["vedma-otryvok", "feya-s-ostrovov-otryvok"] as const;
+const homepageStorySlugs = [
+  "veter-severa-otryvok",
+  "svetorada-zolotaya-otryvok",
+] as const;
 
 export const homepageStories: StoryEntry[] = homepageStorySlugs
   .map((slug) => stories.find((story) => story.slug === slug))

@@ -126,7 +126,7 @@ export default async function Page({
           </div>
           <div className="homeStoriesList">
             {homepageStories.map((story) => (
-              <StoryPreview key={story.id} story={story} lang={lang} compact />
+              <StoryPreview key={story.id} story={story} lang={lang} compact featured />
             ))}
           </div>
         </section>

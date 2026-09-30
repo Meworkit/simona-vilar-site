@@ -43,6 +43,21 @@ const equivalents = [
   ["/ru/stories/vedma-otryvok", "/uk/stories/vedma-otryvok"],
   ["/uk/stories/vedma-otryvok", "/ru/stories/vedma-otryvok"],
   ["/en/stories/vedma-otryvok", "/ru/stories/vedma-otryvok"],
+  ["/ru/stories/veter-severa-otryvok", "/uk/stories/veter-severa-otryvok"],
+  ["/uk/stories/veter-severa-otryvok", "/ru/stories/veter-severa-otryvok"],
+  ["/en/stories/veter-severa-otryvok", "/ru/stories/veter-severa-otryvok"],
+  [
+    "/ru/stories/svetorada-zolotaya-otryvok",
+    "/uk/stories/svetorada-zolotaya-otryvok",
+  ],
+  [
+    "/uk/stories/svetorada-zolotaya-otryvok",
+    "/ru/stories/svetorada-zolotaya-otryvok",
+  ],
+  [
+    "/en/stories/svetorada-zolotaya-otryvok",
+    "/ru/stories/svetorada-zolotaya-otryvok",
+  ],
   ["/ru/privacy", "/uk/privacy"],
   ["/uk/privacy", "/ru/privacy"],
   ["/ru/news/official-statement", "/uk/news/official-statement"],
@@ -69,22 +84,72 @@ test("all internal links resolve and key interactive links are present", async (
     const stories = await render(`/${lang}/stories`);
     const story = await render(`/${lang}/stories/feya-s-ostrovov-otryvok`);
     const witchStory = await render(`/${lang}/stories/vedma-otryvok`);
+    const northWindStory = await render(`/${lang}/stories/veter-severa-otryvok`);
+    const svetoradaStory = await render(`/${lang}/stories/svetorada-zolotaya-otryvok`);
     const book = await render(`/${lang}/books/feya-s-ostrovov`);
     const witchBook = await render(`/${lang}/books/vedma`);
-    const pages = [homepage, news, biography, privacy, stories, story, witchStory, book, witchBook];
+    const northWindBook = await render(`/${lang}/books/veter-s-severa`);
+    const svetoradaBook = await render(`/${lang}/books/svetorada-zolotaya`);
+    const pages = [
+      homepage,
+      news,
+      biography,
+      privacy,
+      stories,
+      story,
+      witchStory,
+      northWindStory,
+      svetoradaStory,
+      book,
+      witchBook,
+      northWindBook,
+      svetoradaBook,
+    ];
 
     assert.match(homepage.html, new RegExp(`href="/${lang}/news/official-statement"`));
     assert.match(news.html, new RegExp(`href="/${lang}/news/official-statement"`));
     assert.match(biography.html, new RegExp(`href="/${lang}/privacy"`));
     assert.match(privacy.html, /href="mailto:contact@simonavilar\.com"/);
-    assert.match(homepage.html, new RegExp(`href="/${lang}/stories/feya-s-ostrovov-otryvok"`));
+    assert.doesNotMatch(
+      homepage.html,
+      new RegExp(`href="/${lang}/stories/feya-s-ostrovov-otryvok"`),
+    );
     assert.match(stories.html, new RegExp(`href="/${lang}/stories/feya-s-ostrovov-otryvok"`));
     assert.match(story.html, new RegExp(`href="/${lang}/books/feya-s-ostrovov"`));
     assert.match(book.html, new RegExp(`href="/${lang}/stories/feya-s-ostrovov-otryvok"`));
-    assert.match(homepage.html, new RegExp(`href="/${lang}/stories/vedma-otryvok"`));
+    assert.doesNotMatch(homepage.html, new RegExp(`href="/${lang}/stories/vedma-otryvok"`));
     assert.match(stories.html, new RegExp(`href="/${lang}/stories/vedma-otryvok"`));
     assert.match(witchStory.html, new RegExp(`href="/${lang}/books/vedma"`));
     assert.match(witchBook.html, new RegExp(`href="/${lang}/stories/vedma-otryvok"`));
+    assert.match(
+      homepage.html,
+      new RegExp(`href="/${lang}/stories/veter-severa-otryvok"`),
+    );
+    assert.match(
+      stories.html,
+      new RegExp(`href="/${lang}/stories/veter-severa-otryvok"`),
+    );
+    assert.match(northWindStory.html, new RegExp(`href="/${lang}/books/veter-s-severa"`));
+    assert.match(
+      northWindBook.html,
+      new RegExp(`href="/${lang}/stories/veter-severa-otryvok"`),
+    );
+    assert.match(
+      homepage.html,
+      new RegExp(`href="/${lang}/stories/svetorada-zolotaya-otryvok"`),
+    );
+    assert.match(
+      stories.html,
+      new RegExp(`href="/${lang}/stories/svetorada-zolotaya-otryvok"`),
+    );
+    assert.match(
+      svetoradaStory.html,
+      new RegExp(`href="/${lang}/books/svetorada-zolotaya"`),
+    );
+    assert.match(
+      svetoradaBook.html,
+      new RegExp(`href="/${lang}/stories/svetorada-zolotaya-otryvok"`),
+    );
     assert.equal(
       [...homepage.html.matchAll(new RegExp(`href="/${lang}/stories/[^"]+"`, "g"))]
         .map((match) => match[0])
