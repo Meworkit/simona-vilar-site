@@ -21,10 +21,10 @@ export async function generateMetadata({
     url = `https://simonavilar.com/${lang}`,
     brand = lang === "uk" ? "Сімона Вілар" : lang === "en" ? "Simona Vilar" : "Симона Вилар";
   const ogImage = {
-    url: "https://simonavilar.com/biography-photo.jpg",
-    width: 2000,
-    height: 1335,
-    alt: c.photo,
+    url: "https://simonavilar.com/og-image.jpg",
+    width: 1200,
+    height: 630,
+    alt: "Симона Вилар — официальный сайт",
   };
   return {
     title: c.title,
