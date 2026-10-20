@@ -1,12 +1,13 @@
 import Image from "next/image";
 import type { Lang } from "./content";
 import type { StoryEntry } from "./stories";
-import { storiesCopy, storyDisplayTitle } from "./stories";
+import { storiesCopy, storyDisplayTitle, storyImage } from "./stories";
 
 // Excerpt-type Stories must show the actual beginning of the supplied
 // literary text — no generated/synthetic lead paragraph. Non-excerpt
 // ("story") entries may still carry their own editorial intro.
 function previewParagraphs(story: StoryEntry, lang: Lang): string[] {
+  if (story.videoId) return [story.preview[lang]];
   if (story.type === "excerpt") {
     return story.body[lang].slice(0, 2);
   }
@@ -39,7 +40,7 @@ export function StoryPreview({
     >
       <a className="storyPreviewImage" href={`/${lang}/stories/${story.slug}`}>
         <Image
-          src={story.image}
+          src={storyImage(story, lang)}
           alt={story.imageAlt[lang]}
           width={story.imageWidth}
           height={story.imageHeight}

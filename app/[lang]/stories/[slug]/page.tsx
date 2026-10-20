@@ -3,7 +3,8 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { copy, type Lang } from "../../../content";
 import { Footer, Header } from "../../../components";
-import { getStory, relatedBook, stories, storiesCopy, storyDisplayTitle, storyTypeLabel } from "../../../stories";
+import { SongVideoFrame } from "../../../SongVideo";
+import { getStory, relatedBook, stories, storiesCopy, storyDisplayTitle, storyImage, storyIsAvailable, storyTypeLabel } from "../../../stories";
 
 const siteUrl = "https://simonavilar.com";
 
@@ -11,7 +12,9 @@ export const dynamicParams = false;
 
 export function generateStaticParams() {
   return stories.flatMap((story) =>
-    (["ru", "uk", "en"] as Lang[]).map((lang) => ({ lang, slug: story.slug })),
+    (["ru", "uk", "en"] as Lang[])
+      .filter((lang) => storyIsAvailable(story, lang))
+      .map((lang) => ({ lang, slug: story.slug })),
   );
 }
 
@@ -25,20 +28,21 @@ export async function generateMetadata({
   const story = getStory(slug);
   if (!story) return {};
   const l = lang as Lang;
+  if (!storyIsAvailable(story, l)) return {};
   const url = `${siteUrl}/${l}/stories/${story.slug}`;
-  const imageUrl = `${siteUrl}${story.image}`;
+  const imageUrl = `${siteUrl}${storyImage(story, l)}`;
   const brand = l === "uk" ? "Сімона Вілар" : l === "en" ? "Simona Vilar" : "Симона Вилар";
   return {
     title: story.seoTitle[l],
     description: story.metaDescription[l],
     alternates: {
       canonical: url,
-      languages: {
-        ru: `${siteUrl}/ru/stories/${story.slug}`,
-        uk: `${siteUrl}/uk/stories/${story.slug}`,
-        en: `${siteUrl}/en/stories/${story.slug}`,
-        "x-default": `${siteUrl}/ru/stories/${story.slug}`,
-      },
+      languages: Object.fromEntries([
+        ...(["ru", "uk", "en"] as Lang[])
+          .filter((language) => storyIsAvailable(story, language))
+          .map((language) => [language, `${siteUrl}/${language}/stories/${story.slug}`]),
+        ["x-default", `${siteUrl}/ru/stories/${story.slug}`],
+      ]),
     },
     openGraph: {
       title: story.seoTitle[l],
@@ -77,15 +81,16 @@ export default async function StoryPage({
   const story = getStory(slug);
   if (!story) notFound();
   const lang = raw as Lang;
+  if (!storyIsAvailable(story, lang)) notFound();
   const labels = storiesCopy[lang];
   const related = relatedBook(story, lang);
   const altPaths = {
     ru: `/ru/stories/${slug}`,
     uk: `/uk/stories/${slug}`,
-    en: `/en/stories/${slug}`,
+    en: storyIsAvailable(story, "en") ? `/en/stories/${slug}` : "/en/stories",
   };
   const storyUrl = `${siteUrl}/${lang}/stories/${slug}`;
-  const imageUrl = `${siteUrl}${story.image}`;
+  const imageUrl = `${siteUrl}${storyImage(story, lang)}`;
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -129,7 +134,7 @@ export default async function StoryPage({
           </header>
           <figure className="storyHero" style={{ maxWidth: Math.min(story.imageWidth, 850) }}>
             <Image
-              src={story.image}
+              src={storyImage(story, lang)}
               alt={story.imageAlt[lang]}
               width={story.imageWidth}
               height={story.imageHeight}
@@ -153,7 +158,17 @@ export default async function StoryPage({
                 </p>
               ))}
             </div>
-            {related && (
+            {story.videoId?.[lang] && story.videoTitle?.[lang] && (
+              <section className="storySongMedia">
+                <SongVideoFrame videoId={story.videoId[lang]} title={story.videoTitle[lang]} />
+                {story.songLinkLabel?.[lang] && (
+                  <a href={lang === "uk" ? `/${lang}/books/series/dalekiy-svet` : `/${lang}/books/rytsar-sveta`}>
+                    {story.songLinkLabel[lang]}
+                  </a>
+                )}
+              </section>
+            )}
+            {related && !story.videoId?.[lang] && (
               <section className="storyRelatedBook">
                 <p>{labels.bookSection}</p>
                 <h2>{related.title}</h2>

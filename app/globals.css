@@ -388,9 +388,44 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 .arthurSongLanguages button.isActive{border-color:var(--accent);background:var(--accent);color:#fffaf6}
 .songVideoFrame{position:relative;width:min(100%,780px);aspect-ratio:16/9;overflow:hidden;border-radius:6px;background:#1b1715}
 .songVideoFrame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.arthurSongStoryLink{display:inline-block;margin-top:16px;color:var(--accent);font-weight:500}
+.arthurSongStoryLink:hover{color:var(--accent-dark)}
 @media(max-width:560px){
   .arthurSong{margin-top:28px;padding:23px 0 25px}
   .privacyBody .arthurSong h2{font-size:24px}
   .privacyBody .arthurSong .arthurSongDescription{font-size:16px}
   .songVideoFrame{width:100%}
+}
+
+/* Arthur song news */
+.blogCardWithImage{padding:0 0 24px;overflow:hidden}
+.blogCardWithImage>time,.blogCardWithImage>h2,.blogCardWithImage>p,.blogCardWithImage>span:last-child{margin-left:24px;margin-right:24px}
+.blogCardImage{position:relative;display:block;width:100%;height:160px;margin:0 0 20px;padding:0!important;overflow:hidden;background:#1b1715}
+.blogCardImage img{display:block;width:100%;height:100%;object-fit:cover}
+.youtubeBadge{position:absolute;left:50%;top:50%;display:grid!important;width:46px;height:32px;margin:0!important;padding:0!important;place-items:center;border-radius:8px;background:#c00;color:#fff!important;font:16px/1 sans-serif;transform:translate(-50%,-50%)}
+.blogCardWithImage h2{margin-top:14px}
+.newsArticle{width:min(860px,calc(100% - 48px));padding:46px 0 96px}
+.newsArticle>article{margin-top:30px}
+.newsArticleHeading{padding:0 0 30px;border:0;border-bottom:1px solid var(--border-soft);background:none}
+.newsArticleHeading time{color:var(--text-muted);font:500 13px Manrope,sans-serif;letter-spacing:.04em}
+.newsArticleHeading h1{max-width:820px;margin:12px 0 0;font-size:54px;font-weight:500;line-height:1.08}
+.newsArticleBody{margin-top:36px}
+.newsArticleBody>p{margin:0 0 20px;color:var(--text-primary);font-size:19px;line-height:1.55}
+.newsArticleBody .songVideoFrame{margin:36px 0 22px}
+.newsBookLink{padding:22px 0;border-top:1px solid var(--border-soft);border-bottom:1px solid var(--border-soft)}
+.newsBookLink a{color:var(--accent);font-weight:500}
+.newsBookLink a:hover{color:var(--accent-dark)}
+
+/* Song text in Stories */
+.storyText p:first-child{font-size:22px;font-weight:500}
+.storySongMedia{margin:46px 0 34px;padding-top:34px;border-top:1px solid var(--border-soft)}
+.storySongMedia>a{display:inline-block;margin-top:18px;color:var(--accent);font-weight:500}
+.storySongMedia>a:hover{color:var(--accent-dark)}
+@media(max-width:560px){
+  .newsArticle{width:calc(100% - 32px);padding-top:34px;padding-bottom:70px}
+  .newsArticleHeading h1{font-size:38px}
+  .newsArticleBody>p{font-size:17px;line-height:1.5}
+  .blogCardImage{height:auto;aspect-ratio:16/9}
+  .storyText p:first-child{font-size:20px}
+  .storySongMedia{margin-top:36px;padding-top:28px}
 }

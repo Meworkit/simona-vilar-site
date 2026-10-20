@@ -84,7 +84,7 @@ for (const language of ["ru", "uk"] as const) {
       await clickAndExpect(page, page.locator("a.card"), `/${language}/news/official-statement`);
 
       await page.goto(`/${language}/news`);
-      await clickAndExpect(page, page.getByText(labels.read, { exact: true }), `/${language}/news/official-statement`);
+      await clickAndExpect(page, page.locator(`a[href="/${language}/news/official-statement"]`), `/${language}/news/official-statement`);
     });
 
     test("back links and footer language", async ({ page }) => {
@@ -100,18 +100,21 @@ for (const language of ["ru", "uk"] as const) {
   });
 }
 
-test("English Distant Light song switches between Russian and Ukrainian", async ({ page }) => {
+test("English Distant Light pages do not present a translated song", async ({ page }) => {
   await page.goto("/en/books/rytsar-sveta");
-  const frame = page.locator(".arthurSong iframe");
-  await expect(frame).toHaveAttribute("src", /WrT-UzkNLPo/);
-  await expect(page.getByRole("button", { name: "Russian" })).toHaveAttribute(
-    "aria-pressed",
-    "true",
-  );
-  await page.getByRole("button", { name: "Ukrainian" }).click();
-  await expect(frame).toHaveAttribute("src", /MQok3_gu_Fg/);
-  await expect(page.getByRole("button", { name: "Ukrainian" })).toHaveAttribute(
-    "aria-pressed",
-    "true",
-  );
+  await expect(page.locator(".arthurSong")).toHaveCount(0);
 });
+
+for (const language of ["ru", "uk"] as const) {
+  test(`${language.toUpperCase()} Arthur song news and story links`, async ({ page }) => {
+    await page.goto(`/${language}/news`);
+    await clickAndExpect(page, page.locator(`a[href="/${language}/news/arthur-song"]`), `/${language}/news/arthur-song`);
+    await expect(page.locator(".songVideoFrame iframe")).toHaveAttribute("loading", "lazy");
+    await page.locator(`a[href="/${language}/books/rytsar-sveta"]`).click();
+    await expect(page).toHaveURL((url) => url.pathname === `/${language}/books/rytsar-sveta`);
+
+    await page.goto(`/${language}/stories`);
+    await clickAndExpect(page, page.locator(`a[href="/${language}/stories/arthur-song"]`).first(), `/${language}/stories/arthur-song`);
+    await expect(page.locator(".songVideoFrame iframe")).toHaveAttribute("loading", "lazy");
+  });
+}

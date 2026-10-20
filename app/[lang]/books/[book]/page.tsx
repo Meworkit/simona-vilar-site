@@ -14,7 +14,7 @@ import {
 import { Breadcrumb, BreadcrumbJsonLd, BookJsonLd } from "../../../BookComponents";
 import { StoryPreview } from "../../../StoryPreview";
 import { ArthurSong } from "../../../SongVideo";
-import { storiesForBook } from "../../../stories";
+import { storiesForBook, storyIsAvailable } from "../../../stories";
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -119,7 +119,7 @@ export default async function BookPage({
     en: `/en/books/${bookSlug}`,
   };
   const displayTitle = bookTitle(book, lang);
-  const relatedStories = storiesForBook(book.slug);
+  const relatedStories = storiesForBook(book.slug).filter((story) => storyIsAvailable(story, lang));
   const breadcrumbItems = [
     { label: bc.breadcrumbRoot, href: `/${lang}/books` },
     ...(series

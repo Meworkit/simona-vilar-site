@@ -17,6 +17,7 @@ export interface StoryEntry {
   homepageExtra?: LocalizedText;
   body: LocalizedParagraphs;
   image: string;
+  imageByLang?: Partial<Record<Lang, string>>;
   imageWidth: number;
   imageHeight: number;
   imageAlt: LocalizedText;
@@ -24,6 +25,10 @@ export interface StoryEntry {
   seriesSlug?: string;
   seoTitle: LocalizedText;
   metaDescription: LocalizedText;
+  languages?: Lang[];
+  videoId?: Partial<Record<Lang, string>>;
+  videoTitle?: Partial<Record<Lang, string>>;
+  songLinkLabel?: Partial<Record<Lang, string>>;
 }
 
 export const storiesCopy: Record<
@@ -88,6 +93,71 @@ export const storiesCopy: Record<
 };
 
 export const stories: StoryEntry[] = [
+  {
+    id: "arthur-song",
+    slug: "arthur-song",
+    type: "story",
+    publishedAt: "2026-10-20",
+    modifiedAt: "2026-10-20",
+    languages: ["ru", "uk"],
+    title: {
+      ru: "«И я туда вернусь». Песня Артура",
+      uk: "«І я туди вернусь». Пісня Артура",
+      en: "",
+    },
+    preview: {
+      ru: "Средневековая баллада из романа Симоны Вилар «Рыцарь света», дилогия «Далёкий свет».",
+      uk: "Середньовічна балада з роману Сімони Вілар «Лицар світла», дилогія «Далеке світло».",
+      en: "",
+    },
+    body: {
+      ru: [
+        "«И я туда вернусь»",
+        "Огонь горит, и ночь темна,\nВосходит бледная луна.\nНалей, приятель, мне вина, —\nСегодня я напьюсь.\nУдарь по струнам веселей\nИ ни о чем не сожалей.\nКак в жаркий туман с полей,\nПусть улетает грусть!",
+        "В глаза костлявой я смотрел,\nВ меня летели сотни стрел,\nНо я в сраженьях не робел,\nЯ смерти не боюсь.\nПокуда Бог хранит меня,\nИ от меча и от огня,\nИ, направляя в бой коня, —\nЯ весело смеюсь!",
+        "Во многих землях побывал,\nПрекрасных женщин обнимал\nИ поцелуев с губ срывал\nВишневый сладкий вкус.\nНо без дорог мне счастья нет,\nПускай красотки плачут в след.\nКогда прогонит ночь рассвет,\nУйду, не обернусь.",
+        "Но только снится иногда\nХолмов зеленых череда.\nПрекрасней места никогда\nНе встретите — клянусь!\nРека сверкает серебром,\nШумит дубрава за окном.\nТам я родился, там мой дом —\nИ я туда вернусь!",
+      ],
+      uk: [
+        "«І я туди вернусь»",
+        "Вогонь палає, ніч темна,\nНа небі місяць вирина.\nНалий, мій друже, ще вина —\nСьогодні я нап'юсь.\nЗаграй на струнах веселіше,\nЖени журбу від серця швидше.\nХай геть летить вона скоріше —\nІ я вже не журюсь!",
+        "В очах я смерті поглядав,\nІ сотні стріл я зустрічав,\nТа у боях не відступав —\nЯ смерті не боюсь.\nДопоки Бог мене храня,\nВід гострих стріл і від вогня,\nВеду у бій свого коня —\nІ весело сміюсь!",
+        "У різних землях побував,\nКрасунь в обіймах я тримав,\nЗ вуст поцілунки я зривав —\nВишневий ніжний смак.\nТа без доріг життя нема,\nХай плаче дівчина сама.\nКоли розвіється пітьма —\nПіду, не глянувши назад.",
+        "Та іноді приходить в сни\nЗелених пагорбів лани.\nНема прекрасніш сторони —\nУ цьому я клянусь!\nРіка сріблиться за селом,\nШумить діброва за вікном.\nТам я родився, там мій дім —\nІ я туди вернусь!",
+      ],
+      en: [],
+    },
+    image: "/arthur-song-ru.jpg",
+    imageByLang: { uk: "/arthur-song-uk.jpg" },
+    imageWidth: 1280,
+    imageHeight: 720,
+    imageAlt: {
+      ru: "«И я туда вернусь». Песня Артура — превью видео",
+      uk: "«І я туди вернусь». Пісня Артура — прев’ю відео",
+      en: "",
+    },
+    bookSlug: "rytsar-sveta",
+    seriesSlug: "dalekiy-svet",
+    videoId: { ru: "WrT-UzkNLPo", uk: "MQok3_gu_Fg" },
+    videoTitle: {
+      ru: "Песня Артура — «И я туда вернусь»",
+      uk: "Пісня Артура — «І я туди вернусь»",
+    },
+    songLinkLabel: {
+      ru: "Роман «Рыцарь света».",
+      uk: "Дилогия «Далеке світло».",
+    },
+    seoTitle: {
+      ru: "«И я туда вернусь». Песня Артура | Симона Вилар",
+      uk: "«І я туди вернусь». Пісня Артура | Сімона Вілар",
+      en: "",
+    },
+    metaDescription: {
+      ru: "Полный текст и видео средневековой баллады из романа Симоны Вилар «Рыцарь света».",
+      uk: "Повний текст і відео середньовічної балади з роману Сімони Вілар «Лицар світла».",
+      en: "",
+    },
+  },
   {
     id: "veter-severa-otryvok",
     slug: "veter-severa-otryvok",
@@ -359,6 +429,14 @@ export const homepageStories: StoryEntry[] = homepageStorySlugs
 
 export function getStory(slug: string): StoryEntry | undefined {
   return stories.find((story) => story.slug === slug);
+}
+
+export function storyIsAvailable(story: StoryEntry, lang: Lang): boolean {
+  return !story.languages || story.languages.includes(lang);
+}
+
+export function storyImage(story: StoryEntry, lang: Lang): string {
+  return story.imageByLang?.[lang] ?? story.image;
 }
 
 export function storiesForBook(bookSlug: string): StoryEntry[] {

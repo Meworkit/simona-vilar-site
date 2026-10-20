@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { copy, type Lang } from "../../content";
 import { Footer, Header } from "../../components";
 import { StoryPreview } from "../../StoryPreview";
-import { stories, storiesCopy } from "../../stories";
+import { stories, storiesCopy, storyIsAvailable } from "../../stories";
 
 export const dynamicParams = false;
 
@@ -70,7 +70,7 @@ export default async function StoriesPage({
           <h1>{labels.sectionTitle}</h1>
         </header>
         <div className="storiesList">
-          {stories.map((story) => (
+          {stories.filter((story) => storyIsAvailable(story, lang)).map((story) => (
             <StoryPreview key={story.id} story={story} lang={lang} />
           ))}
         </div>

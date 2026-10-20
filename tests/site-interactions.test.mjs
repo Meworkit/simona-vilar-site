@@ -62,6 +62,10 @@ const equivalents = [
   ["/uk/privacy", "/ru/privacy"],
   ["/ru/news/official-statement", "/uk/news/official-statement"],
   ["/uk/news/official-statement", "/ru/news/official-statement"],
+  ["/ru/news/arthur-song", "/uk/news/arthur-song"],
+  ["/uk/news/arthur-song", "/ru/news/arthur-song"],
+  ["/ru/stories/arthur-song", "/uk/stories/arthur-song"],
+  ["/uk/stories/arthur-song", "/ru/stories/arthur-song"],
 ];
 
 test("language switches preserve the equivalent current page", async () => {
@@ -93,6 +97,8 @@ test("all internal links resolve and key interactive links are present", async (
     const ladyNoviceBook = await render(`/${lang}/books/ledi-poslushnitsa`);
     const knightBook = await render(`/${lang}/books/rytsar-sveta`);
     const distantLightSeries = await render(`/${lang}/books/series/dalekiy-svet`);
+    const arthurNews = lang === "en" ? null : await render(`/${lang}/news/arthur-song`);
+    const arthurStory = lang === "en" ? null : await render(`/${lang}/stories/arthur-song`);
     const pages = [
       homepage,
       news,
@@ -110,6 +116,8 @@ test("all internal links resolve and key interactive links are present", async (
       ladyNoviceBook,
       knightBook,
       distantLightSeries,
+      ...(arthurNews ? [arthurNews] : []),
+      ...(arthurStory ? [arthurStory] : []),
     ];
 
     for (const page of pages) {
@@ -117,18 +125,21 @@ test("all internal links resolve and key interactive links are present", async (
       assert.match(page.html, /href="https:\/\/www\.youtube\.com\/@SimVilar"/);
     }
 
-    const expectedVideo = lang === "uk" ? "MQok3_gu_Fg" : "WrT-UzkNLPo";
-    for (const page of [ladyNoviceBook, knightBook, distantLightSeries]) {
-      assert.match(page.html, new RegExp(`youtube-nocookie\\.com/embed/${expectedVideo}`));
-      assert.match(page.html, /loading="lazy"/);
-      assert.doesNotMatch(page.html, /autoplay=1/);
-    }
     if (lang === "en") {
       for (const page of [ladyNoviceBook, knightBook, distantLightSeries]) {
-        assert.match(page.html, /aria-label="Song language"/);
-        assert.match(page.html, />Russian<\/button>/);
-        assert.match(page.html, />Ukrainian<\/button>/);
+        assert.doesNotMatch(page.html, /class="arthurSong"/);
       }
+    } else {
+      const expectedVideo = lang === "uk" ? "MQok3_gu_Fg" : "WrT-UzkNLPo";
+      for (const page of [ladyNoviceBook, knightBook, distantLightSeries, arthurNews, arthurStory]) {
+        assert.match(page.html, new RegExp(`youtube-nocookie\\.com/embed/${expectedVideo}`));
+        assert.match(page.html, /loading="lazy"/);
+        assert.doesNotMatch(page.html, /autoplay=1/);
+      }
+      assert.match(news.html, new RegExp(`href="/${lang}/news/arthur-song"`));
+      assert.match(stories.html, new RegExp(`href="/${lang}/stories/arthur-song"`));
+      assert.match(arthurNews.html, new RegExp(`href="/${lang}/books/rytsar-sveta"`));
+      assert.match(knightBook.html, new RegExp(`href="/${lang}/stories/arthur-song"`));
     }
 
     const expectedCta =
@@ -138,15 +149,17 @@ test("all internal links resolve and key interactive links are present", async (
           ? "Продажі на сайті поки не відкрито. Підпишіться на розсилку, щоб першими дізнатися про їх відкриття."
           : "Sales are not yet open on this site. Subscribe to be the first to hear when they open.";
     assert.match(knightBook.html, new RegExp(expectedCta.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
-    assert.ok(
-      knightBook.html.indexOf('class="bookDesc"') < knightBook.html.indexOf('class="arthurSong"'),
-      `${lang} song must follow the book description`,
-    );
-    assert.ok(
-      distantLightSeries.html.indexOf('class="privacyIntro"') <
-        distantLightSeries.html.indexOf('class="arthurSong"'),
-      `${lang} song must follow the series description`,
-    );
+    if (lang !== "en") {
+      assert.ok(
+        knightBook.html.indexOf('class="bookDesc"') < knightBook.html.indexOf('class="arthurSong"'),
+        `${lang} song must follow the book description`,
+      );
+      assert.ok(
+        distantLightSeries.html.indexOf('class="privacyIntro"') <
+          distantLightSeries.html.indexOf('class="arthurSong"'),
+        `${lang} song must follow the series description`,
+      );
+    }
 
     assert.match(homepage.html, new RegExp(`href="/${lang}/news/official-statement"`));
     assert.match(news.html, new RegExp(`href="/${lang}/news/official-statement"`));
@@ -220,4 +233,23 @@ test("all internal links resolve and key interactive links are present", async (
       );
     }
   }
+});
+
+test("Arthur song materials are localized, indexable, and not duplicated in English", async () => {
+  for (const lang of ["ru", "uk"]) {
+    for (const section of ["news", "stories"]) {
+      const path = `/${lang}/${section}/arthur-song`;
+      const { response, html } = await render(path);
+      assert.equal(response.status, 200, path);
+      assert.match(html, new RegExp(`<link rel="canonical" href="https://simonavilar\\.com${path}"`));
+      assert.match(html, /<meta name="robots" content="index, follow, max-image-preview:large"/);
+      assert.match(html, new RegExp(`href="https://simonavilar\\.com/${lang === "ru" ? "uk" : "ru"}/${section}/arthur-song" hreflang="${lang === "ru" ? "uk" : "ru"}`));
+      assert.doesNotMatch(html, new RegExp(`/${lang}/${section}/arthur-song[^<]*autoplay=1`));
+    }
+  }
+
+  assert.equal((await render("/en/news/arthur-song")).response.status, 404);
+  assert.equal((await render("/en/stories/arthur-song")).response.status, 404);
+  assert.doesNotMatch((await render("/en/news")).html, /\/en\/news\/arthur-song/);
+  assert.doesNotMatch((await render("/en/stories")).html, /\/en\/stories\/arthur-song/);
 });
