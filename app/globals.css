@@ -321,7 +321,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 .bookMeta strong{color:var(--text-primary,var(--ink));font-weight:600}
 .bookMeta a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
 .bookCta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;margin:22px 0 26px;padding:18px 0;border-top:1px solid var(--border-soft,var(--line));border-bottom:1px solid var(--border-soft,var(--line))}
-.bookCtaText{margin:0;flex:1 1 320px;color:var(--text-secondary,var(--muted));font-style:italic;font-weight:400;font-size:19px;line-height:1.5}
+.bookCtaText{margin:0;flex:1 1 320px;color:var(--text-secondary,var(--muted));font-style:normal;font-weight:400;font-size:19px;line-height:1.5}
 .bookCtaButton{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:14px 28px;border-radius:5px;background:var(--accent);color:#fffaf6;font:600 16px 'Source Serif 4',Georgia,serif;letter-spacing:.01em;text-decoration:none;cursor:pointer;white-space:nowrap}
 .bookCtaButton:hover{background:var(--accent-dark,var(--accent))}
 .bookCtaButton:focus-visible{outline:2px solid var(--accent-dark,var(--accent));outline-offset:3px}

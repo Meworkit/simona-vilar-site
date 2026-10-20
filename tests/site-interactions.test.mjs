@@ -133,7 +133,7 @@ test("all internal links resolve and key interactive links are present", async (
 
     const expectedCta =
       lang === "ru"
-        ? "Продажи на сайте пока закрыты. Подпишитесь на рассылку, чтобы первыми узнать об их открытии."
+        ? "Продажи на паузе. Подпишитесь, чтобы узнать первыми о новостях"
         : lang === "uk"
           ? "Продажі на сайті поки не відкрито. Підпишіться на розсилку, щоб першими дізнатися про їх відкриття."
           : "Sales are not yet open on this site. Subscribe to be the first to hear when they open.";

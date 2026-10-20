@@ -496,7 +496,7 @@ export const booksCopy: Record<Lang, BooksCopy> = {
     author: "Автор",
     authorName: "Симона Вилар",
     series: "Серия",
-    ctaText: "Продажи на сайте пока закрыты. Подпишитесь на рассылку, чтобы первыми узнать об их открытии.",
+    ctaText: "Продажи на паузе. Подпишитесь, чтобы узнать первыми о новостях",
     ctaButton: "Подписаться",
     breadcrumbRoot: "Книги",
     originalTitleLabel: "Оригинальное название",
