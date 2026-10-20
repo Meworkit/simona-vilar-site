@@ -99,3 +99,19 @@ for (const language of ["ru", "uk"] as const) {
     });
   });
 }
+
+test("English Distant Light song switches between Russian and Ukrainian", async ({ page }) => {
+  await page.goto("/en/books/rytsar-sveta");
+  const frame = page.locator(".arthurSong iframe");
+  await expect(frame).toHaveAttribute("src", /WrT-UzkNLPo/);
+  await expect(page.getByRole("button", { name: "Russian" })).toHaveAttribute(
+    "aria-pressed",
+    "true",
+  );
+  await page.getByRole("button", { name: "Ukrainian" }).click();
+  await expect(frame).toHaveAttribute("src", /MQok3_gu_Fg/);
+  await expect(page.getByRole("button", { name: "Ukrainian" })).toHaveAttribute(
+    "aria-pressed",
+    "true",
+  );
+});

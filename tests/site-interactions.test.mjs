@@ -90,6 +90,9 @@ test("all internal links resolve and key interactive links are present", async (
     const witchBook = await render(`/${lang}/books/vedma`);
     const northWindBook = await render(`/${lang}/books/veter-s-severa`);
     const svetoradaBook = await render(`/${lang}/books/svetorada-zolotaya`);
+    const ladyNoviceBook = await render(`/${lang}/books/ledi-poslushnitsa`);
+    const knightBook = await render(`/${lang}/books/rytsar-sveta`);
+    const distantLightSeries = await render(`/${lang}/books/series/dalekiy-svet`);
     const pages = [
       homepage,
       news,
@@ -104,7 +107,46 @@ test("all internal links resolve and key interactive links are present", async (
       witchBook,
       northWindBook,
       svetoradaBook,
+      ladyNoviceBook,
+      knightBook,
+      distantLightSeries,
     ];
+
+    for (const page of pages) {
+      assert.match(page.html, /href="https:\/\/www\.facebook\.com\/Simona\.Vilar\/"/);
+      assert.match(page.html, /href="https:\/\/www\.youtube\.com\/@SimVilar"/);
+    }
+
+    const expectedVideo = lang === "uk" ? "MQok3_gu_Fg" : "WrT-UzkNLPo";
+    for (const page of [ladyNoviceBook, knightBook, distantLightSeries]) {
+      assert.match(page.html, new RegExp(`youtube-nocookie\\.com/embed/${expectedVideo}`));
+      assert.match(page.html, /loading="lazy"/);
+      assert.doesNotMatch(page.html, /autoplay=1/);
+    }
+    if (lang === "en") {
+      for (const page of [ladyNoviceBook, knightBook, distantLightSeries]) {
+        assert.match(page.html, /aria-label="Song language"/);
+        assert.match(page.html, />Russian<\/button>/);
+        assert.match(page.html, />Ukrainian<\/button>/);
+      }
+    }
+
+    const expectedCta =
+      lang === "ru"
+        ? "Продажи на сайте пока закрыты. Подпишитесь на рассылку, чтобы первыми узнать об их открытии."
+        : lang === "uk"
+          ? "Продажі на сайті поки не відкрито. Підпишіться на розсилку, щоб першими дізнатися про їх відкриття."
+          : "Sales are not yet open on this site. Subscribe to be the first to hear when they open.";
+    assert.match(knightBook.html, new RegExp(expectedCta.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+    assert.ok(
+      knightBook.html.indexOf('class="bookDesc"') < knightBook.html.indexOf('class="arthurSong"'),
+      `${lang} song must follow the book description`,
+    );
+    assert.ok(
+      distantLightSeries.html.indexOf('class="privacyIntro"') <
+        distantLightSeries.html.indexOf('class="arthurSong"'),
+      `${lang} song must follow the series description`,
+    );
 
     assert.match(homepage.html, new RegExp(`href="/${lang}/news/official-statement"`));
     assert.match(news.html, new RegExp(`href="/${lang}/news/official-statement"`));
