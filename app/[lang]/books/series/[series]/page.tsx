@@ -4,6 +4,7 @@ import { copy, type Lang } from "../../../../content";
 import { Footer, Header } from "../../../../components";
 import { seriesList, getSeries, booksInSeries, booksCopy, bookTitle } from "../../../../books";
 import { Breadcrumb, BreadcrumbJsonLd } from "../../../../BookComponents";
+import { ArthurSong } from "../../../../SongVideo";
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -114,6 +115,7 @@ export default async function SeriesPage({
         </header>
         <article className="privacyBody">
           <p className="privacyIntro">{series.description[lang]}</p>
+          {series.slug === "dalekiy-svet" && <ArthurSong lang={lang} />}
           <section className="seriesBlock">
             <h2>{bc.seriesBooksHeading}</h2>
             <ul className="bookList">

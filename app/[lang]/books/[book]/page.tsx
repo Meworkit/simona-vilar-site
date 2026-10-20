@@ -13,6 +13,7 @@ import {
 } from "../../../books";
 import { Breadcrumb, BreadcrumbJsonLd, BookJsonLd } from "../../../BookComponents";
 import { StoryPreview } from "../../../StoryPreview";
+import { ArthurSong } from "../../../SongVideo";
 import { storiesForBook } from "../../../stories";
 
 export const dynamicParams = false;
@@ -174,6 +175,8 @@ export default async function BookPage({
           </div>
 
           <p className="bookDesc">{book.description[lang]}</p>
+
+          {book.series === "dalekiy-svet" && <ArthurSong lang={lang} />}
 
           {otherBooks.length > 0 && (
             <section className="relatedBooks">

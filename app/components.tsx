@@ -197,6 +197,33 @@ export function Footer({
           <a href={`mailto:${email}`}>{email}</a>
         </div>
         <span>© 2026 Simona Vilar</span>
+        <div
+          className="footerSocials"
+          aria-label={lang === "uk" ? "Соціальні мережі" : lang === "en" ? "Social media" : "Социальные сети"}
+        >
+          <a
+            href="https://www.facebook.com/Simona.Vilar/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            title="Facebook"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M13.7 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.5 1.6-1.5H17V4.9c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5V11H7v3h3v8h3.7Z" />
+            </svg>
+          </a>
+          <a
+            href="https://www.youtube.com/@SimVilar"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+            title="YouTube"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z" />
+            </svg>
+          </a>
+        </div>
         <div className="footerLanguages" aria-label="Language">
           <a aria-current={lang === "uk" ? "page" : undefined} href={altPaths ? altPaths.uk : localizedPath("uk", page, detail)}>UA</a>
           <span aria-hidden="true">·</span>
