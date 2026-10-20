@@ -6,7 +6,6 @@ import { Newsletter } from "../Newsletter";
 import { Footer, Header, Statement, WebPageJsonLd } from "../components";
 import { StoryPreview } from "../StoryPreview";
 import { homepageStories, storiesCopy } from "../stories";
-import { arthurSongNews, isArthurNewsLang } from "../news";
 export const dynamicParams = false;
 export function generateStaticParams() {
   return [{ lang: "uk" }, { lang: "ru" }, { lang: "en" }];
@@ -102,16 +101,6 @@ export default async function Page({
             </a>
           </div>
           <div data-nosnippet="">
-            {isArthurNewsLang(lang) && (
-              <a className="card" href={`/${lang}/news/${arthurSongNews.slug}`}>
-                <time dateTime={arthurSongNews.publishedAt}>{arthurSongNews.displayDate}</time>
-                <div>
-                  <h3>{arthurSongNews.cardTitle[lang]}</h3>
-                  <p>{arthurSongNews.description[lang]}</p>
-                </div>
-                <span>{arthurSongNews.readLabel[lang]} →</span>
-              </a>
-            )}
             <a className="card" href={`/${lang}/news/official-statement`}>
               <time>08.09.2026</time>
               <div>

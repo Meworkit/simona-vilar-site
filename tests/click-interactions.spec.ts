@@ -106,13 +106,7 @@ test("English Distant Light pages do not present a translated song", async ({ pa
 });
 
 for (const language of ["ru", "uk"] as const) {
-  test(`${language.toUpperCase()} Arthur song news and story links`, async ({ page }) => {
-    await page.goto(`/${language}/news`);
-    await clickAndExpect(page, page.locator(`a[href="/${language}/news/arthur-song"]`), `/${language}/news/arthur-song`);
-    await expect(page.locator(".songVideoFrame iframe")).toHaveAttribute("loading", "lazy");
-    await page.locator(`a[href="/${language}/books/rytsar-sveta"]`).click();
-    await expect(page).toHaveURL((url) => url.pathname === `/${language}/books/rytsar-sveta`);
-
+  test(`${language.toUpperCase()} Arthur song story link`, async ({ page }) => {
     await page.goto(`/${language}/stories`);
     await clickAndExpect(page, page.locator(`a[href="/${language}/stories/arthur-song"]`).first(), `/${language}/stories/arthur-song`);
     await expect(page.locator(".songVideoFrame iframe")).toHaveAttribute("loading", "lazy");
