@@ -132,17 +132,29 @@ export default async function StoryPage({
             <h1>{storyDisplayTitle(story, lang)}</h1>
             <p className="storyArticleType">{storyTypeLabel(story, lang)}</p>
           </header>
-          <figure className="storyHero" style={{ maxWidth: Math.min(story.imageWidth, 850) }}>
-            <Image
-              src={storyImage(story, lang)}
-              alt={story.imageAlt[lang]}
-              width={story.imageWidth}
-              height={story.imageHeight}
-              sizes="(max-width: 850px) 100vw, 850px"
-              priority
-            />
-          </figure>
+          {!story.videoId?.[lang] && (
+            <figure className="storyHero" style={{ maxWidth: Math.min(story.imageWidth, 850) }}>
+              <Image
+                src={storyImage(story, lang)}
+                alt={story.imageAlt[lang]}
+                width={story.imageWidth}
+                height={story.imageHeight}
+                sizes="(max-width: 850px) 100vw, 850px"
+                priority
+              />
+            </figure>
+          )}
           <div className="storyReading">
+            {story.videoId?.[lang] && story.videoTitle?.[lang] && (
+              <section className="storySongMedia storySongMediaTop">
+                <SongVideoFrame videoId={story.videoId[lang]} title={story.videoTitle[lang]} />
+                {story.songLinkLabel?.[lang] && (
+                  <a href={lang === "uk" ? `/${lang}/books/series/dalekiy-svet` : `/${lang}/books/rytsar-sveta`}>
+                    {story.songLinkLabel[lang]}
+                  </a>
+                )}
+              </section>
+            )}
             {story.type !== "excerpt" && (
               <p className="storyIntro">{story.preview[lang]}</p>
             )}
@@ -158,16 +170,6 @@ export default async function StoryPage({
                 </p>
               ))}
             </div>
-            {story.videoId?.[lang] && story.videoTitle?.[lang] && (
-              <section className="storySongMedia">
-                <SongVideoFrame videoId={story.videoId[lang]} title={story.videoTitle[lang]} />
-                {story.songLinkLabel?.[lang] && (
-                  <a href={lang === "uk" ? `/${lang}/books/series/dalekiy-svet` : `/${lang}/books/rytsar-sveta`}>
-                    {story.songLinkLabel[lang]}
-                  </a>
-                )}
-              </section>
-            )}
             {related && !story.videoId?.[lang] && (
               <section className="storyRelatedBook">
                 <p>{labels.bookSection}</p>

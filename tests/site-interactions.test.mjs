@@ -137,17 +137,23 @@ test("all internal links resolve and key interactive links are present", async (
         assert.doesNotMatch(page.html, /autoplay=1/);
       }
       assert.match(news.html, new RegExp(`href="/${lang}/news/arthur-song"`));
+      assert.match(homepage.html, new RegExp(`href="/${lang}/news/arthur-song"`));
       assert.match(stories.html, new RegExp(`href="/${lang}/stories/arthur-song"`));
       assert.match(arthurNews.html, new RegExp(`href="/${lang}/books/rytsar-sveta"`));
       assert.match(knightBook.html, new RegExp(`href="/${lang}/stories/arthur-song"`));
+      assert.doesNotMatch(arthurStory.html, /class="storyHero"/);
+      assert.ok(
+        arthurStory.html.indexOf('class="songVideoFrame"') < arthurStory.html.indexOf('class="storyIntro"'),
+        `${lang} story video must appear before the song introduction and lyrics`,
+      );
     }
 
     const expectedCta =
       lang === "ru"
         ? "Продажи на паузе. Подпишитесь, чтобы узнать первыми о новостях"
         : lang === "uk"
-          ? "Продажі на сайті поки не відкрито. Підпишіться на розсилку, щоб першими дізнатися про їх відкриття."
-          : "Sales are not yet open on this site. Subscribe to be the first to hear when they open.";
+          ? "Продажі на паузі. Підпишіться, щоб першими дізнатися про новини"
+          : "Sales are paused. Subscribe to be the first to hear the news";
     assert.match(knightBook.html, new RegExp(expectedCta.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
     if (lang !== "en") {
       assert.ok(

@@ -81,7 +81,7 @@ for (const language of ["ru", "uk"] as const) {
       await clickAndExpect(page, page.getByRole("link", { name: labels.fullBiography, exact: true }), `/${language}/biography`);
 
       await page.goto(`/${language}`);
-      await clickAndExpect(page, page.locator("a.card"), `/${language}/news/official-statement`);
+      await clickAndExpect(page, page.locator(`a.card[href="/${language}/news/official-statement"]`), `/${language}/news/official-statement`);
 
       await page.goto(`/${language}/news`);
       await clickAndExpect(page, page.locator(`a[href="/${language}/news/official-statement"]`), `/${language}/news/official-statement`);

@@ -421,6 +421,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 .storySongMedia{margin:46px 0 34px;padding-top:34px;border-top:1px solid var(--border-soft)}
 .storySongMedia>a{display:inline-block;margin-top:18px;color:var(--accent);font-weight:500}
 .storySongMedia>a:hover{color:var(--accent-dark)}
+.storySongMediaTop{margin-top:0;margin-bottom:38px;padding-top:0;border-top:0}
 @media(max-width:560px){
   .newsArticle{width:calc(100% - 32px);padding-top:34px;padding-bottom:70px}
   .newsArticleHeading h1{font-size:38px}
