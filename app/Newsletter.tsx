@@ -113,7 +113,7 @@ export function Newsletter({ lang }: { lang: Lang }) {
   }, [captchaLang, t.invalid, t.required]);
 
   return (
-    <section id="newsletter" className="newsletter shell" aria-labelledby="newsletter-title">
+    <section id="newsletter" className="newsletter shell sib-form" aria-labelledby="newsletter-title">
       <h2 id="newsletter-title">{t.title}</h2>
       <p>{t.subtitle}</p>
 
@@ -148,13 +148,13 @@ export function Newsletter({ lang }: { lang: Lang }) {
             <div className="sib-input newsletterEmailField">
               <div className="form__entry entry_block">
                 <div className="form__label-row">
-                  <label className="srOnly" htmlFor={`newsletter-${lang}`}>
+                  <label className="srOnly" htmlFor="EMAIL">
                     {t.placeholder}
                   </label>
                   <div className="entry__field">
                     <input
                       className="input"
-                      id={`newsletter-${lang}`}
+                      id="EMAIL"
                       name="EMAIL"
                       type="email"
                       required
