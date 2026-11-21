@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 
 type Props = {
   lang: "uk" | "ru" | "en";
@@ -11,6 +11,9 @@ type Props = {
   required: string;
   invalid: string;
 };
+
+const BREVO_FORM_ACTION =
+  "https://9bfc7f37.sibforms.com/serve/MUIFAApmT5fj474ePss9nlC9yMWNjcfgsRBMmI6nQVA16d5wuEhYj50ITfuFDxfxDzRc5_tp0hTKb0POHndNLDR04Iw8NMM2qiO7loSarrH1KGL9a6OqZAmg6gJlKXvSu5Pykn3nNv1Sr-uP5vW_SBLwqwXReMBqmMrPZR1MAaGmIoTxBl6EdkYKI4r26O6-BFPg1ESENRhIk8IYcg==";
 
 const RECAPTCHA_SITE_KEY = "6LeZySouAAAAABAAXTpRYkSmVPM0GPgU1gcLb1Sc";
 
@@ -33,7 +36,7 @@ export function BrevoNewsletterForm({
   const [captchaToken, setCaptchaToken] = useState("");
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [fieldError, setFieldError] = useState("");
-  const [debugError, setDebugError] = useState("");
+  const submittedRef = useRef(false);
 
   const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
   const canSubmit = emailValid && Boolean(captchaToken) && status !== "submitting";
@@ -45,6 +48,7 @@ export function BrevoNewsletterForm({
       setCaptchaToken(token);
       setStatus("idle");
     };
+
     w.handleCaptchaExpired = () => {
       setCaptchaToken("");
     };
@@ -66,87 +70,79 @@ export function BrevoNewsletterForm({
     };
   }, [lang]);
 
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
     setFieldError("");
-    setDebugError("");
 
     if (!email.trim()) {
+      event.preventDefault();
       setFieldError(required);
       return;
     }
+
     if (!emailValid) {
+      event.preventDefault();
       setFieldError(invalid);
       return;
     }
+
     if (!captchaToken) {
+      event.preventDefault();
       setStatus("error");
       return;
     }
 
+    // Do not preventDefault here. The browser must submit this exact form
+    // directly to Brevo so Brevo records a real "Form submitted" event and
+    // can trigger the form's built-in double opt-in flow.
+    submittedRef.current = true;
     setStatus("submitting");
+  }
 
-    try {
-      const response = await fetch("/api/newsletter", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email: email.trim(),
-          captchaToken,
-        }),
-      });
-      const result = (await response.json()) as {
-        success?: boolean;
-        debug?: {
-          brevoStatus?: number;
-          brevoBody?: string;
-          networkError?: string;
-        };
-      };
+  function handleBrevoFrameLoad() {
+    // The hidden iframe also fires once for its initial about:blank document.
+    if (!submittedRef.current) return;
 
-      if (!response.ok || !result.success) {
-        const details = result.debug
-          ? JSON.stringify(result.debug)
-          : `HTTP ${response.status}`;
-        setDebugError(details);
-        setStatus("error");
-        return;
-      }
-
-      setStatus("success");
-      setEmail("");
-      setCaptchaToken("");
-      (window as CaptchaWindow).grecaptcha?.reset();
-    } catch {
-      setDebugError("Network error while calling /api/newsletter");
-      setStatus("error");
-    }
+    submittedRef.current = false;
+    setStatus("success");
+    setEmail("");
+    setCaptchaToken("");
+    (window as CaptchaWindow).grecaptcha?.reset();
   }
 
   return (
     <div className="newsletterBrevoContainer">
       {status === "error" && (
         <div className="newsletterFormMessage newsletterFormError" role="alert">
-          <div>{error}</div>
-          {debugError && <pre className="newsletterDebugError">{debugError}</pre>}
+          {error}
         </div>
       )}
+
       {status === "success" && (
         <div className="newsletterFormMessage newsletterFormSuccess" role="status">
           {success}
         </div>
       )}
 
-      <form className="newsletterControlledForm" onSubmit={handleSubmit} noValidate>
+      <form
+        id="sib-form"
+        className="newsletterControlledForm"
+        action={BREVO_FORM_ACTION}
+        method="post"
+        target="brevo-newsletter-response"
+        data-type="subscription"
+        onSubmit={handleSubmit}
+        noValidate
+      >
         <div className="newsletterEmailField">
-          <label className="srOnly" htmlFor={`newsletter-${lang}`}>
+          <label className="srOnly" htmlFor="EMAIL">
             {placeholder}
           </label>
           <input
-            id={`newsletter-${lang}`}
+            id="EMAIL"
             name="EMAIL"
             type="email"
             required
+            data-required="true"
             autoComplete="email"
             placeholder={placeholder}
             value={email}
@@ -168,6 +164,7 @@ export function BrevoNewsletterForm({
         <div className="newsletterCaptcha">
           <div
             className="g-recaptcha"
+            id="sib-captcha"
             data-sitekey={RECAPTCHA_SITE_KEY}
             data-callback="handleCaptchaResponse"
             data-expired-callback="handleCaptchaExpired"
@@ -183,7 +180,26 @@ export function BrevoNewsletterForm({
                 : "Отправляем…"
             : button}
         </button>
+
+        <input
+          type="text"
+          name="email_address_check"
+          value=""
+          className="input--hidden"
+          tabIndex={-1}
+          aria-hidden="true"
+          autoComplete="off"
+          readOnly
+        />
+        <input type="hidden" name="locale" value="en" />
       </form>
+
+      <iframe
+        name="brevo-newsletter-response"
+        title="Brevo newsletter response"
+        className="newsletterResponseFrame"
+        onLoad={handleBrevoFrameLoad}
+      />
     </div>
   );
 }
