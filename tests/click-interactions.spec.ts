@@ -112,3 +112,20 @@ for (const language of ["ru", "uk"] as const) {
     await expect(page.locator(".songVideoFrame iframe")).toHaveAttribute("loading", "lazy");
   });
 }
+
+for (const language of ["ru", "uk", "en"] as const) {
+  test(`${language.toUpperCase()} newsletter renders the official Brevo iframe`, async ({ page }) => {
+    await page.goto(`/${language}`);
+    const iframe = page.locator("#newsletter .newsletterBrevoIframe");
+    await expect(iframe).toHaveCount(1);
+    await expect(iframe).toHaveAttribute("loading", "lazy");
+    await expect(iframe).toHaveAttribute("src", /^https:\/\/9bfc7f37\.sibforms\.com\//);
+    // Accessible name must not be empty, and must not just restate "iframe".
+    const title = await iframe.getAttribute("title");
+    expect(title).toBeTruthy();
+    expect(title!.length).toBeGreaterThan(5);
+    // No Brevo/reCAPTCHA script should load into the parent document itself.
+    const parentScripts = await page.locator("script[src*='sibforms.com'], script[src*='recaptcha']").count();
+    expect(parentScripts).toBe(0);
+  });
+}
