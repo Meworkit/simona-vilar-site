@@ -33,6 +33,7 @@ export function BrevoNewsletterForm({
   const [captchaToken, setCaptchaToken] = useState("");
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [fieldError, setFieldError] = useState("");
+  const [debugError, setDebugError] = useState("");
 
   const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
   const canSubmit = emailValid && Boolean(captchaToken) && status !== "submitting";
@@ -68,6 +69,7 @@ export function BrevoNewsletterForm({
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setFieldError("");
+    setDebugError("");
 
     if (!email.trim()) {
       setFieldError(required);
@@ -93,9 +95,20 @@ export function BrevoNewsletterForm({
           captchaToken,
         }),
       });
-      const result = (await response.json()) as { success?: boolean };
+      const result = (await response.json()) as {
+        success?: boolean;
+        debug?: {
+          brevoStatus?: number;
+          brevoBody?: string;
+          networkError?: string;
+        };
+      };
 
       if (!response.ok || !result.success) {
+        const details = result.debug
+          ? JSON.stringify(result.debug)
+          : `HTTP ${response.status}`;
+        setDebugError(details);
         setStatus("error");
         return;
       }
@@ -105,6 +118,7 @@ export function BrevoNewsletterForm({
       setCaptchaToken("");
       (window as CaptchaWindow).grecaptcha?.reset();
     } catch {
+      setDebugError("Network error while calling /api/newsletter");
       setStatus("error");
     }
   }
@@ -113,7 +127,8 @@ export function BrevoNewsletterForm({
     <div className="newsletterBrevoContainer">
       {status === "error" && (
         <div className="newsletterFormMessage newsletterFormError" role="alert">
-          {error}
+          <div>{error}</div>
+          {debugError && <pre className="newsletterDebugError">{debugError}</pre>}
         </div>
       )}
       {status === "success" && (
