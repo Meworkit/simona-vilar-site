@@ -1,4 +1,5 @@
 import type { Lang } from "./content";
+import { BrevoNewsletterForm } from "./BrevoNewsletterForm";
 
 const text = {
   uk: { title: "Отримувати новини про авторку та наступні публікації", subtitle: "Нові публікації, новини та важливі оголошення авторки.", placeholder: "Ваш email", button: "Підписатися", consent: "Підписуючись, ви погоджуєтеся отримувати новини Симони Вілар електронною поштою. Відписатися можна в будь-який момент.", privacy: "Політика конфіденційності" },
@@ -22,30 +23,35 @@ export function Newsletter({ lang }: { lang: Lang }) {
     <section id="newsletter" className="newsletter shell" aria-labelledby="newsletter-title">
       <h2 id="newsletter-title">{t.title}</h2>
       <p>{t.subtitle}</p>
-      <form action={BREVO_FORM_ACTION} method="post">
-        <label className="srOnly" htmlFor={`newsletter-${lang}`}>{t.placeholder}</label>
-        <input
-          id={`newsletter-${lang}`}
-          name="EMAIL"
-          type="email"
-          required
-          autoComplete="email"
-          placeholder={t.placeholder}
-        />
-        <button type="submit">{t.button}</button>
-        {/* Brevo anti-spam honeypot: must stay empty and out of the tab
-            order / screen-reader flow, never display:none (some bots skip
-            display:none fields on purpose). */}
-        <input
-          type="text"
-          name="email_address_check"
-          tabIndex={-1}
-          aria-hidden="true"
-          autoComplete="off"
-          style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }}
-        />
-        <input type="hidden" name="locale" value="en" />
-      </form>
+      <BrevoNewsletterForm
+        lang={lang}
+        placeholder={t.placeholder}
+        button={t.button}
+        success={
+          lang === "uk"
+            ? "Перевірте пошту та підтвердьте підписку"
+            : lang === "en"
+              ? "Check your email and confirm your subscription"
+              : "Проверьте почту и подтвердите подписку"
+        }
+        error={
+          lang === "uk"
+            ? "Не вдалося надіслати форму. Спробуйте ще раз"
+            : lang === "en"
+              ? "We couldn't submit the form. Please try again"
+              : "Не удалось отправить форму. Попробуйте ещё раз"
+        }
+        required={
+          lang === "uk" ? "Введіть email" : lang === "en" ? "Enter your email" : "Введите email"
+        }
+        invalid={
+          lang === "uk"
+            ? "Перевірте правильність введеного email"
+            : lang === "en"
+              ? "Check that your email address is correct"
+              : "Проверьте правильность введённого email"
+        }
+      />
       <p className="consent">
         {t.consent} <a href={`/${lang}/privacy`}>{t.privacy}</a>
       </p>
