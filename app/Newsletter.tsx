@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect } from "react";
 import type { Lang } from "./content";
 
 const text = {
@@ -51,32 +54,63 @@ export function Newsletter({ lang }: { lang: Lang }) {
   const t = text[lang];
   const captchaLang = lang === "uk" ? "uk" : lang === "ru" ? "ru" : "en";
 
-  const brevoRuntimeConfig = `
-    window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
-    window.LOCALE = 'en';
-    window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = ${JSON.stringify(t.invalid)};
-    window.REQUIRED_ERROR_MESSAGE = ${JSON.stringify(t.required)};
-    window.GENERIC_INVALID_MESSAGE = ${JSON.stringify(t.invalid)};
-    window.INVALID_NUMBER = ${JSON.stringify(t.invalid)};
-    window.INVALID_DATE = 'Please enter a valid date';
-    window.REQUIRED_MULTISELECT_MESSAGE = 'Please select at least 1 option';
-    window.translation = {
-      common: {
-        selectedList: '{quantity} list selected',
-        selectedLists: '{quantity} lists selected',
-        selectedOption: '{quantity} selected',
-        selectedOptions: '{quantity} selected'
-      }
-    };
-    var AUTOHIDE = Boolean(0);
+  useEffect(() => {
+    const w = window as typeof window & Record<string, any>;
 
-    function handleCaptchaResponse() {
-      var event = new Event('captchaChange');
-      var captcha = document.getElementById('sib-captcha');
-      if (captcha) captcha.dispatchEvent(event);
-    }
-    window.handleCaptchaResponse = handleCaptchaResponse;
-  `;
+    w.REQUIRED_CODE_ERROR_MESSAGE = "Please choose a country code";
+    w.LOCALE = "en";
+    w.EMAIL_INVALID_MESSAGE = t.invalid;
+    w.SMS_INVALID_MESSAGE = t.invalid;
+    w.REQUIRED_ERROR_MESSAGE = t.required;
+    w.GENERIC_INVALID_MESSAGE = t.invalid;
+    w.INVALID_NUMBER = t.invalid;
+    w.INVALID_DATE = "Please enter a valid date";
+    w.REQUIRED_MULTISELECT_MESSAGE = "Please select at least 1 option";
+    w.translation = {
+      common: {
+        selectedList: "{quantity} list selected",
+        selectedLists: "{quantity} lists selected",
+        selectedOption: "{quantity} selected",
+        selectedOptions: "{quantity} selected",
+      },
+    };
+    w.AUTOHIDE = false;
+    w.handleCaptchaResponse = () => {
+      const captcha = document.getElementById("sib-captcha");
+      if (captcha) captcha.dispatchEvent(new Event("captchaChange"));
+    };
+
+    const ensureScript = (
+      id: string,
+      src: string,
+      options: { async?: boolean; defer?: boolean } = {},
+    ) => {
+      if (document.getElementById(id)) return;
+      const script = document.createElement("script");
+      script.id = id;
+      script.src = src;
+      script.async = options.async ?? false;
+      script.defer = options.defer ?? false;
+      document.body.appendChild(script);
+    };
+
+    // Brevo's own JavaScript intercepts the form POST so the visitor stays
+    // on simonavilar.com and sees the inline success/error message.
+    ensureScript(
+      "brevo-form-main-js",
+      "https://sibforms.com/forms/end-form/build/main.js",
+      { defer: true },
+    );
+
+    // Brevo configured this form with Google reCAPTCHA. Loading it only
+    // after the component mounts guarantees that the widget container is
+    // already present in the DOM and g-recaptcha-response can be generated.
+    ensureScript(
+      "brevo-recaptcha-js",
+      `https://www.google.com/recaptcha/api.js?hl=${captchaLang}`,
+      { async: true, defer: true },
+    );
+  }, [captchaLang, t.invalid, t.required]);
 
   return (
     <section id="newsletter" className="newsletter shell" aria-labelledby="newsletter-title">
@@ -187,10 +221,6 @@ export function Newsletter({ lang }: { lang: Lang }) {
       <p className="consent">
         {t.consent} <a href={`/${lang}/privacy`}>{t.privacy}</a>
       </p>
-
-      <script dangerouslySetInnerHTML={{ __html: brevoRuntimeConfig }} />
-      <script defer src="https://sibforms.com/forms/end-form/build/main.js" />
-      <script src={`https://www.google.com/recaptcha/api.js?hl=${captchaLang}`} />
     </section>
   );
 }
