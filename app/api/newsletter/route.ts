@@ -56,12 +56,29 @@ export async function POST(request: Request) {
         status: brevoResponse.status,
         body: raw.slice(0, 1000),
       });
-      return Response.json({ success: false }, { status: 502 });
+      return Response.json(
+        {
+          success: false,
+          debug: {
+            brevoStatus: brevoResponse.status,
+            brevoBody: raw.slice(0, 1200),
+          },
+        },
+        { status: 502 },
+      );
     }
 
     return Response.json({ success: true });
   } catch (error) {
     console.error("Brevo newsletter request failed", error);
-    return Response.json({ success: false }, { status: 502 });
+    return Response.json(
+      {
+        success: false,
+        debug: {
+          networkError: error instanceof Error ? error.message : String(error),
+        },
+      },
+      { status: 502 },
+    );
   }
 }
