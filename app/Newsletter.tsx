@@ -48,7 +48,7 @@ const text = {
 const BREVO_FORM_ACTION =
   "https://9bfc7f37.sibforms.com/serve/MUIFAApmT5fj474ePss9nlC9yMWNjcfgsRBMmI6nQVA16d5wuEhYj50ITfuFDxfxDzRc5_tp0hTKb0POHndNLDR04Iw8NMM2qiO7loSarrH1KGL9a6OqZAmg6gJlKXvSu5Pykn3nNv1Sr-uP5vW_SBLwqwXReMBqmMrPZR1MAaGmIoTxBl6EdkYKI4r26O6-BFPg1ESENRhIk8IYcg==";
 
-const BREVO_RECAPTCHA_SITE_KEY = "6LeugCouAAAAABGd1c3ExE2qLfiwp5LExdvURal_";
+const BREVO_RECAPTCHA_SITE_KEY = "6LeZySouAAAAABAAXTpRYkSmVPM0GPgU1gcLb1Sc";
 
 export function Newsletter({ lang }: { lang: Lang }) {
   const t = text[lang];
