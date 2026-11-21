@@ -411,19 +411,22 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 
 /* Brevo newsletter test branch */
 .newsletterBrevoContainer{max-width:760px;margin:0 auto}
-.newsletterBrevoInner{width:100%}
-.newsletter .sib-form-message-panel{display:none;max-width:620px;margin:18px auto 0;padding:12px 16px;border:1px solid var(--border-soft);background:#fffdfa;font:14px/1.45 Manrope,sans-serif;text-align:center}
-.newsletter .sib-form-message-panel--active{display:block}
+.newsletter .newsletterControlledForm{
+  display:grid;
+  grid-template-columns:minmax(240px,430px);
+  justify-content:center;
+  gap:14px;
+  margin:28px auto 17px;
+}
+.newsletter .newsletterEmailField{min-width:0}
+.newsletter .newsletterCaptcha{display:flex;justify-content:center;min-height:78px}
+.newsletter .newsletterControlledForm button{width:100%}
+.newsletter .newsletterControlledForm button:disabled{cursor:not-allowed;opacity:.42}
+.newsletter .newsletterFormMessage{display:block;max-width:620px;margin:18px auto 0;padding:12px 16px;border:1px solid var(--border-soft);background:#fffdfa;font:14px/1.45 Manrope,sans-serif;text-align:center}
 .newsletter .newsletterFormError{border-color:#c98e8e;background:#fbefed;color:#6d2f2f}
 .newsletter .newsletterFormSuccess{border-color:#b9c8b7;background:#f1f7ef;color:#36553a}
-.newsletter .newsletterEmailField{min-width:0}
-.newsletter .newsletterEmailField .entry__field{width:100%}
-.newsletter .newsletterFieldError{display:block;min-height:0;margin-top:6px;color:#7a3e3e;font:12px/1.35 Manrope,sans-serif;text-align:left}
-.newsletter .newsletterFieldError:empty{display:none}
-.newsletter .newsletterCaptcha{grid-column:1/-1;justify-self:center;margin-top:8px}
-.newsletter .newsletterCaptcha .form__entry{display:flex;flex-direction:column;align-items:center}
-.newsletter .newsletterCaptcha .newsletterFieldError{text-align:center}
-.newsletter .input--hidden{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important}
+.newsletter .newsletterFieldError{margin-top:6px;color:#7a3e3e;font:12px/1.35 Manrope,sans-serif;text-align:left}
 @media(max-width:560px){
+  .newsletter .newsletterControlledForm{grid-template-columns:1fr}
   .newsletter .newsletterCaptcha{transform:scale(.92);transform-origin:center top;margin-bottom:-6px}
 }
