@@ -408,11 +408,11 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   .storySongMedia{margin-top:36px;padding-top:28px}
 }
 
-/* Brevo newsletter: official iframe embed (test/newsletter-brevo-iframe-v1).
-   The 480px height covers the measured content height of the live Brevo
-   form (title + subtitle + email field + button + reCAPTCHA: ~376px at
-   rest, ~452px with a success/error message showing, checked at 375px
-   and 540px viewport widths), plus a safety margin so the iframe never
-   needs to scroll internally. */
-.newsletterBrevoContainer{max-width:540px;margin:28px auto 0}
-.newsletterBrevoIframe{display:block;width:100%;height:480px;border:0}
+/* Compact Brevo iframe treatment for the test integration. The hosted
+   form no longer contains its own title or description. */
+.newsletter{padding-top:28px;padding-bottom:28px}
+.newsletterBrevoContainer{max-width:540px;margin:16px auto 0}
+.newsletterBrevoIframe{display:block;width:100%;height:320px;border:0}
+@media(max-width:560px){
+  .newsletter{padding-top:26px;padding-bottom:26px}
+}
