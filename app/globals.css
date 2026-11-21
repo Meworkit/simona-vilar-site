@@ -407,3 +407,28 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
   .storyText p:first-child{font-size:20px}
   .storySongMedia{margin-top:36px;padding-top:28px}
 }
+
+
+/* Brevo newsletter test branch */
+.newsletterBrevoContainer{max-width:760px;margin:0 auto}
+.newsletter .newsletterControlledForm{
+  display:grid;
+  grid-template-columns:minmax(240px,430px);
+  justify-content:center;
+  gap:14px;
+  margin:28px auto 17px;
+}
+.newsletter .newsletterEmailField{min-width:0}
+.newsletter .newsletterCaptcha{display:flex;justify-content:center;min-height:78px}
+.newsletter .newsletterControlledForm button{width:100%}
+.newsletter .newsletterControlledForm button:disabled{cursor:not-allowed;opacity:.42}
+.newsletter .newsletterFormMessage{display:block;max-width:620px;margin:18px auto 0;padding:12px 16px;border:1px solid var(--border-soft);background:#fffdfa;font:14px/1.45 Manrope,sans-serif;text-align:center}
+.newsletter .newsletterFormError{border-color:#c98e8e;background:#fbefed;color:#6d2f2f}
+.newsletter .newsletterFormSuccess{border-color:#b9c8b7;background:#f1f7ef;color:#36553a}
+.newsletter .newsletterFieldError{margin-top:6px;color:#7a3e3e;font:12px/1.35 Manrope,sans-serif;text-align:left}
+@media(max-width:560px){
+  .newsletter .newsletterControlledForm{grid-template-columns:1fr}
+  .newsletter .newsletterCaptcha{transform:scale(.92);transform-origin:center top;margin-bottom:-6px}
+}
+
+.newsletterResponseFrame{position:absolute;width:1px;height:1px;border:0;opacity:0;pointer-events:none}
